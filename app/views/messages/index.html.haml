@@ -1,0 +1,33 @@
+%h1 Listing messages
+
+%table
+  %tr
+    %th To name
+    %th To email
+    %th User
+    %th From name
+    %th From email
+    %th Subject
+    %th Html body
+    %th Text body
+    %th
+    %th
+    %th
+
+  - @messages.each do |message|
+    %tr
+      %td= message.to_name
+      %td= message.to_email
+      %td= message.user_id
+      %td= message.from_name
+      %td= message.from_email
+      %td= message.subject
+      %td= message.html_body
+      %td= message.text_body
+      %td= link_to 'Show', message
+      %td= link_to 'Edit', edit_message_path(message)
+      %td= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Message', new_message_path
