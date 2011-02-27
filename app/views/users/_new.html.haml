@@ -1,0 +1,17 @@
+= form_for @user, :url => registration_path(:user) do |f|
+  %p
+    = f.label :email
+    %br/
+    = f.text_field :email
+  %p
+    = f.label :mask_email
+    %br/
+    = f.text_field :mask_email
+  %p
+    = f.label :summary_frequency
+    %br/
+    = f.select :summary_frequency, @summary_frequencies
+
+  %button.sign_up.green(type="submit")
+    .title Sign Up
+    .subtitle Free your inbox from the tyranny of newsletters now

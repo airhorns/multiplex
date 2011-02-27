@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %title Sidebox
+    = include_stylesheets :screen, :media => 'screen, projection'
+    = include_stylesheets :print, :media => 'print'
+    /[if lt IE 8]
+      = include_stylesheets :ie, :media => 'screen, projection'
+    = include_javascripts :main
+    
+    = csrf_meta_tag
+  %body
+    #container
+      #content
+        %header
+          %h1 
+            = link_to "Sidebox", root_path
+          %nav
+            - if user_signed_in?
+              = link_to "Sign Out", sign_out_path
+              |
+              = link_to "Feedback", "#"
+            - else
+              = link_to "Sign In", sign_in_path    
+        - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
+          %div(class="#{f} flash")
+            = flash[f]
+
+        = yield
+        #container_footer &nbsp;
+    %footer
+      <p>Copyright 2011 Us. Problems? Tell us about it!</p>
