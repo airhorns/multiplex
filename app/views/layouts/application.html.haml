@@ -16,12 +16,16 @@
           %h1 
             = link_to "Sidebox", root_path
           %nav
+            = link_to "About", "#"
+            |
+            = link_to "FAQ", "#"
+            |
+            = link_to "Feedback", "#"
+            |
             - if user_signed_in?
               = link_to "Sign Out", sign_out_path
-              |
-              = link_to "Feedback", "#"
             - else
-              = link_to "Sign In", sign_in_path    
+              = link_to "Sign In", sign_in_path
         - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
           %div(class="#{f} flash")
             = flash[f]

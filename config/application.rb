@@ -38,5 +38,23 @@ module Multiplex
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Sendgrid Email setup
+    settings = {
+      :address              => "smtp.sendgrid.net",
+      :port                 => 587,
+      :authentication       => :plain,
+      :user_name            => 'harry@harry.me',
+      :password             => "5ky11ght",
+      :domain               => "harry.me",
+      :enable_starttls_auto => true  
+    }
+    
+    ActionMailer::Base.smtp_settings = settings.dup
+    ActionMailer::Base.delivery_method = :smtp
+
+    Mail.defaults do
+      delivery_method :smtp, settings.dup
+    end
   end
 end

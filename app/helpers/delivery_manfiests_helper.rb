@@ -1,0 +1,2 @@
+module DeliveryManfiestsHelper
+end

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110227060959) do
+ActiveRecord::Schema.define(:version => 20110301020009) do
+
+  create_table "delivery_manifests", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "delivery_secret"
+  end
+
+  create_table "manifest_entries", :force => true do |t|
+    t.integer  "delivery_manifest_id"
+    t.integer  "message_id"
+    t.boolean  "marked_for_delivery"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", :force => true do |t|
     t.string   "to_name"
@@ -25,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20110227060959) do
     t.text     "mail"
     t.string   "params_type"
     t.text     "params"
+    t.string   "delivery_secret"
   end
 
   create_table "users", :force => true do |t|
@@ -41,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20110227060959) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "frequency"
     t.string   "mask_email"
     t.string   "summary_frequency"
   end

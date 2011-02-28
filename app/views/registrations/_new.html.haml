@@ -1,0 +1,8 @@
+= simple_form_for resource, :url => user_registration_path do |f|
+  = f.input :email 
+  = f.input :mask_email do
+    = f.text_field :mask_email
+    @otherbox.com
+  = f.input :summary_frequency, :as => :radio, :collection => @summary_frequencies
+  = f.submit
+

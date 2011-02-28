@@ -27,4 +27,15 @@ class MessagesController < ApplicationController
     @message.destroy
     redirect_to(messages_url)
   end
+
+  def deliver
+    @message = Message.find(params[:id])
+    if @message.delivery_secret == params[:secret]
+      @message.queue_delivery
+      flash[:success] = "Your message will be delivered shortly."
+    else
+      flash[:error] = "Error delivering message."
+    end
+    redirect_to(root_path)    
+  end
 end

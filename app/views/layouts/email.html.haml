@@ -1,0 +1,11 @@
+%html
+  %head
+    %style(type='text/css')= File.read(File.join(Rails.root, 'public', 'stylesheets', 'email.css'))
+  %body
+    #header
+      %h1 
+        = link_to "Otherbox", root_path
+    = yield
+    #footer
+      <p>Copyright 2011 Us. Problems? Tell us about it!</p>
+

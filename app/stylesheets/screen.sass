@@ -13,7 +13,10 @@
 @import partials/one_col
 @import partials/multi_line_button
 
+.pane
+  +clearfix
 button.sign_up
+  float: right
   +multi-line-button(#60a3d8)
   &.green
     +color-multi-line-button(#63bb4a)
@@ -22,3 +25,17 @@ button.sign_up
   &.orange
     +color-multi-line-button(#d98026)
 
+form#new_user
+  .input
+    +clearfix
+    &.string
+      height: 32px
+  label
+    display: block
+    width: 150px
+    float: left
+    &.collection_radio
+      float: none
+      margin-left: 150px 
+  input[type="text"]
+    float: left

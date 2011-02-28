@@ -1,0 +1,14 @@
+= form_for @manifest, :url => delivery_manifest_url(@manifest), :html => {:method => :get} do |g|
+  = g.hidden_field :delivery_secret
+  %table.message_summary
+    %tr
+      %th From
+      %th Subject
+      %th Send
+    = g.fields_for :manifest_entries do |f|
+      %tr
+        %td= f.object.message.from
+        %td= f.object.message.subject
+        %td= f.check_box :marked_for_delivery
+
+  = g.submit "Send Emails"

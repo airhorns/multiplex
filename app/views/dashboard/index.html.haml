@@ -1,2 +1,12 @@
-We do this this and this, check it out.
-= render 'users/new'
+.pane
+  We do this this and this, check it out.
+
+  %button.sign_up.green(type="submit")
+    .title Sign Up
+    .subtitle Free your inbox from the tyranny of newsletters now
+
+- unless user_signed_in?
+  %h2 Sign Up
+  = render :partial => "registrations/new", :locals => {:resource => @user}
+- else
+  = link_to "Send Summary Now", send_summary_path

@@ -3,5 +3,19 @@
 
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
+require 'resque/tasks'
 
 Multiplex::Application.load_tasks
+
+task "resque:setup" => :environment do
+  ENV['QUEUE'] = '*'
+end
+
+desc "Alias for resque:work (To run workers on Heroku)"
+task "jobs:work" => "resque:work"
+
+desc "Make asset packages"
+task "jam" do
+  require 'jammit'
+  Jammit.package!
+end 

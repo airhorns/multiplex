@@ -2,14 +2,18 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
 gem "devise"
+gem "simple_form"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
-gem "jammit"
 gem "compass"
-gem "hpricot"
-gem "ruby_parser"
+gem "resque"
+gem "uuid"
+gem "mail"
+gem "jammit"
+gem "pg"
 
 group :development, :test do
+  gem "heroku"
   gem "mongrel", "1.2.0.pre2"
   gem 'ruby-debug19'
   gem 'sqlite3'
@@ -25,8 +29,3 @@ group :development, :test do
   gem "growl"
   gem "rb-fsevent"
 end
-
-group :production do
-  gem "pg"
-end
-

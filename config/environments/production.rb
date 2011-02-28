@@ -46,4 +46,9 @@ Multiplex::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # Host configuration 
+  config.action_mailer.default_url_options = { :host => "summarly.heroku.com" }
+
+  ENV['REDISTOGO_URL'] ||= "redis://redistogo:4b5e283cccced8fd569b7427b2d5e27c@filefish.redistogo.com:9496/"
 end

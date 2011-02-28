@@ -627,7 +627,14 @@ form.bp textarea {
 }
 
 /* line 16, ../../app/stylesheets/screen.sass */
+.pane {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 18, ../../app/stylesheets/screen.sass */
 button.sign_up {
+  float: right;
   -moz-background-clip: padding;
   -webkit-background-clip: padding;
   -o-background-clip: padding-box;
@@ -713,7 +720,7 @@ button.sign_up:active, button.sign_up.depressed {
   box-shadow: none;
   border-color: #2970a9;
 }
-/* line 18, ../../app/stylesheets/screen.sass */
+/* line 21, ../../app/stylesheets/screen.sass */
 button.sign_up.green {
   background-color: #63bb4a;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #83c96f), color-stop(50%, #63bb4a), color-stop(100%, #4e9939));
@@ -746,7 +753,7 @@ button.sign_up.green:active, button.sign_up.green.depressed {
   box-shadow: none;
   border-color: #3b742b;
 }
-/* line 20, ../../app/stylesheets/screen.sass */
+/* line 23, ../../app/stylesheets/screen.sass */
 button.sign_up.red {
   background-color: #bf4040;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cc6666), color-stop(50%, #bf4040), color-stop(100%, #993333));
@@ -779,7 +786,7 @@ button.sign_up.red:active, button.sign_up.red.depressed {
   box-shadow: none;
   border-color: #732626;
 }
-/* line 22, ../../app/stylesheets/screen.sass */
+/* line 25, ../../app/stylesheets/screen.sass */
 button.sign_up.orange {
   background-color: #d98026;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e19951), color-stop(50%, #d98026), color-stop(100%, #ae661e));
@@ -811,4 +818,29 @@ button.sign_up.orange:active, button.sign_up.orange.depressed {
   -o-box-shadow: none;
   box-shadow: none;
   border-color: #824d17;
+}
+
+/* line 29, ../../app/stylesheets/screen.sass */
+form#new_user .input {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 31, ../../app/stylesheets/screen.sass */
+form#new_user .input.string {
+  height: 32px;
+}
+/* line 33, ../../app/stylesheets/screen.sass */
+form#new_user label {
+  display: block;
+  width: 150px;
+  float: left;
+}
+/* line 37, ../../app/stylesheets/screen.sass */
+form#new_user label.collection_radio {
+  float: none;
+  margin-left: 150px;
+}
+/* line 40, ../../app/stylesheets/screen.sass */
+form#new_user input[type="text"] {
+  float: left;
 }

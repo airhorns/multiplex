@@ -1,0 +1,10 @@
+%p
+  Summary for 
+  = @date_range.begin
+  to 
+  = @date_range.end 
+  \.
+  = pluralize(@manifest.messages.count, 'message')
+  received. Check the checkboxes below to deliver the messages from your otherbox.
+
+= render 'delivery_manifests/form'

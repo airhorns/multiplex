@@ -1,5 +1,6 @@
 Multiplex::Application.routes.draw do
-  devise_for :users do
+
+  devise_for :users, :controllers => { :registrations => "registrations" } do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_out", :to => "devise/sessions#destroy"
   end
@@ -7,9 +8,18 @@ Multiplex::Application.routes.draw do
   resources :messages, :only => [:index, :show, :destroy] do
     post 'sendgrid_create', :on => :collection
     post 'cloudmailin_create', :on => :collection
+    get 'deliver', :on => :member
   end
+    
+  resources :delivery_manifests, :only => [:update] do
+    get 'update', :on => :member
+  end 
 
+  match 'faq' => 'dashboard#faq', :as => :faq
+  match 'help' => 'dashboard#help', :as => :help
+  match 'send_summary' => 'dashboard#send_summary', :as => :send_summary
   root :to => "dashboard#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

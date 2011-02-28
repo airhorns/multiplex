@@ -1,0 +1,10 @@
+Summary for <%= @date_range.begin %> to <%= @date_range.end %>. <%= pluralize(@manifest.messages.count, 'message') %> received. Check the checkboxes below to deliver the messages from your otherbox.
+
+<% @manifest.messages.each do |message| %>
+From: <%= message.from %>
+Subject: <%= message.subject %>
+Send the whole thing: <%= deliver_message_url(message, :secret => message.delivery_secret, :host => "localhost:3000") %>
+
+<% end %>
+
+Sent at <%= Time.now %>, especially for you, by Otherbox.
