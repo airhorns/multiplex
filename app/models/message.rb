@@ -9,20 +9,19 @@ class Message < ActiveRecord::Base
    end
 
    def message_from_sendgrid(params)
-      encodings = ActiveSupport::JSON.decode(params[:charsets])
       # Sendgrid auto-decodes the headers into UTF8
       mail = Mail.new(params[:headers])
 
       if params[:text].present?
-        text_body = params['text'].force_encoding(encodings['text']).encode("UTF-8")
+        text_body = params['text']
         mail.text_part = Mail::Part.new(:charset => 'UTF-8', :content_type => "text/plain;", :body => text_body)
       end
 
       if params[:html].present?
-        html_body = params['html'].force_encoding(encodings['html']).encode("UTF-8")
+        html_body = params['html']
         mail.html_part = Mail::Part.new(:charset => 'UTF-8', :content_type => "text/html;", :body => html_body)
       end
-      debugger 
+
       mail
     end
 
@@ -40,12 +39,24 @@ class Message < ActiveRecord::Base
       self.new(attributes)
     end
 
-    def new_from_params(params, type)
+    def new_from_params(unencoded_params, type)
+      params = prepare_params(unencoded_params)
       mail = self.send("message_from_#{type}", params)
       message = self.new_from_mail(mail)
       message.params_type = type
-      message.params = "#{Marshal.dump(params)}".encode("UTF-8")
+      message.params = Marshal.dump(params).encode("UTF-8")
       message
+    end
+
+    private
+    def prepare_params(params)
+      # Sendgrid auto-decodes the headers into UTF8
+      new = {:headers => params[:headers]}
+      encodings = ActiveSupport::JSON.decode(params[:charsets])
+      encodings.each do |key, encoding|
+        new[key] = params[key].force_encoding(encodings[key]).encode("UTF-8")
+      end      
+      new
     end
   end
 
