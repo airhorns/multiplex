@@ -20,6 +20,7 @@ group :development, :test do
   gem 'sqlite3'
 
   gem "rspec-rails"
+  gem 'spork', '~> 0.9.0.rc'  
   gem "steak"
   gem "capybara"
 
@@ -27,6 +28,7 @@ group :development, :test do
   gem "guard-rspec"
   gem "guard-coffeescript"
   gem "guard-compass"
+  gem "guard-spork"
   gem "growl"
   gem "rb-fsevent"
 end

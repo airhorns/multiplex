@@ -1,5 +1,13 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
+#
+#guard 'spork' do
+  #watch('config/application.rb')
+  #watch('config/environment.rb')
+  #watch(%r{^config/environments/.*\.rb$})
+  #watch(%r{^config/initializers/.*\.rb$})
+  #watch('spec/spec_helper.rb')
+#end
 
 guard 'rspec', :version => 2 do
   watch(/^spec\/(.*)_spec.rb/)
@@ -11,9 +19,10 @@ guard 'rspec', :version => 2 do
 end
 
 guard 'compass' do
-  watch('^/app/stylesheets/(.*)\.s[ac]ss')
+  watch(/^\/app\/stylesheets\/(.*)\.s[ac]ss/)
 end
 
 guard 'coffeescript', :output => 'public/javascripts' do
   watch(%r{app/coffeescripts/.+\.coffee})
 end
+

@@ -13,15 +13,14 @@ class Message < ActiveRecord::Base
       mail = Mail.new(params[:headers])
 
       if params[:text].present?
-        text_body = params['text']
+        text_body = params[:text]
         mail.text_part = Mail::Part.new(:charset => 'UTF-8', :content_type => "text/plain;", :body => text_body)
       end
 
       if params[:html].present?
-        html_body = params['html']
+        html_body = params[:html]
         mail.html_part = Mail::Part.new(:charset => 'UTF-8', :content_type => "text/html;", :body => html_body)
       end
-
       mail
     end
 
@@ -39,25 +38,32 @@ class Message < ActiveRecord::Base
       self.new(attributes)
     end
 
-    def new_from_params(unencoded_params, type)
-      params = prepare_params(unencoded_params)
+    def new_from_params(params, type)
+      params = send("prepare_#{type}_params", params)
       mail = self.send("message_from_#{type}", params)
       message = self.new_from_mail(mail)
       message.params_type = type
-      message.params = Marshal.dump(params).encode("UTF-8")
+      message.params = Marshal.dump(params)
       message
     end
 
     private
-    def prepare_params(params)
+    def prepare_sendgrid_params(params)
       # Sendgrid auto-decodes the headers into UTF8
       new = {:headers => params[:headers]}
       encodings = ActiveSupport::JSON.decode(params[:charsets])
       encodings.each do |key, encoding|
-        new[key] = params[key].force_encoding(encodings[key]).encode("UTF-8")
-      end      
+        new[key.intern] = params[key].force_encoding(encodings[key]).encode("UTF-8")
+      end
       new
     end
+
+    def prepare_cloudmailin_params(params)
+      # Don't need the rest of the stuff
+      new = {:message => params[:message]}
+      new
+    end
+    
   end
 
   belongs_to :user

@@ -13,13 +13,11 @@ class MessagesController < ApplicationController
   end
 
   def sendgrid_create
-    @message = Message.new_from_params(params, :sendgrid).save!
-    render :nothing => true, :status => 200 # a status of 404 would reject the mail
+    create(:sendgrid)
   end
 
   def cloudmailin_create
-    @message = Message.new_from_params(params, :cloudmailin).save!
-    render :nothing => true, :status => 200 # a status of 404 would reject the mail
+    create(:cloudmailin)
   end
   
   def destroy
@@ -37,5 +35,16 @@ class MessagesController < ApplicationController
       flash[:error] = "Error delivering message."
     end
     redirect_to(root_path)    
+  end
+
+  private
+  def create(type)
+    @message = Message.new_from_params(params, type)
+    if EmailInterfaceController.recognize_path(@message.to)
+      EmailInterfaceController.dispatch(@message)
+    else
+      @message.save!
+    end
+    render :nothing => true, :status => 200 # a status of 404 would reject the mail
   end
 end

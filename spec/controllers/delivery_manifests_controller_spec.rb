@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe DeliveryManfiestsController do
+describe DeliveryManifestsController do
 
 end
