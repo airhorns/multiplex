@@ -1,4 +1,4 @@
-class CollectUnownedEmailsJob
+class CollectUnownedEmailsJob < MultiplexJob
   @queue = :internal
   def self.perform(user_id)
     @user = User.find(user_id)

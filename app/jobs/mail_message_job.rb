@@ -1,4 +1,4 @@
-class MailMessageJob
+class MailMessageJob < MultiplexJob
   @queue = :outgoing
 
   def self.perform(message_id)

@@ -7,19 +7,20 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "compass"
 gem "resque"
+gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
 gem "uuid"
 gem "mail"
 gem "jammit"
 gem "pg"
+gem "heroku"
 
 group :development, :test do
-  gem "heroku"
   gem "mongrel", "1.2.0.pre2"
   gem 'ruby-debug19'
   gem 'sqlite3'
 
-  gem "rspec-rails", ">= 2.0.1"
-  gem "steak", ">= 1.0.0.rc.1"
+  gem "rspec-rails"
+  gem "steak"
   gem "capybara"
 
   gem "guard"
