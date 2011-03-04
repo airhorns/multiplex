@@ -6,7 +6,7 @@ class EmailInterfaceController
   }
 
   def self.recognize_path(message)
-    address = message.to.map {|x| Mail::Address.new(x)}.select {|x| x.domain == "otherbox.me"}.first
+    address = message.mail.to.map{|x| Mail::Address.new(x)}.select{|x| x.domain == Multiplex::Application::Domain}.first
     if address
       @routes[address.local]
     else
@@ -15,7 +15,7 @@ class EmailInterfaceController
   end
   
   def self.dispatch(message)
-    self.new(message).call(self.recognize_path(message))
+    self.new(message).send(self.recognize_path(message))
   end
   
   attr_accessor :message
@@ -34,7 +34,7 @@ class EmailInterfaceController
 
   def unsubscribe
     if @message.user.present?
-      @message.user.update_attributes(:summary_frequency => :never)
+      @message.user.unsubscribe!
     else
       self.error(:unrecognized_user, @message)      
     end

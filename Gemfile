@@ -18,12 +18,15 @@ group :development, :test do
   gem "mongrel", "1.2.0.pre2"
   gem 'ruby-debug19'
   gem 'sqlite3'
+  
 
   gem "rspec-rails"
   gem 'spork', '~> 0.9.0.rc'  
   gem "steak"
   gem "capybara"
-
+  gem "factory_girl", "2.0.0.beta2"
+  gem 'factory_girl_rails', "1.1.beta1"
+  
   gem "guard"
   gem "guard-rspec"
   gem "guard-coffeescript"

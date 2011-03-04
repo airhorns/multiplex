@@ -31,10 +31,9 @@ class Message < ActiveRecord::Base
         attributes[(sym+'_name').intern]    = mail[sym.intern].display_names.join(", ")
       end
 
-      # Incoming mail. To Us, from Them
       attributes[:subject]      = mail.subject
       attributes[:delivered]    = false
-      attributes[:user]         = User.find_by_mask_email(attributes[:to_email])
+      attributes[:user]         = User.find_by_mask_email(attributes[:to_email]) || User.find_by_email(attributes[:from_email])
       self.new(attributes)
     end
 
@@ -53,7 +52,7 @@ class Message < ActiveRecord::Base
       new = {:headers => params[:headers]}
       encodings = ActiveSupport::JSON.decode(params[:charsets])
       encodings.each do |key, encoding|
-        new[key.intern] = params[key].force_encoding(encodings[key]).encode("UTF-8")
+        new[key.intern] = params[key].force_encoding(encodings[key]).encode("UTF-8") if params[key].present?
       end
       new
     end
@@ -65,6 +64,8 @@ class Message < ActiveRecord::Base
     end
     
   end
+
+  attr_accessor :mail
 
   belongs_to :user
   validates_presence_of :subject, :mail
@@ -82,10 +83,10 @@ class Message < ActiveRecord::Base
   end
 
   def mail
-    unless @mail_obj.present?
-      @mail_obj = self.class.send("message_from_#{self.params_type}", Marshal.load(self.params))
+    unless @mail.present?
+      @mail = self.class.send("message_from_#{self.params_type}", Marshal.load(self.params))
     end
-    @mail_obj
+    @mail
   end
 
   def queue_delivery

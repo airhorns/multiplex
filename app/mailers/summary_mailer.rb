@@ -1,5 +1,5 @@
 class SummaryMailer < ActionMailer::Base
-  default :from => "Otherbox Summaries <summaries@otherbox.com>"
+  default :from => "Otherbox Summaries <summaries@#{Multiplex::Application::Domain}>"
 
   def summary(manifest)
     @manifest = manifest

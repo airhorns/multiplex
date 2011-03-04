@@ -15,10 +15,10 @@ class User < ActiveRecord::Base
     
   validates_presence_of :email, :mask_email, :summary_frequency
   validates_uniqueness_of :mask_email
-  
-  # Check for unowned emails
-  after_create do 
-    Resque.enqueue(CollectUnownedEmailsJob, self.id)
+
+  def unsubscribe!
+    self.update_attributes!(:summary_frequency => :never)
+    # might need a mailchimp hook here
   end
 
   private

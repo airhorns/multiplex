@@ -5,7 +5,7 @@ Multiplex::Application.routes.draw do
     get "sign_out", :to => "devise/sessions#destroy"
   end
 
-  resources :messages, :only => [:index, :show, :destroy] do
+  resources :messages, :only => [] do
     post 'sendgrid_create', :on => :collection
     post 'cloudmailin_create', :on => :collection
     get 'deliver', :on => :member

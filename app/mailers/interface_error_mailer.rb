@@ -1,5 +1,5 @@
 class InterfaceErrorMailer < ActionMailer::Base
-  default :from => "OtherBox Errors <support@otherbox.me>"
+  default :from => "OtherBox Errors <support@#{Multiplex::Application::Domain}>"
 
   def error(path, message)
 
