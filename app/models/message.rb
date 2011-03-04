@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'digest/sha1'
 
 class Message < ActiveRecord::Base
@@ -42,7 +43,7 @@ class Message < ActiveRecord::Base
       mail = self.send("message_from_#{type}", params)
       message = self.new_from_mail(mail)
       message.params_type = type
-      message.params = Marshal.dump(params)
+      message.params = YAML.dump(params)
       message
     end
 
@@ -84,7 +85,7 @@ class Message < ActiveRecord::Base
 
   def mail
     unless @mail.present?
-      @mail = self.class.send("message_from_#{self.params_type}", Marshal.load(self.params))
+      @mail = self.class.send("message_from_#{self.params_type}", YAML.load(self.params))
     end
     @mail
   end

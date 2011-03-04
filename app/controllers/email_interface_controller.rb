@@ -1,9 +1,16 @@
 class EmailInterfaceController
+  class UnrecognizedPathError < StandardError; end
+  include ActiveSupport::Callbacks
+
   @routes = {
     "check"       => :send_summary,
     "send"        => :send_summary,
     "unsubscribe" => :unsubscribe
   }
+  
+  @routes.values.uniq.push(:all).each do |name|
+    define_callbacks name, :terminator => "result == false"
+  end
 
   def self.recognize_path(message)
     address = message.mail.to.map{|x| Mail::Address.new(x)}.select{|x| x.domain == Multiplex::Application::Domain}.first
@@ -15,7 +22,24 @@ class EmailInterfaceController
   end
   
   def self.dispatch(message)
-    self.new(message).send(self.recognize_path(message))
+    verb = self.recognize_path(message)
+    if verb
+      i = self.new(message)
+      i.run_callbacks :all do
+        i.run_callbacks verb do
+          i.send(verb)
+        end
+      end
+    else
+      raise UnrecognizedPathError.new
+    end
+  end
+ 
+  set_callback :all, :before do
+    unless @message.user.present?
+      self.error(:unrecognized_user, message) 
+      return false
+    end
   end
   
   attr_accessor :message
@@ -23,24 +47,17 @@ class EmailInterfaceController
   def initialize(msg)
     @message = msg
   end
+  
 
   def send_summary
-    if @message.user.present?
-      Resque.enqueue(MailSummaryJob,@message.user_id)
-    else
-      self.error(:unrecognized_user, @message) 
-    end
+    Resque.enqueue(MailSummaryJob,@message.user_id)
   end
 
   def unsubscribe
-    if @message.user.present?
-      @message.user.unsubscribe!
-    else
-      self.error(:unrecognized_user, @message)      
-    end
+    @message.user.unsubscribe!
   end
 
   def error(type, message)
-    Resque.enqueue(InterfaceErrorNotificationJob, type)
+    Resque.enqueue(InterfaceErrorNotificationJob, type, message.mail.from)
   end
 end

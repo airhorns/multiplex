@@ -7,12 +7,15 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "compass"
 gem "resque"
-gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
 gem "uuid"
 gem "mail"
 gem "jammit"
 gem "pg"
 gem "heroku"
+
+group :production do
+  gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
+end
 
 group :development, :test do
   gem "mongrel", "1.2.0.pre2"

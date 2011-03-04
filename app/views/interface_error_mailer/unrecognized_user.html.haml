@@ -1,0 +1,22 @@
+%p 
+  There was an error interacting with your 
+  %a{:href => root_url} Otherbox
+  because we don't know who you are! You emailed us from 
+  = @from_user
+  which we don't seem to have an account for. You might have emailed us
+  from the wrong account or we might have screwed up.
+
+%p
+  If you think this is an error, please feel free to email us at
+  = succeed "." do
+    %a{:href => "mailto:support@otherbox.me"}
+  We'll be glad to answer any questions you have and fix any problems you might be having with Otherbox.
+
+%p
+  You can also create a new account at Otherbox
+  %a{:href => new_user_registration_url} here
+  if you want.
+
+
+%p
+  %b Thanks for choosing Otherbox!
