@@ -27,19 +27,34 @@ button.sign_up
     +color-multi-line-button(#d98026)
 
 form#new_user
-  .input
-    +clearfix
-    &.string
-      height: 32px
-  label
-    display: block
-    width: 150px
-    float: left
-    &.collection_radio
-      float: none
-      margin-left: 150px 
-  input[type="text"]
-    float: left
+  #user_mask_email_name
+    border-right: 0px
+    margin-right: 0px
+    padding-right: 0px
+    width: 200px
+    text-align: right
+  .fixed_inline_text
+    background-color: white
+    padding: 5px 5px 4px 2px
+    margin: 6px 0px 6px -2px
+    border: 1px solid #BBB
+    border-left: 0px
+    color: #333 
+  .field_with_errors .fixed_inline_text
+    border-color: $error_border_color
+  //.input
+    //+clearfix
+    //&.string
+      //height: 32px
+  //label
+    //display: block
+    //width: 150px
+    //float: left
+    //&.collection_radio
+      //float: none
+      //margin-left: 150px 
+  //input[type="text"]
+    //float: left
 
 #splash
   margin-bottom: 1em

@@ -4,7 +4,6 @@ class DashboardController < ApplicationController
 
   def index
     @user = User.new(:summary_frequency => "daily")
-    @summary_frequencies = User.available_frequencies.collect {|(k,v)| [v,k.to_s]}
     respond_with @user
   end
 

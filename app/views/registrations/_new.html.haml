@@ -1,8 +1,8 @@
-= simple_form_for resource, :url => user_registration_path do |f|
+= simple_form_for resource, :url => user_registration_path, :html => {:novalidate => true} do |f|
   = f.input :email 
-  = f.input :mask_email do
-    = f.text_field :mask_email
-    @otherbox.com
-  = f.input :summary_frequency, :as => :radio, :collection => @summary_frequencies
+  = f.input :mask_email_name do
+    = f.text_field :mask_email_name
+    %span.fixed_inline_text> @#{Multiplex::Application::Domain}
+  = f.input :summary_frequency, :as => :radio, :collection => f.object.available_summary_frequencies.collect {|(k,v)| [v,k.to_s]}
   = f.submit
 

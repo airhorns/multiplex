@@ -3,7 +3,7 @@
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = "notifications@otherbox.me"
+  config.mailer_sender = "Otherbox <notifications@otherbox.me>"
 
   # Configure the class responsible to send e-mails.
   config.mailer = "UserMailer"

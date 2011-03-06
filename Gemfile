@@ -12,7 +12,7 @@ gem "uuid"
 gem "mail"
 gem "jammit"
 gem "pg"
-gem "heroku"
+gem "heroku" # need in all groups for the autoscaler as well as developingt c
 
 group :production do
   gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"

@@ -9,8 +9,24 @@
 +blueprint-typography
 +blueprint-utilities
 +blueprint-debug
-+blueprint-interaction
 
+// Flashes
+div.flash
+  &.error
+    +error
+  &.notice
+    +notice
+  &.success
+    +success
+.highlight
+  +highlight
+.added
+  +added
+.removed
+  +removed
+
+.hide
+  display: none
 // Remove the scaffolding when you're ready to start doing visual design.
 // Or leave it in if you're happy with how blueprint looks out-of-the-box
 +blueprint-scaffolding

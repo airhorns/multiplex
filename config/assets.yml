@@ -11,6 +11,7 @@
 javascripts:
   main:
     - public/javascripts/jquery.js
+    - public/javascripts/jquery.validation.js
     - public/javascripts/rails.js
     - public/javascripts/application.js
 

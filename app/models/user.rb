@@ -9,15 +9,30 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable, :trackable, :validatable, :confirmable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :mask_email, :summary_frequency, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :mask_email_name, :summary_frequency, :password, :password_confirmation, :remember_me
     
-  validates_presence_of :email, :mask_email, :summary_frequency
+  validates_presence_of :email, :mask_email_name, :mask_email, :summary_frequency
   validates_uniqueness_of :mask_email
 
   def unsubscribe!
     self.update_attributes!(:summary_frequency => :never)
     # might need a mailchimp hook here
+  end
+  
+  def mask_email_name=(name)
+    self.mask_email = "#{name}@#{Multiplex::Application::Domain}"
+  end
+ 
+  def mask_email_name
+    if self.mask_email.present?
+      self.mask_email.split("@").first
+    else
+      nil
+    end
+  end 
+
+  def available_summary_frequencies
+    self.class.available_frequencies
   end
 
   private
