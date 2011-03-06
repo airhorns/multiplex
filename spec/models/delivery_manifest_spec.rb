@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe DeliveryManifest do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "date range calculation" do
+  end
 end

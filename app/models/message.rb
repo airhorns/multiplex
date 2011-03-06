@@ -72,7 +72,10 @@ class Message < ActiveRecord::Base
   validates_presence_of :subject, :mail
 
   scope :undelivered, self.scoped.where(:delivered => false)
+  scope :unsummarized, self.scoped.where(:summarized => false)
   scope :delivered, self.scoped.where(:delivered => true)
+  scope :summarized, self.scoped.where(:summarized => true)
+ 
   before_create :set_delivery_secret
 
   def to
@@ -97,8 +100,9 @@ class Message < ActiveRecord::Base
   def deliver!
     outgoing = self.deliverable
     outgoing.deliver!
-    self.delivered = true
-    self.save!
+    if self.delivered == false
+      self.update_attributes!(:delivered => true)
+    end
   end
 
   def deliverable

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110305181728) do
+ActiveRecord::Schema.define(:version => 20110306172803) do
 
   create_table "delivery_manifests", :force => true do |t|
     t.integer  "user_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20110305181728) do
     t.string   "params_type"
     t.text     "params"
     t.string   "delivery_secret"
+    t.boolean  "summarized",      :default => false
   end
 
   create_table "users", :force => true do |t|

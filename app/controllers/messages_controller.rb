@@ -14,11 +14,12 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
     if @message.delivery_secret == params[:secret]
       @message.queue_delivery
-      flash[:success] = "Your message will be delivered shortly."
+      render 'delivery_manifests/autoclose'
+      return
     else
       flash[:error] = "Error delivering message."
     end
-    redirect_to(root_path)    
+    redirect_to faq_path
   end
 
   private

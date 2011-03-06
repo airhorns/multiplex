@@ -11,7 +11,7 @@ class DashboardController < ApplicationController
   end
   
   def send_summary
-    Resque.enqueue(MailSummaryJob, current_user.id)
+    current_user.enqueue_summary
     flash[:success] = "Your summary will be sent shortly."
     redirect_to root_path
   end

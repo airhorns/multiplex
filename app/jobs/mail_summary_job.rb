@@ -2,12 +2,14 @@ class MailSummaryJob < MultiplexJob
   @queue = :outgoing
 
   def self.perform(user_id)
-    @user = User.find(user_id)
-    if @user.messages.undelivered.count > 0
-      manifest = DeliveryManifest.new(:messages => @user.messages.undelivered, :user => @user)
+    user = User.find(user_id)
+    messages = user.messages.unsummarized
+    
+    if messages.count > 0
+      manifest = DeliveryManifest.new(:messages => messages, :user => user)
       manifest.save!
-      mail = SummaryMailer.summary(manifest)
-      mail.deliver!
+      SummaryMailer.summary(manifest).deliver!
+      messages.update_all(:summarized => true)
     end
   end
 end

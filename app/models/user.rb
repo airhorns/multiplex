@@ -35,6 +35,11 @@ class User < ActiveRecord::Base
     self.class.available_frequencies
   end
 
+  def enqueue_summary
+    Resque.enqueue(MailSummaryJob, self.id)
+    true
+  end
+
   private
   def password_required? 
     false 
