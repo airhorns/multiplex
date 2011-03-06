@@ -35,6 +35,8 @@ group :development, :test do
   gem "guard-coffeescript"
   gem "guard-compass"
   gem "guard-spork"
+  gem 'guard-jammit'
+
   gem "growl"
   gem "rb-fsevent"
 end

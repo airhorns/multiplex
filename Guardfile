@@ -26,3 +26,7 @@ guard 'coffeescript', :output => 'public/javascripts' do
   watch(%r{app/coffeescripts/.+\.coffee})
 end
 
+guard 'jammit' do
+  watch(/^public\/javascripts\/(.*)\.js/)
+  watch(/^public\/stylesheets\/(.*)\.css/)
+end
