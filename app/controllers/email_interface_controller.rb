@@ -42,13 +42,19 @@ class EmailInterfaceController
     end
   end
   
+  set_callback :send_summary, :before do
+    if !@message.user.confirmed?
+      message.user.confirm!
+      return true
+    end
+  end
+
   attr_accessor :message
 
   def initialize(msg)
     @message = msg
   end
   
-
   def send_summary
     Resque.enqueue(MailSummaryJob,@message.user_id)
   end

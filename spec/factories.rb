@@ -7,6 +7,7 @@ FactoryGirl.define do
       "harry#{n}@#{Multiplex::Application::Domain}" 
     end
     summary_frequency :weekly
+    confirmed_at Time.now
   end
 
   factory :message do

@@ -1,5 +1,6 @@
 Multiplex::Application.configure do
-  Multiplex::Application::Domain = "otherbox.ca"
+  Multiplex::Application::Domain = "multiplex.skylightlabs.ca"
+  #Multiplex::Application::Domain = "otherbox.me"
   
   # Settings specified here will take precedence over those in config/application.rb
 

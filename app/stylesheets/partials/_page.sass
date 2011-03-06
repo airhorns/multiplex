@@ -23,7 +23,7 @@ body
   background-color: #EEE
 #container
   background-color: #FFF
-  width: 800px
+  width: $blueprint-container-size + 40px
   margin-left: auto
   margin-right: auto
   // Don't change the bottom margin on the container, its set by the sticky footer call which
@@ -46,6 +46,18 @@ header
   +clearfix
 
 footer
-  width: 760px
+  width: $blueprint-container-size - 40px
   margin: 0 auto
   +clearfix
+
+.page, .window
+  +clearfix
+
+.page
+  +column($blueprint-grid-columns/2)
+  & + .page
+    +column($blueprint-grid-columns/2, true)
+
+.window
+  +column($blueprint-grid-columns, true)
+    

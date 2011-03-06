@@ -31,6 +31,16 @@ describe EmailInterfaceController do
       Resque.should_not_receive(:enqueue)
       expect { EmailInterfaceController.dispatch(@message) }.to raise_error(EmailInterfaceController::UnrecognizedPathError)
     end
+
+    describe "confirmations" do
+      it "shold allow unconfirmed users to email from their own address, and confirm them" do
+        @message = FactoryGirl.create(:message, to_email:"check@#{Multiplex::Application::Domain}", :user => @user)
+        @user.confirmed_at = nil
+        @user.should_receive(:confirm!)
+        Resque.should_receive(:enqueue)
+        EmailInterfaceController.dispatch(@message)
+      end
+    end
   end
 end
 

@@ -456,8 +456,8 @@ div.border {
 
 /* line 47, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 div.colborder {
-  padding-right: 24px;
-  margin-right: 25px;
+  padding-right: 44px;
+  margin-right: 45px;
   border-right: 1px solid #eeeeee;
 }
 
@@ -530,7 +530,7 @@ body {
 /* line 24, ../../app/stylesheets/partials/_page.sass */
 #container {
   background-color: white;
-  width: 800px;
+  width: 990px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -558,10 +558,51 @@ header nav, header h1 {
 
 /* line 48, ../../app/stylesheets/partials/_page.sass */
 footer {
-  width: 760px;
+  width: 910px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+}
+
+/* line 53, ../../app/stylesheets/partials/_page.sass */
+.page, .window {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 56, ../../app/stylesheets/partials/_page.sass */
+.page {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .page {
+  overflow-x: hidden;
+}
+/* line 58, ../../app/stylesheets/partials/_page.sass */
+.page + .page {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .page + .page {
+  overflow-x: hidden;
+}
+
+/* line 61, ../../app/stylesheets/partials/_page.sass */
+.window {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .window {
+  overflow-x: hidden;
 }
 
 /* line 18, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
@@ -627,12 +668,11 @@ form.bp textarea {
 }
 
 /* line 16, ../../app/stylesheets/screen.sass */
-.pane {
-  overflow: hidden;
-  *zoom: 1;
+#error_explanation h2 {
+  font-size: 12px;
 }
 
-/* line 18, ../../app/stylesheets/screen.sass */
+/* line 19, ../../app/stylesheets/screen.sass */
 button.sign_up {
   float: right;
   -moz-background-clip: padding;
@@ -720,7 +760,7 @@ button.sign_up:active, button.sign_up.depressed {
   box-shadow: none;
   border-color: #2970a9;
 }
-/* line 21, ../../app/stylesheets/screen.sass */
+/* line 22, ../../app/stylesheets/screen.sass */
 button.sign_up.green {
   background-color: #63bb4a;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #83c96f), color-stop(50%, #63bb4a), color-stop(100%, #4e9939));
@@ -753,7 +793,7 @@ button.sign_up.green:active, button.sign_up.green.depressed {
   box-shadow: none;
   border-color: #3b742b;
 }
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 24, ../../app/stylesheets/screen.sass */
 button.sign_up.red {
   background-color: #bf4040;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cc6666), color-stop(50%, #bf4040), color-stop(100%, #993333));
@@ -786,7 +826,7 @@ button.sign_up.red:active, button.sign_up.red.depressed {
   box-shadow: none;
   border-color: #732626;
 }
-/* line 25, ../../app/stylesheets/screen.sass */
+/* line 26, ../../app/stylesheets/screen.sass */
 button.sign_up.orange {
   background-color: #d98026;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e19951), color-stop(50%, #d98026), color-stop(100%, #ae661e));
@@ -820,27 +860,64 @@ button.sign_up.orange:active, button.sign_up.orange.depressed {
   border-color: #824d17;
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
 form#new_user .input {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 31, ../../app/stylesheets/screen.sass */
+/* line 32, ../../app/stylesheets/screen.sass */
 form#new_user .input.string {
   height: 32px;
 }
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 form#new_user label {
   display: block;
   width: 150px;
   float: left;
 }
-/* line 37, ../../app/stylesheets/screen.sass */
+/* line 38, ../../app/stylesheets/screen.sass */
 form#new_user label.collection_radio {
   float: none;
   margin-left: 150px;
 }
-/* line 40, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 form#new_user input[type="text"] {
   float: left;
+}
+
+/* line 44, ../../app/stylesheets/screen.sass */
+#splash {
+  margin-bottom: 1em;
+  overflow: auto;
+}
+/* line 47, ../../app/stylesheets/screen.sass */
+#splash #intro {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #splash #intro {
+  overflow-x: hidden;
+}
+/* line 49, ../../app/stylesheets/screen.sass */
+#splash #email {
+  font-size: 18px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #splash #email {
+  overflow-x: hidden;
+}
+/* line 52, ../../app/stylesheets/screen.sass */
+#splash #enticing {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #3273ad;
+  background-color: #33aad4;
+  color: white;
 }

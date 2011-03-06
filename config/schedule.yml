@@ -1,0 +1,23 @@
+twice_daily_summaries:
+  cron: "0 */12 * * *"
+  class: QueueSummariesJob
+  args: twice_daily
+  description: "Twice Daily aggregate summary run"
+
+daily_summaries:
+  cron: "0 0 * * *"
+  class: QueueSummariesJob
+  args: daily
+  description: "Daily aggregate summary run"
+
+second_day_summaries:
+  cron: "0 0 */2 * *"
+  class: QueueSummariesJob
+  args: second_day
+  description: "Every second day aggregate summary run"
+
+weekly_summaries:
+  cron: "0 0 0 * 0"
+  class: QueueSummariesJob
+  args: weekly
+  description: "Weekly aggregate summary run"

@@ -10,11 +10,12 @@
 // Combine the partials into a single screen stylesheet.
 @import partials/page
 @import partials/form
-@import partials/one_col
 @import partials/multi_line_button
 
-.pane
-  +clearfix
+// General
+#error_explanation h2
+  font-size: $blueprint-font-size
+
 button.sign_up
   float: right
   +multi-line-button(#60a3d8)
@@ -39,3 +40,18 @@ form#new_user
       margin-left: 150px 
   input[type="text"]
     float: left
+
+#splash
+  margin-bottom: 1em
+  overflow: auto
+  #intro
+    +column($blueprint-grid-columns/2)
+  #email
+    font-size: 18px
+    +column($blueprint-grid-columns/2, true)
+  #enticing
+    margin: 10px
+    padding: 10px
+    border: 1px solid #3273AD
+    background-color: #33AAD4
+    color: #FFF

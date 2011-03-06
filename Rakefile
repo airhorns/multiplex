@@ -4,6 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 require 'resque/tasks'
+require 'resque_scheduler/tasks'
 
 Multiplex::Application.load_tasks
 
@@ -13,6 +14,9 @@ end
 
 desc "Alias for resque:work (To run workers on Heroku)"
 task "jobs:work" => "resque:work"
+
+desc "Alias for schedule"
+task "cron" => "resque:schedule"
 
 desc "Make asset packages"
 task "jam" do

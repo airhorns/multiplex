@@ -1,9 +1,18 @@
+- if resource.errors[:confirmation_token].present?
+  %h2 Error!
+
+  We couldn't confirm your account, 
+  %b sorry!
+  If you think this is an error, please try having your confirmation instructions resent using the form below. If you still can't get your account working, we'd be glad to help you get going if you contact us at 
+  = succeed "." do
+    %a(href="mailto:support@mail.otherbox.me") support@mail.otherbox.me
+  
+
 %h2 Resend confirmation instructions
 = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
-  = devise_error_messages!
+  = devise_error_messages!  
   %p
     = f.label :email
-    %br/
     = f.text_field :email
   %p= f.submit "Resend confirmation instructions"
 = render :partial => "devise/shared/links"

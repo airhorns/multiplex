@@ -1,8 +1,13 @@
 Multiplex::Application.routes.draw do
 
-  devise_for :users, :controllers => { :registrations => "registrations" } do
+  devise_for :users,
+    :skip => [:passwords, :registrations],
+    :controllers => { :registrations => "registrations" } do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_out", :to => "devise/sessions#destroy"
+    get "sign_up", :to => "registrations#new"
+    post "user_registration", :to => "registrations#create"
+    get "new_user_registration", :to => "registrations#new"
   end
 
   resources :messages, :only => [] do

@@ -1,5 +1,6 @@
 class SummaryMailer < ActionMailer::Base
   default :from => "Otherbox Summaries <summaries@#{Multiplex::Application::Domain}>"
+  layout 'email'
 
   def summary(manifest)
     @manifest = manifest
@@ -14,7 +15,7 @@ class SummaryMailer < ActionMailer::Base
 
     mail(:to => @user.email, :subject => "Otherbox Summary for #{@date_range.begin} to #{@date_range.end} (#{Time.now.to_s})") do |format|
       format.text
-      format.html {render :layout => 'email'}
+      format.html 
     end
   end
 end

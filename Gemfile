@@ -1,12 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-gem "devise"
+gem "devise", "1.2.rc"
 gem "simple_form"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "compass"
 gem "resque"
+gem "resque-scheduler"
 gem "uuid"
 gem "mail"
 gem "jammit"
@@ -21,7 +22,6 @@ group :development, :test do
   gem "mongrel", "1.2.0.pre2"
   gem 'ruby-debug19'
   gem 'sqlite3'
-  
 
   gem "rspec-rails"
   gem 'spork', '~> 0.9.0.rc'  

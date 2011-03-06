@@ -9,9 +9,8 @@ class DashboardController < ApplicationController
   end
 
   def faq
-    @user = current_user
   end
-
+  
   def send_summary
     Resque.enqueue(MailSummaryJob, current_user.id)
     flash[:success] = "Your summary will be sent shortly."

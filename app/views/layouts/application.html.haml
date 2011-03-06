@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Sidebox
+    %title Otherbox
     = include_stylesheets :screen, :media => 'screen, projection'
     = include_stylesheets :print, :media => 'print'
     /[if lt IE 8]
@@ -14,11 +14,11 @@
       #content
         %header
           %h1 
-            = link_to "Sidebox", root_path
+            = link_to "Otherbox", root_path
           %nav
             = link_to "About", "#"
             |
-            = link_to "FAQ", "#"
+            = link_to "FAQ", faq_path
             |
             = link_to "Feedback", "#"
             |
@@ -33,4 +33,4 @@
         = yield
         #container_footer &nbsp;
     %footer
-      <p>Copyright 2011 Us. Problems? Tell us about it!</p>
+      <p>Copyright 2011 Otherbox. Problems? Tell us about it!</p>

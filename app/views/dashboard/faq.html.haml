@@ -1,0 +1,24 @@
+- if user_signed_in?
+  #splash
+    %h1 Welcome to Otherbox!
+    #intro
+      You can start sending emails to your Otherbox right now. Take a moment to savour the sweet sweet taste of inbox freedom.
+      - unless current_user.confirmed?
+        %br
+        %br
+        Before you start getting summaries however, you still need to 
+        %b confirm your account. 
+        An email from us should arrive in your 
+        actual inbox shortly with a link to confirm your account. Once you click that, we'll start sending you your Otherbox summaries,
+        and thats it!
+    #email
+      Your new Otherbox email is:
+      #enticing= current_user.mask_email
+
+.window
+  %h1 Frequently Asked Questions
+
+  %h3 How does this or that work?
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, pulvinar eu vestibulum venenatis, tristique quis eros. Morbi sit amet purus lorem, at luctus sem. Duis mattis volutpat tempus. Donec risus sem, fermentum non consectetur a, convallis ut tellus. Fusce blandit iaculis nisl, ac sodales elit viverra vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed neque libero, mollis ut facilisis a, volutpat vitae libero. Nunc vel sapien nec lacus porttitor iaculis. Integer nec condimentum risus. Curabitur in lacus odio. Pellentesque metus est, varius quis commodo sit amet, aliquet non augue. Sed cursus lorem et est sollicitudin eu varius turpis accumsan. Morbi orci metus, elementum at congue id, imperdiet a ligula.
+  %h3 How does this or that work?
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, pulvinar eu vestibulum venenatis, tristique quis eros. Morbi sit amet purus lorem, at luctus sem. Duis mattis volutpat tempus. Donec risus sem, fermentum non consectetur a, convallis ut tellus. Fusce blandit iaculis nisl, ac sodales elit viverra vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed neque libero, mollis ut facilisis a, volutpat vitae libero. Nunc vel sapien nec lacus porttitor iaculis. Integer nec condimentum risus. Curabitur in lacus odio. Pellentesque metus est, varius quis commodo sit amet, aliquet non augue. Sed cursus lorem et est sollicitudin eu varius turpis accumsan. Morbi orci metus, elementum at congue id, imperdiet a ligula.
