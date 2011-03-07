@@ -13,6 +13,17 @@
 @import partials/multi_line_button
 
 // General
+body
+  background: transparent url('../images/bg.jpg') repeat top left
+
+nav
+  margin-top: 10px
+  font-size: 16px
+  a, a:visited 
+    color: #104d98
+  a:hover
+    color: #338fff
+
 #error_explanation h2
   font-size: $blueprint-font-size
 
@@ -70,3 +81,21 @@ form#new_user
     border: 1px solid #3273AD
     background-color: #33AAD4
     color: #FFF
+
+.elevator
+  h2, h3
+    font-family: 'Helvetica Neue Light', 'HelveticaNeue-Light', Arial, Helvetica, sans-serif
+
+  h2
+    margin-top: 40px
+    font-size: 30px
+    color: #414141
+    letter-spacing: -1.5px
+    
+  h3
+    font-size: 18px
+    color: #104d98
+
+.body
+  border: 1px solid #104d98
+  +border-radius(5px)

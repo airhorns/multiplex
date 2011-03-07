@@ -1,9 +1,13 @@
-.pane
-  We do this this and this, check it out.
+- content_for :before_body do
+  .elevator
+    %h2 Deal with fewer emails.
+    %h3 Receive a simple <b>summary email</b> instead of a stack of newsletters and notifications.
 
-  %button.sign_up.green(type="submit")
-    .title Sign Up
-    .subtitle Free your inbox from the tyranny of newsletters now
+%img(src="/images/9to1.jpg" alt="We condense your sometimes-unwanted emails in to one summary you'll always want.")
+%hr
+
+%a(href="#") Sign Up
+for an account with OtherBox....  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo an sapien. Nullam hendrerit dolor vitae sem sodales feugiat. In sit amet venenatis dui. Donec eget augue quis diam pulvinar eleifend.In sit amet.
 
 - unless user_signed_in?
   %h2 Sign Up

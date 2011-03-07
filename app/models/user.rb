@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   def self.available_frequencies
-    {:twice_daily => "Twice daily", :daily => "Once a day", :second_day => "Every other day", :weekly => "Once a Week", :never => "Only when I ask"}
+    {:twice_daily => "Twice daily", :daily => "Once a day", :second_day => "Every other day", :weekly => "Once a week", :never => "Only when I ask"}
   end
 
   has_many :messages

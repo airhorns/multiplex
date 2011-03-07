@@ -10,6 +10,7 @@
 +blueprint-utilities
 +blueprint-debug
 
+
 // Flashes
 div.flash
   &.error
@@ -36,30 +37,43 @@ div.flash
 @include sticky-footer(54px, "#container", "#container_footer", "footer")
 
 body
-  background-color: #EEE
+
 #container
-  background-color: #FFF
-  width: $blueprint-container-size + 40px
-  margin-left: auto
-  margin-right: auto
+
   // Don't change the bottom margin on the container, its set by the sticky footer call which
   // makes the footer stick to the bottom of the page regardless of the height of the content.
   // See http://compass-style.org/docs/reference/compass/layout/sticky_footer/
   +clearfix
-  #content
-    padding: 20px
-  
-header
-  height: 3.5em
-  width: 100%
-  border-bottom: 1px #CCC solid
-  margin-bottom: 1em
-  nav, h1
-    float: left
-    margin-right: 1em
+  .content
+    width: $blueprint-container-size + 40px
+    margin-left: auto
+    margin-right: auto
 
+  header
+    .content
+      padding: 10px 20px 0px 20px
+
+  .body
+    padding: 20px  
+    background: #FFF
+    overflow: auto
+    
+
+header
+  height: 6em
+  width: 100%
+  background: #FFF url('../images/header_border.jpg') repeat-x bottom left
+  margin-bottom: 1em
+
+  h1
+    float: left
   nav
-  +clearfix
+    float: right
+    li
+      float: left
+      list-style-position: none
+      list-style-type: none
+      margin-left: 15px
 
 footer
   width: $blueprint-container-size - 40px

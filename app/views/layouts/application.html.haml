@@ -11,27 +11,29 @@
     = csrf_meta_tag
   %body
     #container
-      #content
-        %header
+      %header
+        .content
           %h1 
-            = link_to "Otherbox", root_path
+            %a{:href=>root_path} 
+              %img{:src=>"/images/logo.png", :alt=>"Otherbox"}
           %nav
-            = link_to "About", "#"
-            |
-            = link_to "FAQ", faq_path
-            |
-            = link_to "Feedback", "#"
-            |
-            - if user_signed_in?
-              = link_to "Sign Out", sign_out_path
-            - else
-              = link_to "Sign Up", sign_up_path
-
+            %ul
+              %li= link_to "About", "#"
+              %li= link_to "FAQ", faq_path
+              %li= link_to "Feedback", "#"
+              - if user_signed_in?
+                %li= link_to "Sign Out", sign_out_path
+              - else
+                %li= link_to "Sign Up", sign_up_path
+      .content
         - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
           %div(class="#{f} flash")
             = flash[f]
-
-        = yield
+        = yield :before_body
+        .body
+          = yield
         #container_footer &nbsp;
     %footer
       <p>Copyright 2011 Otherbox. Problems? Tell us about it!</p>
+
+
