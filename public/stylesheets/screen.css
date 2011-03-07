@@ -1,8 +1,16 @@
-/* line 4, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html, body {
+/* line 14, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
@@ -10,73 +18,42 @@ html, body {
   vertical-align: baseline;
 }
 
-/* line 6, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html {
-  font-size: 100.01%;
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
 }
 
-/* line 16, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-pre, a, abbr, acronym, address, code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
+/* line 19, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
 }
 
-/* line 18, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote, q {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  quotes: "" "";
-}
-/* line 45, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-}
-
-/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-th, td, caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 21, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 23, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
@@ -737,31 +714,31 @@ form div.error {
   border-left: 0px;
 }
 
-/* line 16, ../../app/stylesheets/screen.sass */
+/* line 18, ../../app/stylesheets/screen.sass */
 body {
   background: transparent url("../images/bg.jpg") repeat top left;
 }
 
-/* line 19, ../../app/stylesheets/screen.sass */
+/* line 21, ../../app/stylesheets/screen.sass */
 nav {
   margin-top: 10px;
   font-size: 16px;
 }
-/* line 22, ../../app/stylesheets/screen.sass */
+/* line 24, ../../app/stylesheets/screen.sass */
 nav a, nav a:visited {
   color: #104d98;
 }
-/* line 24, ../../app/stylesheets/screen.sass */
+/* line 26, ../../app/stylesheets/screen.sass */
 nav a:hover {
   color: #338fff;
 }
 
-/* line 27, ../../app/stylesheets/screen.sass */
+/* line 29, ../../app/stylesheets/screen.sass */
 #error_explanation h2 {
   font-size: 12px;
 }
 
-/* line 30, ../../app/stylesheets/screen.sass */
+/* line 32, ../../app/stylesheets/screen.sass */
 button.sign_up {
   float: right;
   -moz-background-clip: padding;
@@ -849,7 +826,7 @@ button.sign_up:active, button.sign_up.depressed {
   box-shadow: none;
   border-color: #2970a9;
 }
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 35, ../../app/stylesheets/screen.sass */
 button.sign_up.green {
   background-color: #63bb4a;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #83c96f), color-stop(50%, #63bb4a), color-stop(100%, #4e9939));
@@ -882,7 +859,7 @@ button.sign_up.green:active, button.sign_up.green.depressed {
   box-shadow: none;
   border-color: #3b742b;
 }
-/* line 35, ../../app/stylesheets/screen.sass */
+/* line 37, ../../app/stylesheets/screen.sass */
 button.sign_up.red {
   background-color: #bf4040;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cc6666), color-stop(50%, #bf4040), color-stop(100%, #993333));
@@ -915,7 +892,7 @@ button.sign_up.red:active, button.sign_up.red.depressed {
   box-shadow: none;
   border-color: #732626;
 }
-/* line 37, ../../app/stylesheets/screen.sass */
+/* line 39, ../../app/stylesheets/screen.sass */
 button.sign_up.orange {
   background-color: #d98026;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e19951), color-stop(50%, #d98026), color-stop(100%, #ae661e));
@@ -949,7 +926,7 @@ button.sign_up.orange:active, button.sign_up.orange.depressed {
   border-color: #824d17;
 }
 
-/* line 41, ../../app/stylesheets/screen.sass */
+/* line 43, ../../app/stylesheets/screen.sass */
 form#new_user #user_mask_email_name {
   border-right: 0px;
   margin-right: 0px;
@@ -957,7 +934,7 @@ form#new_user #user_mask_email_name {
   width: 200px;
   text-align: right;
 }
-/* line 47, ../../app/stylesheets/screen.sass */
+/* line 49, ../../app/stylesheets/screen.sass */
 form#new_user .fixed_inline_text {
   background-color: white;
   padding: 5px 5px 4px 2px;
@@ -966,17 +943,17 @@ form#new_user .fixed_inline_text {
   border-left: 0px;
   color: #333333;
 }
-/* line 54, ../../app/stylesheets/screen.sass */
+/* line 56, ../../app/stylesheets/screen.sass */
 form#new_user .field_with_errors .fixed_inline_text {
   border-color: #fbc2c4;
 }
 
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 72, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 75, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -987,7 +964,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 75, ../../app/stylesheets/screen.sass */
+/* line 77, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -999,7 +976,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 78, ../../app/stylesheets/screen.sass */
+/* line 80, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -1008,24 +985,24 @@ form#new_user .field_with_errors .fixed_inline_text {
   color: white;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 88, ../../app/stylesheets/screen.sass */
 .elevator h2, .elevator h3 {
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
 }
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 91, ../../app/stylesheets/screen.sass */
 .elevator h2 {
   margin-top: 40px;
   font-size: 30px;
   color: #414141;
   letter-spacing: -1.5px;
 }
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 97, ../../app/stylesheets/screen.sass */
 .elevator h3 {
   font-size: 18px;
   color: #104d98;
 }
 
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 101, ../../app/stylesheets/screen.sass */
 .body {
   border: 1px solid #104d98;
   -moz-border-radius: 5px;
