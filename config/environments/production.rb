@@ -1,6 +1,5 @@
 Multiplex::Application.configure do
-  Multiplex::Application::Domain = "multiplex.skylightlabs.ca"
-  #Multiplex::Application::Domain = "otherbox.me"
+  Multiplex::Application::Domain = "othermail.me"
   
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -51,7 +50,7 @@ Multiplex::Application.configure do
   config.active_support.deprecation = :notify
 
   # Host configuration 
-  config.action_mailer.default_url_options = { :host => "summarly.heroku.com" }
+  config.action_mailer.default_url_options = { :host => Multiplex::Application::Domain }
 
   ENV['REDISTOGO_URL'] ||= "redis://redistogo:4b5e283cccced8fd569b7427b2d5e27c@filefish.redistogo.com:9496/"
 end
