@@ -9,6 +9,10 @@ Multiplex::Application.routes.draw do
     post "user_registration", :to => "registrations#create"
     get "new_user_registration", :to => "registrations#new"
   end
+  
+  resources :users, :only => [] do
+    get 'unsubscribe', :on => :member
+  end
 
   resources :messages, :only => [] do
     post 'sendgrid_create', :on => :collection

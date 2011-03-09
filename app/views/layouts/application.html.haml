@@ -12,19 +12,20 @@
   %body
     #container
       %header
-        .content
-          %h1 
-            %a{:href=>root_path} 
-              %img{:src=>"/images/logo.png", :alt=>"Otherbox"}
-          %nav
-            %ul
-              %li= link_to "About", "#"
-              %li= link_to "FAQ", faq_path
-              %li= link_to "Feedback", "#"
-              - if user_signed_in?
-                %li= link_to "Sign Out", sign_out_path
-              - else
-                %li= link_to "Sign Up", sign_up_path
+        .bg
+          .content
+            %h1 
+              %a{:href=>root_path} 
+                %img{:src=>"/images/logo.png", :alt=>"Otherbox"}
+            %nav
+              %ul
+                %li= link_to "About", "#"
+                %li= link_to "FAQ", faq_path
+                %li= link_to "Feedback", "#"
+                - if user_signed_in?
+                  %li= link_to "Sign Out", sign_out_path
+                - else
+                  %li= link_to "Sign Up", sign_up_path
       .content
         - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
           %div(class="#{f} flash")

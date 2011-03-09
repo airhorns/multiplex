@@ -497,44 +497,49 @@ footer {
   height: 54px;
 }
 
-/* line 41, ../../app/stylesheets/partials/_page.sass */
+/* line 42, ../../app/stylesheets/partials/_page.sass */
 #container {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 47, ../../app/stylesheets/partials/_page.sass */
+/* line 48, ../../app/stylesheets/partials/_page.sass */
 #container .content {
   width: 740px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 53, ../../app/stylesheets/partials/_page.sass */
+/* line 54, ../../app/stylesheets/partials/_page.sass */
+#container header .bg {
+  width: 100%;
+  height: 64px;
+}
+/* line 57, ../../app/stylesheets/partials/_page.sass */
 #container header .content {
   padding: 10px 20px 0px 20px;
 }
-/* line 56, ../../app/stylesheets/partials/_page.sass */
+/* line 60, ../../app/stylesheets/partials/_page.sass */
 #container .body {
   padding: 20px;
   background: white;
   overflow: auto;
 }
 
-/* line 62, ../../app/stylesheets/partials/_page.sass */
+/* line 66, ../../app/stylesheets/partials/_page.sass */
 header {
-  height: 6em;
+  height: 72px;
   width: 100%;
-  background: white url("../images/header_border.jpg") repeat-x bottom left;
+  background: transparent url("../images/header_border.png") repeat-x bottom left;
   margin-bottom: 1em;
 }
-/* line 68, ../../app/stylesheets/partials/_page.sass */
+/* line 72, ../../app/stylesheets/partials/_page.sass */
 header h1 {
   float: left;
 }
-/* line 70, ../../app/stylesheets/partials/_page.sass */
+/* line 74, ../../app/stylesheets/partials/_page.sass */
 header nav {
   float: right;
 }
-/* line 72, ../../app/stylesheets/partials/_page.sass */
+/* line 76, ../../app/stylesheets/partials/_page.sass */
 header nav li {
   float: left;
   list-style-position: none;
@@ -542,7 +547,7 @@ header nav li {
   margin-left: 15px;
 }
 
-/* line 78, ../../app/stylesheets/partials/_page.sass */
+/* line 82, ../../app/stylesheets/partials/_page.sass */
 footer {
   width: 660px;
   margin: 0 auto;
@@ -550,13 +555,13 @@ footer {
   *zoom: 1;
 }
 
-/* line 83, ../../app/stylesheets/partials/_page.sass */
+/* line 87, ../../app/stylesheets/partials/_page.sass */
 .page, .window {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 86, ../../app/stylesheets/partials/_page.sass */
+/* line 90, ../../app/stylesheets/partials/_page.sass */
 .page {
   display: inline;
   float: left;
@@ -567,7 +572,7 @@ footer {
 * html .page {
   overflow-x: hidden;
 }
-/* line 88, ../../app/stylesheets/partials/_page.sass */
+/* line 92, ../../app/stylesheets/partials/_page.sass */
 .page + .page {
   display: inline;
   float: left;
@@ -579,7 +584,7 @@ footer {
   overflow-x: hidden;
 }
 
-/* line 91, ../../app/stylesheets/partials/_page.sass */
+/* line 95, ../../app/stylesheets/partials/_page.sass */
 .window {
   display: inline;
   float: left;
@@ -716,29 +721,34 @@ form div.error {
 
 /* line 18, ../../app/stylesheets/screen.sass */
 body {
-  background: transparent url("../images/bg.jpg") repeat top left;
+  background-color: #e6f3fe;
 }
 
-/* line 21, ../../app/stylesheets/screen.sass */
+/* line 22, ../../app/stylesheets/screen.sass */
 nav {
   margin-top: 10px;
   font-size: 16px;
 }
-/* line 24, ../../app/stylesheets/screen.sass */
+/* line 25, ../../app/stylesheets/screen.sass */
 nav a, nav a:visited {
   color: #104d98;
 }
-/* line 26, ../../app/stylesheets/screen.sass */
+/* line 27, ../../app/stylesheets/screen.sass */
 nav a:hover {
   color: #338fff;
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
+header .bg {
+  background-color: white;
+}
+
+/* line 33, ../../app/stylesheets/screen.sass */
 #error_explanation h2 {
   font-size: 12px;
 }
 
-/* line 32, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 button.sign_up {
   float: right;
   -moz-background-clip: padding;
@@ -826,7 +836,7 @@ button.sign_up:active, button.sign_up.depressed {
   box-shadow: none;
   border-color: #2970a9;
 }
-/* line 35, ../../app/stylesheets/screen.sass */
+/* line 39, ../../app/stylesheets/screen.sass */
 button.sign_up.green {
   background-color: #63bb4a;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #83c96f), color-stop(50%, #63bb4a), color-stop(100%, #4e9939));
@@ -859,7 +869,7 @@ button.sign_up.green:active, button.sign_up.green.depressed {
   box-shadow: none;
   border-color: #3b742b;
 }
-/* line 37, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 button.sign_up.red {
   background-color: #bf4040;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cc6666), color-stop(50%, #bf4040), color-stop(100%, #993333));
@@ -892,7 +902,7 @@ button.sign_up.red:active, button.sign_up.red.depressed {
   box-shadow: none;
   border-color: #732626;
 }
-/* line 39, ../../app/stylesheets/screen.sass */
+/* line 43, ../../app/stylesheets/screen.sass */
 button.sign_up.orange {
   background-color: #d98026;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e19951), color-stop(50%, #d98026), color-stop(100%, #ae661e));
@@ -926,7 +936,7 @@ button.sign_up.orange:active, button.sign_up.orange.depressed {
   border-color: #824d17;
 }
 
-/* line 43, ../../app/stylesheets/screen.sass */
+/* line 47, ../../app/stylesheets/screen.sass */
 form#new_user #user_mask_email_name {
   border-right: 0px;
   margin-right: 0px;
@@ -934,7 +944,7 @@ form#new_user #user_mask_email_name {
   width: 200px;
   text-align: right;
 }
-/* line 49, ../../app/stylesheets/screen.sass */
+/* line 53, ../../app/stylesheets/screen.sass */
 form#new_user .fixed_inline_text {
   background-color: white;
   padding: 5px 5px 4px 2px;
@@ -943,17 +953,17 @@ form#new_user .fixed_inline_text {
   border-left: 0px;
   color: #333333;
 }
-/* line 56, ../../app/stylesheets/screen.sass */
+/* line 60, ../../app/stylesheets/screen.sass */
 form#new_user .field_with_errors .fixed_inline_text {
   border-color: #fbc2c4;
 }
 
-/* line 72, ../../app/stylesheets/screen.sass */
+/* line 76, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 75, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -964,7 +974,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 81, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -976,7 +986,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 80, ../../app/stylesheets/screen.sass */
+/* line 84, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -985,24 +995,24 @@ form#new_user .field_with_errors .fixed_inline_text {
   color: white;
 }
 
-/* line 88, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 .elevator h2, .elevator h3 {
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
 }
-/* line 91, ../../app/stylesheets/screen.sass */
+/* line 95, ../../app/stylesheets/screen.sass */
 .elevator h2 {
   margin-top: 40px;
   font-size: 30px;
   color: #414141;
   letter-spacing: -1.5px;
 }
-/* line 97, ../../app/stylesheets/screen.sass */
+/* line 101, ../../app/stylesheets/screen.sass */
 .elevator h3 {
   font-size: 18px;
   color: #104d98;
 }
 
-/* line 101, ../../app/stylesheets/screen.sass */
+/* line 105, ../../app/stylesheets/screen.sass */
 .body {
   border: 1px solid #104d98;
   -moz-border-radius: 5px;

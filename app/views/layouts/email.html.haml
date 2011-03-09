@@ -7,5 +7,7 @@
         = link_to "Otherbox", root_path
     = yield
     #footer
-      <p>Copyright 2011 Us. Problems? Tell us about it!</p>
-
+      %p Problems? Tell us about it!
+      - rz = @user || resource
+      - if rz
+        %a{:href => unsubscribe_user_url(rz, :secret => rz.delivery_secret)} Unsubscribe

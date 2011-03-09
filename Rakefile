@@ -16,7 +16,7 @@ desc "Alias for resque:work (To run workers on Heroku)"
 task "jobs:work" => "resque:work"
 
 desc "Alias for schedule"
-task "cron" => "resque:schedule"
+task "cron" => "resque:scheduler"
 
 desc "Make asset packages"
 task "jam" do

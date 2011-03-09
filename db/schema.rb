@@ -10,13 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110306172803) do
+ActiveRecord::Schema.define(:version => 20110308182254) do
 
   create_table "delivery_manifests", :force => true do |t|
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "delivery_secret"
+  end
+
+  create_table "invites", :force => true do |t|
+    t.string   "code"
+    t.integer  "user_id"
+    t.boolean  "used"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "manifest_entries", :force => true do |t|
@@ -61,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20110306172803) do
     t.datetime "updated_at"
     t.string   "mask_email"
     t.string   "summary_frequency"
+    t.string   "delivery_secret"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

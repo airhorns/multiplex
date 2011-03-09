@@ -13,6 +13,7 @@ javascripts:
     - public/javascripts/jquery.js
     - public/javascripts/modernizr.js
     - public/javascripts/jquery.validation.js
+    - public/javascripts/jquery.noisy.js
     - public/javascripts/rails.js
     - public/javascripts/application.js
 
