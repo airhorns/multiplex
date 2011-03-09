@@ -4,7 +4,6 @@
     = f.text_field :mask_email_name
     %span.fixed_inline_text> @#{Multiplex::Application::Domain}
   = f.input :summary_frequency, :as => :radio, :collection => f.object.available_summary_frequencies.collect {|(k,v)| [v,k.to_s]}
-  - debugger
   = f.input :invite_code
   = f.submit
 

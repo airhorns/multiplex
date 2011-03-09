@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
   
   def invite_code=(code)
     self.invite = Invite.find_by_code(code)
-    code
+    self.invite_code
   end
 
   def invite_code
