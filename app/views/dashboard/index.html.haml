@@ -1,16 +1,38 @@
-- content_for :before_body do
+.index_splash
   .elevator
     %h2 Deal with fewer emails.
     %h3 Receive a simple <b>summary email</b> instead of a stack of newsletters and notifications.
+    %a.sign_up{:href => sign_up_path, :title => "Get Othermail"} &nbsp;
+    %hr
+  %p.explanation
+    Every other day Othermail sends you a simple 
+    summary of the emails that have been sent to your Othermail address. This way you can deal with all of them quikly and efficiently.
+    %br
+    %br
+    You will be amazed at the peace of mind and time 
+    savings that comes from stopping the constant stream of other emails which are flooding your inbox. 
+    %a{:href => sign_up_path} Sign up 
+    or
+    = succeed "." do
+      %a{:href => faq_path} Learn more
 
-%img(src="/images/9to1.jpg" alt="We condense your sometimes-unwanted emails in to one summary you'll always want.")
-%hr
+  .image
+    %img{:class => "demo_email", :src => "/images/email_screenshot.png"}
 
-%a(href="#") Sign Up
-for an account with OtherBox....  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo an sapien. Nullam hendrerit dolor vitae sem sodales feugiat. In sit amet venenatis dui. Donec eget augue quis diam pulvinar eleifend.In sit amet.
+  .list
+    .bracket {
+    %ul
+      %li twitter followers
+      %li newsletters
+      %li facebook requests
+      %li notifications
+      %li random contacts 
+      %li the hundreds of other things that fill your inbox with everything other than mail.
 
-- unless user_signed_in?
-  %h2 Sign Up
-  = render :partial => "registrations/new", :locals => {:resource => @user}
-- else
-  = link_to "Send Summary Now", send_summary_path
+  .clear
+
+-#- unless user_signed_in?
+  -#%h2 Sign Up
+  -#= render :partial => "registrations/new", :locals => {:resource => @user}
+-#- else
+  -#= link_to "Send Summary Now", send_summary_path

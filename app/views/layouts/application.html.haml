@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Otherbox
+    %title Othermail
     = include_stylesheets :screen, :media => 'screen, projection'
     = include_stylesheets :print, :media => 'print'
     /[if lt IE 8]
@@ -12,20 +12,18 @@
   %body
     #container
       %header
-        .bg
-          .content
-            %h1 
-              %a{:href=>root_path} 
-                %img{:src=>"/images/logo.png", :alt=>"Otherbox"}
-            %nav
-              %ul
-                %li= link_to "About", "#"
-                %li= link_to "FAQ", faq_path
-                %li= link_to "Feedback", "#"
-                - if user_signed_in?
-                  %li= link_to "Sign Out", sign_out_path
-                - else
-                  %li= link_to "Sign Up", sign_up_path
+        .content
+          %h1 
+            %a{:href=>root_path} 
+              Othermail
+          %nav
+            %ul
+              %li= link_to "{FAQ}", faq_path
+              %li= link_to "{Feedback}", "#"
+              - if user_signed_in?
+                -#%li= link_to "Sign Out", sign_out_path
+              - else
+                %li= link_to "{Sign Up}", sign_up_path
       .content
         - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
           %div(class="#{f} flash")

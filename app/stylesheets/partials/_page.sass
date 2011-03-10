@@ -1,6 +1,10 @@
 // Import the non-default scaffolding module to help us get started.
 @import blueprint/scaffolding
 
+// This import applies a global reset to any page that imports this stylesheet.
+//@import blueprint/reset
+@import compass/reset
++reset-html5
 // This configuration will only apply the
 // blueprint styles to pages with a body class of "bp"
 // This makes it easier to have pages without blueprint styles
@@ -36,7 +40,7 @@ div.flash
 @import "compass/layout/sticky-footer"
 @include sticky-footer(54px, "#container", "#container_footer", "footer")
 
-$header-height: 72px
+$header-height: 50px
 
 body
 #container
@@ -50,15 +54,8 @@ body
     margin-left: auto
     margin-right: auto
 
-  header
-    .bg
-      width: 100%
-      height: $header-height - 8px
-    .content
-      padding: 10px 20px 0px 20px
-
   .body
-    padding: 20px  
+    padding: 19px  
     background: #FFF
     overflow: auto
     
@@ -66,8 +63,9 @@ body
 header
   height: $header-height
   width: 100%
-  background: transparent url('../images/header_border.png') repeat-x bottom left
-  margin-bottom: 1em
+  margin-bottom: $header-height
+  .content
+    padding: 5px 20px 0px 20px
 
   h1
     float: left
