@@ -4,10 +4,10 @@
   %body
     #header
       %h1 
-        = link_to "Otherbox", root_path
+        = link_to "Othermail", root_path
     = yield
     #footer
       %p Problems? Tell us about it!
-      - rz = @user || resource
+      - rz = (@user || resource) rescue nil
       - if rz
         %a{:href => unsubscribe_user_url(rz, :secret => rz.delivery_secret)} Unsubscribe

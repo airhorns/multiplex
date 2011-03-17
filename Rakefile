@@ -23,3 +23,13 @@ task "jam" do
   require 'jammit'
   Jammit.package!
 end 
+
+desc "Invite a user to otherbox"
+task :invite, :email, :needs => :environment do |t, args|
+  unless user = User.find_by_email(args[:email])
+    UserMailer.invite(args[:email]).deliver!
+  else
+    puts "User already exists as #{user.mask_email}!"
+  end
+end
+

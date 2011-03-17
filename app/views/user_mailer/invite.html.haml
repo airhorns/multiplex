@@ -1,0 +1,11 @@
+%h2 You've been invited to Othermail! Cool, right?
+
+Your invite code is
+= succeed "." do
+  %b= @invite.code
+
+You can sign up using it at
+= succeed "." do
+  %a{:href => sign_up_url} the Othermail sign up page
+
+Thanks for helping test it out! If you have any feedback at all, please don't hesitate to send it our way at <b>feedback@otherbox.me</b>. Any and all questions, comments, and suggestions would be greatly appreciated.

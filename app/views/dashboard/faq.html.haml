@@ -1,24 +1,37 @@
 - if user_signed_in?
   #splash
-    %h1 Welcome to Otherbox!
+    %h1 Welcome to Othermail!
     #intro
-      You can start sending emails to your Otherbox right now. Take a moment to savour the sweet sweet taste of inbox freedom.
+      You can start sending emails to your Othermail right now. Take a moment to savour the sweet sweet taste of inbox freedom.
       - unless current_user.confirmed?
         %br
         %br
         Before you start getting summaries however, you still need to 
         %b confirm your account. 
         An email from us should arrive in your 
-        actual inbox shortly with a link to confirm your account. Once you click that, we'll start sending you your Otherbox summaries,
+        actual inbox shortly with a link to confirm your account. Once you click that, we'll start sending you your Othermail summaries,
         and thats it!
     #email
-      Your Otherbox email is:
+      Your Othermail email is:
       #enticing= current_user.mask_email
 
 .window
   %h1 Frequently Asked Questions
 
-  %h3 How does this or that work?
-  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, pulvinar eu vestibulum venenatis, tristique quis eros. Morbi sit amet purus lorem, at luctus sem. Duis mattis volutpat tempus. Donec risus sem, fermentum non consectetur a, convallis ut tellus. Fusce blandit iaculis nisl, ac sodales elit viverra vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed neque libero, mollis ut facilisis a, volutpat vitae libero. Nunc vel sapien nec lacus porttitor iaculis. Integer nec condimentum risus. Curabitur in lacus odio. Pellentesque metus est, varius quis commodo sit amet, aliquet non augue. Sed cursus lorem et est sollicitudin eu varius turpis accumsan. Morbi orci metus, elementum at congue id, imperdiet a ligula.
-  %h3 How does this or that work?
-  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, pulvinar eu vestibulum venenatis, tristique quis eros. Morbi sit amet purus lorem, at luctus sem. Duis mattis volutpat tempus. Donec risus sem, fermentum non consectetur a, convallis ut tellus. Fusce blandit iaculis nisl, ac sodales elit viverra vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed neque libero, mollis ut facilisis a, volutpat vitae libero. Nunc vel sapien nec lacus porttitor iaculis. Integer nec condimentum risus. Curabitur in lacus odio. Pellentesque metus est, varius quis commodo sit amet, aliquet non augue. Sed cursus lorem et est sollicitudin eu varius turpis accumsan. Morbi orci metus, elementum at congue id, imperdiet a ligula.
+  %h3 How can I check my Othermail inbox right now?
+  %p
+    Just email <b>check@othermail.me</b> from the email you get your summaries at, and a summary should arrive in your actual inbox shortly. Summaries will still continue to arrive on schedule.
+
+  %h3 How can I unsubscribe from Othermail?
+  %p
+    Just click the "Unsubscribe from Othermail" link at the bottom of any email from us, or email <b>unsubscribe@othermail.me</b> from the email you get your summaries at. We'll still receive any email sent to your Othermail address and you'll still be able to check it by emailing <b>check@othermail.me</b>.
+
+  %h3 Help! I didnt get a confirmation email!
+  %p 
+    That's weird. Did you check your spam folder? Did you wait a few minutes? If you still haven't gotten a confirmation email, you can resend it at the
+    %a{:href => new_confirmation_path(:user)} Send Another Confirmation
+    page.
+
+  %h3 Why Otherbox instead of &lt;some other solution which is definitely better&gt;?
+  %p Rule matching filters, priority inbox, the "+" trick, and lots of other solutions exist for the same problem. If you think they are better, go right ahead and use them! We built Othermail because its extraordinarily simple and we want to use it every day. We think its worth it. It introduces a paradigm shift from incoming emails being "unread" by default, to electing to have some emails come in as "read" by default and only actually read them if they look interesting enough. Adding this extra step for the erroneous emails cluttering your inbox is worth it and leaves only the good, juicy stuff as actually "unread" in your real inbox.
+

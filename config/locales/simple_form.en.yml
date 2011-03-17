@@ -29,6 +29,7 @@ en:
       user:
         email: "This is where we'll send your summaries"
         mask_email_name: "This is where you'll have people send your other emails."
+        invite_code: "This should have been given to you."
     placeholders:
       user:
         email: "Email"

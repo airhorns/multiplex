@@ -2,6 +2,7 @@
   = f.input :email, :label => false
   = f.input :mask_email_name, :label => false, :wrapper_html => {:class => "ghostwrite"} do
     = f.text_field :mask_email_name, :placeholder => "Othermail Email"
+    = f.error :mask_email
     %span.ghost
       %span.write>
       @othermail.me

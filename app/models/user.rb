@@ -13,7 +13,9 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :mask_email_name, :summary_frequency, :password, :password_confirmation, :remember_me, :invite_code
     
-  validates_presence_of :email, :mask_email_name, :mask_email, :summary_frequency, :invite_code
+  validates_presence_of :email, :mask_email_name, :mask_email, :summary_frequency
+  validate :mask_email_valid?
+  validate :invited
   validates_uniqueness_of :mask_email
 
   def unsubscribe!
@@ -27,7 +29,7 @@ class User < ActiveRecord::Base
   end
   
   def mask_email_name=(name)
-    self.mask_email = "#{name}@#{Multiplex::Application::Domain}"
+    self.mask_email = "#{name.downcase}@#{Multiplex::Application::Domain}"
   end
  
   def mask_email_name
@@ -63,5 +65,19 @@ class User < ActiveRecord::Base
   private
   def password_required? 
     false 
+  end
+
+  def invited
+    if self.invite.present?
+      errors.add(:invite_code, "has already been used") if self.invite.used
+    else
+      errors.add(:invite_code, "must be valid") 
+    end    
+  end
+
+  def mask_email_valid?
+    unless self.mask_email =~ /\A[a-z0-9._%-]+@#{Multiplex::Application::Domain}\z/
+      errors.add(:mask_email_name, "must be valid, containing only letters, numbers, and . _ % or -.")
+    end
   end
 end
