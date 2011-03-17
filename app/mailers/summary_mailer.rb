@@ -12,4 +12,12 @@ class SummaryMailer < ActionMailer::Base
       format.html 
     end
   end
+
+  def help(user)
+    @user = user
+    mail(:to => @user.email, :subject => "Otherbox Help") do |f|
+      f.text
+      f.html
+    end
+  end
 end

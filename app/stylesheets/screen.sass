@@ -50,21 +50,46 @@ header
   font-size: $blueprint-font-size
 
 form#new_user
-  #user_mask_email_name
-    border-right: 0px
-    margin-right: 0px
-    padding-right: 0px
-    width: 200px
-    text-align: right
-  .fixed_inline_text
-    background-color: white
-    padding: 5px 5px 4px 2px
-    margin: 6px 0px 6px -2px
-    border: 1px solid #BBB
-    border-left: 0px
-    color: #333 
-  .field_with_errors .fixed_inline_text
-    border-color: $error_border_color
+  +column(8)
+  .input
+    +column(4)
+    & + .input
+      +column(4, true)
+    input 
+      width: $blueprint_grid_width * 4 + $blueprint_grid_margin * (4 - 1) - 12px
+    select
+      +span(4)
+
+  input[type="submit"]
+    clear: both
+  
+  .hint
+    margin: 0 auto
+    font-size: 12px
+
+  .ghostwrite
+    input
+      width: 155px
+
+    span.ghost
+      font-size: 12px
+    span.write
+      color: #FFF
+      +transparent
+  br
+    clear: both
+
+  input[type="submit"]
+    display: block
+    margin-left: 80px
+    width: 100px
+
+.register_email
+  +column(4, true)
+  img
+    +box-shadow(#c2c2c2, 0px, 0px, 5px, 0px)
+    border: 1px solid #c2c2c2
+    width: 100%
 
 #splash
   margin-bottom: 1em

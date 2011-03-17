@@ -10,7 +10,9 @@ FactoryGirl.define do
  
   factory :user do
     association :invite
-    email 'harry.brundage@gmail.com'
+    sequence :email do |n|
+      "harry.brundage+#{n}@gmail.com"
+    end
     sequence :mask_email do |n| 
       "harry#{n}@#{Multiplex::Application::Domain}" 
     end
@@ -33,12 +35,15 @@ FactoryGirl.define do
     mail { Mail::Message.new(subject:subject, to:"#{to_name} <#{to_email}>", from:"#{from_name} <#{from_email}>", :text => "Hello", :html => "<b>Hello</b>") } 
   end
 
-  factory :manifest_entries do
+  factory :manifest_entry do
     association :message
-    association :delivery_manifest
     marked_for_delivery false
   end
 
+  factory :manifest_entry_with_manifest, :parent => :manifest_entry do
+    association :delivery_manifest
+  end
+  
   factory :delivery_manifest do
     association :user
   end
@@ -46,7 +51,7 @@ FactoryGirl.define do
   factory :delivery_manifest_with_entries, :parent => :delivery_manifest do |manifest|
     manifest.after_build do |manifest| 
       3.times do 
-        manifest.entries << FactoryGirl.build(:manifest_entry, :delivery_manifest => manifest)
+        manifest.manifest_entries << FactoryGirl.build(:manifest_entry, :delivery_manifest => manifest)
       end
     end
   end

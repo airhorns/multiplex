@@ -28,11 +28,19 @@ describe SummaryMailer do
       end
     end
 
-    it "should make an html version with a form to deliver each message" do
-      str = @email.html_part.to_s
-      #@manifest.messages.each do |msg|
-        #str.should match(/messages\/#{msg.id}\/deliver/)
-      #end
+    it "should make an html version with a form to deliver each message"
+  end
+
+  describe "help" do
+    before do
+      @user = FactoryGirl.build(:user)
+      @email = SummaryMailer.help(@user).deliver
+    end
+
+    it "should tell the user their Othermail email" do
+      [@email.text_part, @email.html_part].map(&:to_s).each do |str|
+        str.should match(@user.mask_email)
+      end
     end
   end
 end

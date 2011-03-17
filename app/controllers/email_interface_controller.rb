@@ -3,6 +3,7 @@ class EmailInterfaceController
   include ActiveSupport::Callbacks
 
   @routes = {
+    "help"       =>  :send_help,
     "check"       => :send_summary,
     "send"        => :send_summary,
     "unsubscribe" => :unsubscribe
@@ -62,8 +63,13 @@ class EmailInterfaceController
   def unsubscribe
     @message.user.unsubscribe!
   end
+  
+  def help
+    Resque.enqueue(MailHelpJob,@message.user_id)
+  end
 
   def error(type, message)
     Resque.enqueue(InterfaceErrorNotificationJob, type, message.mail.from)
   end
+
 end

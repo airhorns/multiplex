@@ -70,7 +70,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* line 39, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body {
   line-height: 1.5;
-  font-family: "Garamond", "Goudy Old Style", "Georgia", "Times New Roman", serif;
+  font-family: "Georgia", "Times New Roman", serif;
   color: #353535;
   font-size: 112.5%;
 }
@@ -783,34 +783,109 @@ header h1 a:hover {
   font-size: 18px;
 }
 
-/* line 53, ../../app/stylesheets/screen.sass */
-form#new_user #user_mask_email_name {
-  border-right: 0px;
-  margin-right: 0px;
-  padding-right: 0px;
-  width: 200px;
-  text-align: right;
+/* line 52, ../../app/stylesheets/screen.sass */
+form#new_user {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 530px;
 }
-/* line 59, ../../app/stylesheets/screen.sass */
-form#new_user .fixed_inline_text {
-  background-color: white;
-  padding: 5px 5px 4px 2px;
-  margin: 6px 0px 6px -2px;
-  border: 1px solid #bbbbbb;
-  border-left: 0px;
-  color: #333333;
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form#new_user {
+  overflow-x: hidden;
+}
+/* line 54, ../../app/stylesheets/screen.sass */
+form#new_user .input {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 260px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form#new_user .input {
+  overflow-x: hidden;
+}
+/* line 56, ../../app/stylesheets/screen.sass */
+form#new_user .input + .input {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 260px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form#new_user .input + .input {
+  overflow-x: hidden;
+}
+/* line 58, ../../app/stylesheets/screen.sass */
+form#new_user .input input {
+  width: 248px;
+}
+/* line 60, ../../app/stylesheets/screen.sass */
+form#new_user .input select {
+  width: 260px;
+}
+/* line 63, ../../app/stylesheets/screen.sass */
+form#new_user input[type="submit"] {
+  clear: both;
 }
 /* line 66, ../../app/stylesheets/screen.sass */
-form#new_user .field_with_errors .fixed_inline_text {
-  border-color: #fbc2c4;
+form#new_user .hint {
+  margin: 0 auto;
+  font-size: 12px;
+}
+/* line 71, ../../app/stylesheets/screen.sass */
+form#new_user .ghostwrite input {
+  width: 155px;
+}
+/* line 74, ../../app/stylesheets/screen.sass */
+form#new_user .ghostwrite span.ghost {
+  font-size: 12px;
+}
+/* line 76, ../../app/stylesheets/screen.sass */
+form#new_user .ghostwrite span.write {
+  color: white;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+/* line 79, ../../app/stylesheets/screen.sass */
+form#new_user br {
+  clear: both;
+}
+/* line 82, ../../app/stylesheets/screen.sass */
+form#new_user input[type="submit"] {
+  display: block;
+  margin-left: 80px;
+  width: 100px;
 }
 
-/* line 69, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
+.register_email {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 260px;
+}
+/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .register_email {
+  overflow-x: hidden;
+}
+/* line 89, ../../app/stylesheets/screen.sass */
+.register_email img {
+  -moz-box-shadow: #c2c2c2 0px 0px 5px 0px;
+  -webkit-box-shadow: #c2c2c2 0px 0px 5px 0px;
+  -o-box-shadow: #c2c2c2 0px 0px 5px 0px;
+  box-shadow: #c2c2c2 0px 0px 5px 0px;
+  border: 1px solid #c2c2c2;
+  width: 100%;
+}
+
+/* line 94, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 72, ../../app/stylesheets/screen.sass */
+/* line 97, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -821,7 +896,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 74, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -833,7 +908,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -842,17 +917,17 @@ form#new_user .field_with_errors .fixed_inline_text {
   color: white;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 111, ../../app/stylesheets/screen.sass */
 .body {
   border: 1px solid #c2c2c2;
 }
 
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 114, ../../app/stylesheets/screen.sass */
 .clear {
   clear: both;
 }
 
-/* line 93, ../../app/stylesheets/screen.sass */
+/* line 118, ../../app/stylesheets/screen.sass */
 .index_splash .elevator {
   width: 100%;
   height: 110px;
@@ -860,22 +935,22 @@ form#new_user .field_with_errors .fixed_inline_text {
   position: relative;
   z-index: 1;
 }
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 124, ../../app/stylesheets/screen.sass */
 .index_splash .elevator h2, .index_splash .elevator h3 {
   line-height: 1;
 }
-/* line 101, ../../app/stylesheets/screen.sass */
+/* line 126, ../../app/stylesheets/screen.sass */
 .index_splash .elevator h2 {
   font-size: 36px;
   margin-bottom: 10px;
 }
-/* line 105, ../../app/stylesheets/screen.sass */
+/* line 130, ../../app/stylesheets/screen.sass */
 .index_splash .elevator h3 {
   font-size: 18px;
   color: #353535;
   margin-bottom: 30px;
 }
-/* line 109, ../../app/stylesheets/screen.sass */
+/* line 134, ../../app/stylesheets/screen.sass */
 .index_splash .elevator hr {
   color: #c2c2c2;
   background-color: #c2c2c2;
@@ -884,7 +959,7 @@ form#new_user .field_with_errors .fixed_inline_text {
   margin-right: -19px;
   width: 838px;
 }
-/* line 117, ../../app/stylesheets/screen.sass */
+/* line 142, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up {
   width: 157px;
   height: 32px;
@@ -897,15 +972,15 @@ form#new_user .field_with_errors .fixed_inline_text {
   height: 32px;
   overflow: hidden;
 }
-/* line 126, ../../app/stylesheets/screen.sass */
+/* line 151, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up:hover {
   background-position: 0px -32px;
 }
-/* line 128, ../../app/stylesheets/screen.sass */
+/* line 153, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up:active {
   background-position: 0px -64px;
 }
-/* line 130, ../../app/stylesheets/screen.sass */
+/* line 155, ../../app/stylesheets/screen.sass */
 .index_splash .explanation {
   display: inline;
   float: left;
@@ -916,7 +991,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html .index_splash .explanation {
   overflow-x: hidden;
 }
-/* line 133, ../../app/stylesheets/screen.sass */
+/* line 158, ../../app/stylesheets/screen.sass */
 .index_splash .image {
   z-index: 999;
   position: relative;
@@ -929,7 +1004,7 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html .index_splash .image {
   overflow-x: hidden;
 }
-/* line 137, ../../app/stylesheets/screen.sass */
+/* line 162, ../../app/stylesheets/screen.sass */
 .index_splash .image img {
   z-index: 1000;
   position: relative;
@@ -941,7 +1016,7 @@ form#new_user .field_with_errors .fixed_inline_text {
   border: 1px solid #c2c2c2;
   width: 100%;
 }
-/* line 145, ../../app/stylesheets/screen.sass */
+/* line 170, ../../app/stylesheets/screen.sass */
 .index_splash .list {
   line-height: 1.25;
   display: inline;
@@ -949,7 +1024,7 @@ form#new_user .field_with_errors .fixed_inline_text {
   margin-right: 0;
   width: 260px;
 }
-/* line 147, ../../app/stylesheets/screen.sass */
+/* line 172, ../../app/stylesheets/screen.sass */
 .index_splash .list .bracket {
   color: #7d8b3e;
   float: left;
@@ -961,11 +1036,11 @@ form#new_user .field_with_errors .fixed_inline_text {
 * html .index_splash .list {
   overflow-x: hidden;
 }
-/* line 154, ../../app/stylesheets/screen.sass */
+/* line 179, ../../app/stylesheets/screen.sass */
 .index_splash .list ul {
   margin-top: 40px;
 }
-/* line 156, ../../app/stylesheets/screen.sass */
+/* line 181, ../../app/stylesheets/screen.sass */
 .index_splash .list ul li {
   list-style-type: none;
   list-style-image: none;
