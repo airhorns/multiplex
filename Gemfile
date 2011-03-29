@@ -15,7 +15,9 @@ gem "heroku" # need in all groups for the autoscaler as well as developingt c
 
 group :production do
   gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
-  gem "sc_jammit_lite", :require => "jammit_lite"
+  #gem "jammit_lite", :path => "~/Code/jammit_lite"
+  #gem "jammit_lite", :git => "https://github.com/chatgris/jammit_lite.git"
+  gem "jammit_lite", :git => "https://github.com/hornairs/jammit_lite.git"
 end
 
 group :development, :test do

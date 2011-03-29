@@ -1,15 +1,4 @@
-/* line 1, ../../app/stylesheets/email.sass */
-#header {
-  width: 100%;
-  background-color: #aaaaff;
-  padding: 10px;
-}
+#header { width: 100%; background-color: #aaaaff; padding: 10px; }
 
-/* line 6, ../../app/stylesheets/email.sass */
-table {
-  border: 1px solid #111111;
-}
-/* line 8, ../../app/stylesheets/email.sass */
-table td {
-  padding: 0px 2px;
-}
+table { border: 1px solid #111111; }
+table td { padding: 0px 2px; }

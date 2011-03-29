@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/hornairs/jammit_lite.git
+  revision: 7a599ae3849bd19aab6dc34faa426d3294b9ef5f
+  specs:
+    jammit_lite (0.6.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -189,7 +195,6 @@ GEM
     rubyzip (0.9.4)
     rufus-scheduler (2.0.8)
       tzinfo (>= 0.3.23)
-    sc_jammit_lite (0.6.0)
     selenium-webdriver (0.1.4)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
@@ -239,6 +244,7 @@ DEPENDENCIES
   haml-rails
   heroku
   jammit
+  jammit_lite!
   mail
   mongrel (= 1.2.0.pre2)
   pg
@@ -249,7 +255,6 @@ DEPENDENCIES
   resque-scheduler
   rspec-rails
   ruby-debug19
-  sc_jammit_lite
   simple_form
   spork (~> 0.9.0.rc)
   sqlite3

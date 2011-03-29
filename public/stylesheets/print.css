@@ -1,78 +1,25 @@
-/*
-Syntax error: Properties aren't allowed at the root of a document.
-        on line 45 of /Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss, in `blueprint-print-body'
-        from line 26 of /Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss, in `blueprint-print'
-        from line 4 of /Users/hornairs/Sites/multiplex/app/stylesheets/print.sass
+body { line-height: 1.5; font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; color: black; background: none; font-size: 10pt; }
 
-Backtrace:
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss:45:in `blueprint-print-body'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss:26:in `blueprint-print'
-/Users/hornairs/Sites/multiplex/app/stylesheets/print.sass:4
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/node.rb:108:in `check_child!'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:40:in `block in _cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:39:in `map'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:39:in `_cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:26:in `cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:41:in `block in _cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:39:in `map'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:39:in `_cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:26:in `cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/node.rb:292:in `block in cssize!'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/node.rb:292:in `map'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/node.rb:292:in `cssize!'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/root_node.rb:133:in `cssize!'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/node.rb:278:in `_cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/node.rb:193:in `cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/root_node.rb:50:in `cssize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `block (2 levels) in update_stylesheets'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `block in update_stylesheets'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:35:in `block in call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `catch'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
-<internal:prelude>:10:in `synchronize'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/chunked.rb:15:in `call'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/mongrel.rb:67:in `process'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/mongrel-1.2.0.pre2/lib/mongrel.rb:165:in `block in process_client'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/mongrel-1.2.0.pre2/lib/mongrel.rb:164:in `each'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/mongrel-1.2.0.pre2/lib/mongrel.rb:164:in `process_client'
-/Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/mongrel-1.2.0.pre2/lib/mongrel.rb:291:in `block (2 levels) in run'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Properties aren't allowed at the root of a document.\A         on line 45 of /Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss, in `blueprint-print-body'\A         from line 26 of /Users/hornairs/.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss, in `blueprint-print'\A         from line 4 of /Users/hornairs/Sites/multiplex/app/stylesheets/print.sass"; }
+.container { background: none; }
+
+hr { background: #cccccc; color: #cccccc; width: 100%; height: 2px; margin: 2em 0; padding: 0; border: none; }
+hr.space { background: white; color: white; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+code { font-size: 0.9em; font-family: "andale mono", "lucida console", monospace; }
+
+a img { border: none; }
+a:link, a:visited { background: transparent; font-weight: 700; text-decoration: underline; }
+
+p img.top { margin-top: 0; }
+
+blockquote { margin: 1.5em; padding: 1em; font-style: italic; font-size: 0.9em; }
+
+.small { font-size: 0.9em; }
+
+.large { font-size: 1.1em; }
+
+.quiet { color: #999999; }
+
+.hide { display: none; }
