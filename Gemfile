@@ -11,17 +11,17 @@ gem "uuid"
 gem "mail"
 gem "pg"
 gem "heroku" # need in all groups for the autoscaler as well as developingt c
-#gem 'jammit'
 
 group :production do
   gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
-  #gem "jammit_lite", :path => "~/Code/jammit_lite"
-  #gem "jammit_lite", :git => "https://github.com/chatgris/jammit_lite.git"
   gem "jammit_lite", :git => "https://github.com/hornairs/jammit_lite.git"
 end
 
 group :development, :test do
+  # CSS Fandangling
   gem "compass"
+  gem 'jammit'
+  
   gem "mongrel", "1.2.0.pre2"
   gem 'ruby-debug19'
   gem 'sqlite3'

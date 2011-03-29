@@ -243,6 +243,7 @@ DEPENDENCIES
   haml (>= 3.0.0)
   haml-rails
   heroku
+  jammit
   jammit_lite!
   mail
   mongrel (= 1.2.0.pre2)
