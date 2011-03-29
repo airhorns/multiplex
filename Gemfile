@@ -5,26 +5,26 @@ gem "devise", "1.2.rc"
 gem "simple_form"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
-gem "compass"
 gem "resque"
 gem "resque-scheduler"
 gem "uuid"
 gem "mail"
 gem "pg"
 gem "heroku" # need in all groups for the autoscaler as well as developingt c
+gem 'jammit'
 
 group :production do
   gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
   #gem "jammit_lite", :path => "~/Code/jammit_lite"
   #gem "jammit_lite", :git => "https://github.com/chatgris/jammit_lite.git"
-  gem "jammit_lite", :git => "https://github.com/hornairs/jammit_lite.git"
+  #gem "jammit_lite", :git => "https://github.com/hornairs/jammit_lite.git"
 end
 
 group :development, :test do
+  gem "compass"
   gem "mongrel", "1.2.0.pre2"
   gem 'ruby-debug19'
   gem 'sqlite3'
-  gem 'jammit'
 
   gem "rspec-rails"
   gem 'spork', '~> 0.9.0.rc'  
