@@ -1,3 +1,5 @@
-require 'compass'
-require 'compass/app_integration/rails'
-Compass::AppIntegration::Rails.initialize!
+unless Rails.env.production?
+  require 'compass'
+  require 'compass/app_integration/rails'
+  Compass::AppIntegration::Rails.initialize!
+end

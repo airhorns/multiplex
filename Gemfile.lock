@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/hornairs/jammit_lite.git
+  revision: 7a599ae3849bd19aab6dc34faa426d3294b9ef5f
+  specs:
+    jammit_lite (0.6.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -237,7 +243,7 @@ DEPENDENCIES
   haml (>= 3.0.0)
   haml-rails
   heroku
-  jammit
+  jammit_lite!
   mail
   mongrel (= 1.2.0.pre2)
   pg
