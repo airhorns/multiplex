@@ -2,10 +2,14 @@ require 'mail'
 
 FactoryGirl.define do
   factory :invite do
-    used true
+    used false
     sequence :code do |n|
       "ABC#{n}"
     end
+  end
+
+  factory :used_invite, :parent => :invite do
+    used true
   end
  
   factory :user do
