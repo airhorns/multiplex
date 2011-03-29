@@ -10,12 +10,12 @@ gem "resque"
 gem "resque-scheduler"
 gem "uuid"
 gem "mail"
-gem "sc_jammit_lite"
 gem "pg"
 gem "heroku" # need in all groups for the autoscaler as well as developingt c
 
 group :production do
   gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
+  gem "sc_jammit_lite", :require => "jammit_lite"
 end
 
 group :development, :test do
