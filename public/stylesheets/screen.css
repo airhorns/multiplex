@@ -971,22 +971,23 @@ form#new_user input[type="submit"] {
 .index_splash .explanation p {
   text-align: justify;
   line-height: 1.2;
+  color: #373c3c;
 }
-/* line 172, ../../app/stylesheets/screen.sass */
+/* line 173, ../../app/stylesheets/screen.sass */
 .index_splash .clear hr {
   margin-bottom: 10px;
 }
-/* line 175, ../../app/stylesheets/screen.sass */
+/* line 176, ../../app/stylesheets/screen.sass */
 .index_splash .quote {
   margin: 0px 50px 0px 50px;
 }
-/* line 177, ../../app/stylesheets/screen.sass */
+/* line 178, ../../app/stylesheets/screen.sass */
 .index_splash .quote .words {
-  font-family: "Helvetica Light", "HelveticaLight", "Helvetica", "Arial", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-align: justify;
   font-size: 24px;
 }
-/* line 181, ../../app/stylesheets/screen.sass */
+/* line 183, ../../app/stylesheets/screen.sass */
 .index_splash .quote .person {
   text-align: right;
 }
