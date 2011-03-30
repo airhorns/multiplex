@@ -72,7 +72,7 @@ body {
   line-height: 1.5;
   font-family: "Helvetica", "Arial", sans-serif;
   color: #5d5d5d;
-  font-size: 100%;
+  font-size: 87.5%;
 }
 
 /* line 65, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
@@ -526,17 +526,16 @@ footer {
 /* line 60, ../../app/stylesheets/partials/_page.sass */
 header {
   width: 100%;
-  margin-bottom: 45px;
 }
-/* line 64, ../../app/stylesheets/partials/_page.sass */
+/* line 63, ../../app/stylesheets/partials/_page.sass */
 header h1 {
   float: left;
 }
-/* line 66, ../../app/stylesheets/partials/_page.sass */
+/* line 65, ../../app/stylesheets/partials/_page.sass */
 header nav {
   float: right;
 }
-/* line 68, ../../app/stylesheets/partials/_page.sass */
+/* line 67, ../../app/stylesheets/partials/_page.sass */
 header nav li {
   float: left;
   list-style-position: none;
@@ -544,7 +543,7 @@ header nav li {
   margin-left: 15px;
 }
 
-/* line 74, ../../app/stylesheets/partials/_page.sass */
+/* line 73, ../../app/stylesheets/partials/_page.sass */
 footer {
   width: 620px;
   margin: 0 auto;
@@ -552,13 +551,13 @@ footer {
   *zoom: 1;
 }
 
-/* line 79, ../../app/stylesheets/partials/_page.sass */
+/* line 78, ../../app/stylesheets/partials/_page.sass */
 .page, .window {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 82, ../../app/stylesheets/partials/_page.sass */
+/* line 81, ../../app/stylesheets/partials/_page.sass */
 .page {
   display: inline;
   float: left;
@@ -569,7 +568,7 @@ footer {
 * html .page {
   overflow-x: hidden;
 }
-/* line 84, ../../app/stylesheets/partials/_page.sass */
+/* line 83, ../../app/stylesheets/partials/_page.sass */
 .page + .page {
   display: inline;
   float: left;
@@ -581,7 +580,7 @@ footer {
   overflow-x: hidden;
 }
 
-/* line 87, ../../app/stylesheets/partials/_page.sass */
+/* line 86, ../../app/stylesheets/partials/_page.sass */
 .window {
   display: inline;
   float: left;
@@ -734,8 +733,9 @@ a:hover {
 /* line 24, ../../app/stylesheets/screen.sass */
 header {
   padding-top: 40px;
+  margin-bottom: 35px;
 }
-/* line 27, ../../app/stylesheets/screen.sass */
+/* line 28, ../../app/stylesheets/screen.sass */
 header .line {
   position: absolute;
   top: 0px;
@@ -744,31 +744,31 @@ header .line {
   height: 4px;
   background: url("../images/header_border.png") repeat top left;
 }
-/* line 35, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 header h1 {
   margin: 9px 0px 0px -45px;
   font-size: 24px;
 }
-/* line 39, ../../app/stylesheets/screen.sass */
+/* line 40, ../../app/stylesheets/screen.sass */
 header h1 a {
   text-decoration: none;
 }
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 43, ../../app/stylesheets/screen.sass */
 header nav {
   margin-top: 20px;
   font-size: 14px;
 }
-/* line 45, ../../app/stylesheets/screen.sass */
+/* line 46, ../../app/stylesheets/screen.sass */
 header nav a {
   text-decoration: none;
 }
 
-/* line 48, ../../app/stylesheets/screen.sass */
+/* line 49, ../../app/stylesheets/screen.sass */
 #error_explanation h2 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
-/* line 51, ../../app/stylesheets/screen.sass */
+/* line 52, ../../app/stylesheets/screen.sass */
 form#new_user {
   display: inline;
   float: left;
@@ -779,7 +779,7 @@ form#new_user {
 * html form#new_user {
   overflow-x: hidden;
 }
-/* line 53, ../../app/stylesheets/screen.sass */
+/* line 54, ../../app/stylesheets/screen.sass */
 form#new_user .input {
   display: inline;
   float: left;
@@ -790,7 +790,7 @@ form#new_user .input {
 * html form#new_user .input {
   overflow-x: hidden;
 }
-/* line 55, ../../app/stylesheets/screen.sass */
+/* line 56, ../../app/stylesheets/screen.sass */
 form#new_user .input + .input {
   display: inline;
   float: left;
@@ -801,50 +801,50 @@ form#new_user .input + .input {
 * html form#new_user .input + .input {
   overflow-x: hidden;
 }
-/* line 57, ../../app/stylesheets/screen.sass */
+/* line 58, ../../app/stylesheets/screen.sass */
 form#new_user .input input {
   width: 258px;
 }
-/* line 59, ../../app/stylesheets/screen.sass */
+/* line 60, ../../app/stylesheets/screen.sass */
 form#new_user .input select {
   width: 270px;
 }
-/* line 62, ../../app/stylesheets/screen.sass */
+/* line 63, ../../app/stylesheets/screen.sass */
 form#new_user input[type="submit"] {
   clear: both;
 }
-/* line 65, ../../app/stylesheets/screen.sass */
+/* line 66, ../../app/stylesheets/screen.sass */
 form#new_user .hint {
   margin: 0 auto;
   font-size: 12px;
 }
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 71, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite input {
   width: 155px;
 }
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 74, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.ghost {
   font-size: 12px;
 }
-/* line 75, ../../app/stylesheets/screen.sass */
+/* line 76, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.write {
   color: white;
   opacity: 0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
-/* line 78, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 form#new_user br {
   clear: both;
 }
-/* line 81, ../../app/stylesheets/screen.sass */
+/* line 82, ../../app/stylesheets/screen.sass */
 form#new_user input[type="submit"] {
   display: block;
   margin-left: 80px;
   width: 100px;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 .register_email {
   display: inline;
   float: left;
@@ -855,7 +855,7 @@ form#new_user input[type="submit"] {
 * html .register_email {
   overflow-x: hidden;
 }
-/* line 88, ../../app/stylesheets/screen.sass */
+/* line 89, ../../app/stylesheets/screen.sass */
 .register_email img {
   -moz-box-shadow: #c2c2c2 0px 0px 5px 0px;
   -webkit-box-shadow: #c2c2c2 0px 0px 5px 0px;
@@ -865,12 +865,12 @@ form#new_user input[type="submit"] {
   width: 100%;
 }
 
-/* line 93, ../../app/stylesheets/screen.sass */
+/* line 94, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 96, ../../app/stylesheets/screen.sass */
+/* line 97, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -881,7 +881,7 @@ form#new_user input[type="submit"] {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 98, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -893,7 +893,7 @@ form#new_user input[type="submit"] {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 101, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -902,45 +902,44 @@ form#new_user input[type="submit"] {
   color: white;
 }
 
-/* line 110, ../../app/stylesheets/screen.sass */
+/* line 111, ../../app/stylesheets/screen.sass */
 .clear {
   clear: both;
 }
 
-/* line 114, ../../app/stylesheets/screen.sass */
+/* line 115, ../../app/stylesheets/screen.sass */
 .index_splash .elevator {
   width: 100%;
-  height: 110px;
   position: relative;
+  margin-top: 5px;
   z-index: 1;
 }
-/* line 119, ../../app/stylesheets/screen.sass */
+/* line 120, ../../app/stylesheets/screen.sass */
 .index_splash .elevator h2 {
   line-height: 1;
   font-size: 24px;
   margin-bottom: 15px;
+  margin-top: 10px;
   /* old browsers */
   color: #0e0e0e;
   /* firefox */
   /* webkit */
   /* ie */
 }
-/* line 131, ../../app/stylesheets/screen.sass */
+/* line 133, ../../app/stylesheets/screen.sass */
 .index_splash .elevator hr {
   color: #c2c2c2;
   background-color: #c2c2c2;
   height: 1px;
 }
-/* line 136, ../../app/stylesheets/screen.sass */
+/* line 138, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up {
-  width: 157px;
-  height: 32px;
   position: absolute;
-  top: 0px;
+  top: -5px;
   right: 0px;
   text-decoration: none;
-  background: url('/images/buttons.png?1299796397') no-repeat;
-  width: 157px;
+  background: url('/images/buttons.png?1301456529') no-repeat;
+  width: 86px;
   height: 32px;
   overflow: hidden;
 }
@@ -952,68 +951,24 @@ form#new_user input[type="submit"] {
 .index_splash .elevator a.sign_up:active {
   background-position: 0px -64px;
 }
-/* line 149, ../../app/stylesheets/screen.sass */
-.index_splash .explanation {
-  display: inline;
+/* line 150, ../../app/stylesheets/screen.sass */
+.index_splash .image {
   float: left;
-  margin-right: 10px;
-  width: 270px;
-}
-/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .index_splash .explanation {
-  overflow-x: hidden;
 }
 /* line 152, ../../app/stylesheets/screen.sass */
-.index_splash .image {
-  z-index: 999;
-  position: relative;
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 270px;
-}
-/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .index_splash .image {
-  overflow-x: hidden;
+.index_splash .explanation {
+  float: right;
+  width: 253px;
 }
 /* line 156, ../../app/stylesheets/screen.sass */
-.index_splash .image img {
-  z-index: 1000;
-  position: relative;
-  top: -25px;
-  -moz-box-shadow: #c2c2c2 0px 0px 5px 0px;
-  -webkit-box-shadow: #c2c2c2 0px 0px 5px 0px;
-  -o-box-shadow: #c2c2c2 0px 0px 5px 0px;
-  box-shadow: #c2c2c2 0px 0px 5px 0px;
-  border: 1px solid #c2c2c2;
-  width: 100%;
+.index_splash .explanation h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #272b2b;
+  margin-bottom: 12px;
 }
-/* line 164, ../../app/stylesheets/screen.sass */
-.index_splash .list {
-  line-height: 1.25;
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 270px;
-}
-/* line 166, ../../app/stylesheets/screen.sass */
-.index_splash .list .bracket {
-  color: #7d8b3e;
-  float: left;
-  font-size: 280px;
-  margin-left: -38px;
-  line-height: 1;
-}
-/* line 138, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .index_splash .list {
-  overflow-x: hidden;
-}
-/* line 173, ../../app/stylesheets/screen.sass */
-.index_splash .list ul {
-  margin-top: 40px;
-}
-/* line 175, ../../app/stylesheets/screen.sass */
-.index_splash .list ul li {
-  list-style-type: none;
-  list-style-image: none;
+/* line 162, ../../app/stylesheets/screen.sass */
+.index_splash .explanation p {
+  text-align: justify;
+  line-height: 1.2;
 }
