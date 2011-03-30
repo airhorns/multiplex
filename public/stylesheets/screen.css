@@ -907,14 +907,14 @@ form#new_user input[type="submit"] {
   clear: both;
 }
 
-/* line 115, ../../app/stylesheets/screen.sass */
+/* line 119, ../../app/stylesheets/screen.sass */
 .index_splash .elevator {
   width: 100%;
   position: relative;
   margin-top: 5px;
   z-index: 1;
 }
-/* line 120, ../../app/stylesheets/screen.sass */
+/* line 124, ../../app/stylesheets/screen.sass */
 .index_splash .elevator h2 {
   line-height: 1;
   font-size: 24px;
@@ -926,13 +926,13 @@ form#new_user input[type="submit"] {
   /* webkit */
   /* ie */
 }
-/* line 133, ../../app/stylesheets/screen.sass */
+/* line 137, ../../app/stylesheets/screen.sass */
 .index_splash .elevator hr {
   color: #c2c2c2;
   background-color: #c2c2c2;
   height: 1px;
 }
-/* line 138, ../../app/stylesheets/screen.sass */
+/* line 142, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up {
   position: absolute;
   top: -5px;
@@ -943,32 +943,50 @@ form#new_user input[type="submit"] {
   height: 32px;
   overflow: hidden;
 }
-/* line 145, ../../app/stylesheets/screen.sass */
+/* line 149, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up:hover {
   background-position: 0px -32px;
 }
-/* line 147, ../../app/stylesheets/screen.sass */
+/* line 151, ../../app/stylesheets/screen.sass */
 .index_splash .elevator a.sign_up:active {
   background-position: 0px -64px;
 }
-/* line 150, ../../app/stylesheets/screen.sass */
+/* line 154, ../../app/stylesheets/screen.sass */
 .index_splash .image {
   float: left;
 }
-/* line 152, ../../app/stylesheets/screen.sass */
+/* line 157, ../../app/stylesheets/screen.sass */
 .index_splash .explanation {
   float: right;
   width: 253px;
 }
-/* line 156, ../../app/stylesheets/screen.sass */
+/* line 161, ../../app/stylesheets/screen.sass */
 .index_splash .explanation h3 {
   font-weight: bold;
   font-size: 18px;
   color: #272b2b;
   margin-bottom: 12px;
 }
-/* line 162, ../../app/stylesheets/screen.sass */
+/* line 167, ../../app/stylesheets/screen.sass */
 .index_splash .explanation p {
   text-align: justify;
   line-height: 1.2;
+}
+/* line 172, ../../app/stylesheets/screen.sass */
+.index_splash .clear hr {
+  margin-bottom: 10px;
+}
+/* line 175, ../../app/stylesheets/screen.sass */
+.index_splash .quote {
+  margin: 0px 50px 0px 50px;
+}
+/* line 177, ../../app/stylesheets/screen.sass */
+.index_splash .quote .words {
+  font-family: "Helvetica Light", "HelveticaLight", "Helvetica", "Arial", sans-serif;
+  text-align: justify;
+  font-size: 24px;
+}
+/* line 181, ../../app/stylesheets/screen.sass */
+.index_splash .quote .person {
+  text-align: right;
 }
