@@ -40,8 +40,6 @@ div.flash
 @import "compass/layout/sticky-footer"
 @include sticky-footer(54px, "#container", "#container_footer", "footer")
 
-$header-height: 50px
-
 body
 #container
 
@@ -50,22 +48,18 @@ body
   // See http://compass-style.org/docs/reference/compass/layout/sticky_footer/
   +clearfix
   .content
-    width: $blueprint-container-size + 40px
+    width: $blueprint-container-size
     margin-left: auto
     margin-right: auto
 
   .body
-    padding: 19px  
     background: #FFF
     overflow: auto
     
 
 header
-  height: $header-height
   width: 100%
-  margin-bottom: $header-height
-  .content
-    padding: 5px 20px 0px 20px
+  margin-bottom: 45px
 
   h1
     float: left
@@ -78,7 +72,7 @@ header
       margin-left: 15px
 
 footer
-  width: $blueprint-container-size - 40px
+  width: $blueprint-container-size
   margin: 0 auto
   +clearfix
 

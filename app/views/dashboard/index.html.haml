@@ -1,33 +1,22 @@
 .index_splash
   .elevator
-    %h2 Deal with fewer emails.
-    %h3 Receive a simple <b>summary email</b> instead of a stack of newsletters and notifications.
-    %a.sign_up{:href => sign_up_path, :title => "Get Othermail"} &nbsp;
+    %h2 Deal with fewer emails. Simplify your life.
+    -#%a.sign_up{:href => sign_up_path, :title => "Get Othermail"} &nbsp;
     %hr
-  %p.explanation
-    Every other day Othermail sends you a simple 
-    summary of the emails that have been sent to your Othermail address. This way you can deal with all of them quikly and efficiently.
-    %br
-    %br
-    You will be amazed at the peace of mind and time 
-    savings that comes from stopping the constant stream of other emails which are flooding your inbox. 
-    %a{:href => sign_up_path} Sign up 
-    or
-    = succeed "." do
-      %a{:href => faq_path} Learn more
+  -#%p.explanation
+    -#Every other day Othermail sends you a simple 
+    -#summary of the emails that have been sent to your Othermail address. This way you can deal with all of them quikly and efficiently.
+    -#%br
+    -#%br
+    -#You will be amazed at the peace of mind and time 
+    -#savings that comes from stopping the constant stream of other emails which are flooding your inbox. 
+    -#%a{:href => sign_up_path} Sign up 
+    -#or
+    -#= succeed "." do
+      -#%a{:href => faq_path} Learn more
 
-  .image
-    %img{:class => "demo_email", :src => "/images/email_screenshot.png"}
-
-  .list
-    .bracket {
-    %ul
-      %li twitter followers
-      %li newsletters
-      %li facebook requests
-      %li notifications
-      %li random contacts 
-      %li the hundreds of other things that fill your inbox with everything other than mail.
+  -#.image
+    -#%img{:class => "demo_email", :src => "/images/email_screenshot.png"}
 
   .clear
 

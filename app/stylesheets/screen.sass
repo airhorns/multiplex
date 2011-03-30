@@ -13,39 +13,38 @@
 
 // General
 body
-  background-color: #f9f9f6
+  background-color: #FFF
 
 h1,h2,h3,a,a:visited
-  color: #7d8b3e
+  color: #5d5d5d
 
 a:hover
-  color: #adc056
+  color: #8d8d8d
 
-nav
-  margin-top: 10px
-  font-size: 16px
-  a
-    text-decoration: none
-header 
-  background-color: #FFF
-  border-bottom: 1px solid #afafad
-  +box-shadow(#afafad, 0px, 0px, 2px, 0px)
+header
+  padding-top: 40px
+
+  .line 
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 4px
+    background: url('../images/header_border.png') repeat top left
+
   h1 
-    margin-top: 10px
-    margin-bottom: 0px
+    margin: 9px 0px 0px -45px
     font-size: 24px
 
     a
-      background: #FFFFFF url('/images/logo.png') no-repeat left 4px
-      padding-left: 30px
       text-decoration: none
 
-      &, &:visited
-        color: #5f5f5f
-      &:hover
-        background-image: url('/images/logo_hover.png')
-        color: #8b8b8b
-      
+  nav
+    margin-top: 20px
+    font-size: 14px
+    a
+      text-decoration: none
+
 #error_explanation h2
   font-size: $blueprint-font-size
 
@@ -108,9 +107,6 @@ form#new_user
 
 $body-border-color: #c2c2c2
 
-.body
-  border: 1px solid $body-border-color
-
 .clear
   clear: both
 
@@ -118,26 +114,24 @@ $body-border-color: #c2c2c2
   .elevator
     width: 100%
     height: 110px
-    background-color: #FFF
     position: relative
     z-index: 1
-    h2,h3
-      line-height: 1
     h2
-      font-size: 36px
-      margin-bottom: 10px
-      
-    h3
-      font-size: 18px
-      color: $font-color
-      margin-bottom: 30px
+      line-height: 1
+      font-size: 24px
+      margin-bottom: 15px
+      /* old browsers */
+      color: #0e0e0e       
+      /* firefox */
+      //color: -moz-linear-gradient(top, #0e0e0e 0%, #4D4D4D 100%)
+      /* webkit */
+      //-webkit-text-fill-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e0e0e), color-stop(100%,#F00))
+      /* ie */
+      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#4D4D4D',GradientType=0 )
     hr
       color: $body-border-color
       background-color: $body-border-color
       height: 1px
-      margin-left: -19px
-      margin-right: -19px
-      width: $blueprint-container-size + 38px
 
     a.sign_up
       width: 157px

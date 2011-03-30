@@ -12,18 +12,19 @@
   %body
     #container
       %header
+        .line &nbsp;
         .content
           %h1 
             %a{:href=>root_path} 
-              Othermail
+              %img(src="/images/logo.png" alt="Othermail")
           %nav
-            %ul
-              %li= link_to "{FAQ}", faq_path
-              %li= link_to "{Feedback}", "#"
-              - if user_signed_in?
-                -#%li= link_to "Sign Out", sign_out_path
-              - else
-                %li= link_to "{Sign Up}", sign_up_path
+            = link_to "Learn More", "#"
+            |
+            -#= link_to "FAQ", faq_path
+            = link_to "Blog", "#"
+            - if user_signed_in?
+              -#%li= link_to "Sign Out", sign_out_path
+          .clear
       .content
         - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
           %div(class="#{f} flash")
