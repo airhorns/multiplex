@@ -1,7 +1,8 @@
 <%= yield %>
 
--- 
-<% rz = resource.present? && resource.class == User ? resource : @user %>
+--
+
+<% rz = (@user || resource) rescue nil %>
 <% if rz.present? %>
 Unsubscribe from all Othermail emails by visiting <%= unsubscribe_user_url(rz, :secret => rz.delivery_secret) %>
 <% end %>
