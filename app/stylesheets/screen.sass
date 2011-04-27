@@ -13,39 +13,44 @@
 
 // General
 body
-  background-color: #f9f9f6
+  background-color: #FFF
 
 h1,h2,h3,a,a:visited
-  color: #7d8b3e
+  color: #5d5d5d
+
+h3
+  color: #373c3c
+  font-weight: bold
+  font-size: 18px
 
 a:hover
-  color: #adc056
+  color: #8d8d8d
 
-nav
-  margin-top: 10px
-  font-size: 16px
-  a
-    text-decoration: none
-header 
-  background-color: #FFF
-  border-bottom: 1px solid #afafad
-  +box-shadow(#afafad, 0px, 0px, 2px, 0px)
+header
+  padding-top: 40px
+  margin-bottom: 35px
+
+  .line 
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 4px
+    background: url('../images/header_border.png') repeat top left
+
   h1 
-    margin-top: 10px
-    margin-bottom: 0px
+    margin: 9px 0px 0px -45px
     font-size: 24px
 
     a
-      background: #FFFFFF url('/images/logo.png') no-repeat left 4px
-      padding-left: 30px
       text-decoration: none
 
-      &, &:visited
-        color: #5f5f5f
-      &:hover
-        background-image: url('/images/logo_hover.png')
-        color: #8b8b8b
-      
+  nav
+    margin-top: 20px
+    font-size: 14px
+    a
+      text-decoration: none
+
 #error_explanation h2
   font-size: $blueprint-font-size
 
@@ -108,76 +113,87 @@ form#new_user
 
 $body-border-color: #c2c2c2
 
-.body
-  border: 1px solid $body-border-color
-
 .clear
   clear: both
 
+
+// -------------------------
+// Stuff for the index page
+// -------------------------
+.elevator
+  width: 100%
+  position: relative
+  margin-top: 5px
+  z-index: 1
+  h2
+    line-height: 1
+    font-size: 24px
+    margin-bottom: 15px
+    margin-top: 10px
+    /* old browsers */
+    color: #0e0e0e       
+    /* firefox */
+    //color: -moz-linear-gradient(top, #0e0e0e 0%, #4D4D4D 100%)
+    /* webkit */
+    //-webkit-text-fill-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e0e0e), color-stop(100%,#F00))
+    /* ie */
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#4D4D4D',GradientType=0 )
+  hr
+    color: $body-border-color
+    background-color: $body-border-color
+    height: 1px
+
+  a.sign_up
+    position: absolute
+    top: -5px
+    right: 0px
+    text-decoration: none
+
+    +sprite-background('/images/buttons.png', 86px, 32px)
+    &:hover
+      +sprite-row(2)
+    &:active
+      +sprite-row(3)
+
 .index_splash
-  .elevator
-    width: 100%
-    height: 110px
-    background-color: #FFF
-    position: relative
-    z-index: 1
-    h2,h3
-      line-height: 1
-    h2
-      font-size: 36px
-      margin-bottom: 10px
-      
-    h3
-      font-size: 18px
-      color: $font-color
-      margin-bottom: 30px
-    hr
-      color: $body-border-color
-      background-color: $body-border-color
-      height: 1px
-      margin-left: -19px
-      margin-right: -19px
-      width: $blueprint-container-size + 38px
-
-    a.sign_up
-      width: 157px
-      height: 32px
-      position: absolute
-      top: 0px
-      right: 0px
-      text-decoration: none
-
-      +sprite-background('/images/buttons.png', 157px, 32px)
-      &:hover
-        +sprite-row(2)
-      &:active
-        +sprite-row(3)
-  .explanation
-    +column(4)
-
   .image
-    z-index: 999
-    position: relative
-    +column(4)
-    img
-      z-index: 1000
-      position: relative
-      top: -25px
-      +box-shadow(#c2c2c2, 0px, 0px, 5px, 0px)
-      border: 1px solid #c2c2c2
-      width: 100%
+    float: left
 
-  .list
-    line-height: 1.25
-    .bracket
-      color: #7d8b3e
-      float: left
-      font-size: 280px
-      margin-left: -38px
-      line-height: 1
-    +column(4, true)
-    ul
-      margin-top: 40px
-      li
-        list-style-type: none
-        list-style-image: none
+  .explanation
+    float: right
+    width: 253px
+
+    h3
+      font-weight: bold
+      font-size: 18px
+      color: #272b2b
+      margin-bottom: 12px
+    
+    p
+      text-align: justify
+      line-height: 1.2
+      color: #373c3c
+
+.clear
+  hr
+    margin-bottom: 10px
+
+.quote
+  margin: 0px 50px 0px 50px
+  .words
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+
+    text-align: justify
+    font-size: 24px
+  .person
+    text-align: right
+
+.learn_more_splash
+  text-align: justify
+  text-justify: newspaper
+  line-height: 1.2
+
+footer
+  img
+    display: block
+    margin: 0 auto

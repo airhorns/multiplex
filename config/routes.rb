@@ -25,6 +25,7 @@ Multiplex::Application.routes.draw do
   end 
 
   match 'faq' => 'dashboard#faq', :as => :faq
+  match 'learn_more' => 'dashboard#learn_more', :as => :learn_more
   match 'help' => 'dashboard#help', :as => :help
   match 'send_summary' => 'dashboard#send_summary', :as => :send_summary
   root :to => "dashboard#index"

@@ -12,28 +12,32 @@
   %body
     #container
       %header
+        .line &nbsp;
         .content
           %h1 
             %a{:href=>root_path} 
-              Othermail
+              %img(src="/images/logo.png" alt="Othermail")
           %nav
-            %ul
-              %li= link_to "{FAQ}", faq_path
-              %li= link_to "{Feedback}", "#"
-              - if user_signed_in?
-                -#%li= link_to "Sign Out", sign_out_path
-              - else
-                %li= link_to "{Sign Up}", sign_up_path
+            = link_to "Learn More", learn_more_path
+            |
+            = link_to "FAQ", faq_path
+            |
+            = link_to "Blog", "#"
+            - if user_signed_in?
+              |
+              -#%li= link_to "Sign Out", sign_out_path
+          .clear
       .content
         - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
           %div(class="#{f} flash")
             = flash[f]
         = yield :before_body
         .body
-          = yield
+          = content_for?(:content) ? yield(:content) : yield
+
         #container_footer &nbsp;
     %footer
-      <p>Copyright 2011 Othermail. Problems? Tell us about it!</p>
+      %img(src="/images/inbox.png" alt="Othermail will rock your world.")
 
     - if Rails.env.production?
       :javascript
