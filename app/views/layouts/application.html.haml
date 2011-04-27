@@ -18,11 +18,13 @@
             %a{:href=>root_path} 
               %img(src="/images/logo.png" alt="Othermail")
           %nav
-            = link_to "Learn More", "#"
+            = link_to "Learn More", learn_more_path
             |
-            -#= link_to "FAQ", faq_path
+            = link_to "FAQ", faq_path
+            |
             = link_to "Blog", "#"
             - if user_signed_in?
+              |
               -#%li= link_to "Sign Out", sign_out_path
           .clear
       .content
@@ -31,10 +33,11 @@
             = flash[f]
         = yield :before_body
         .body
-          = yield
+          = content_for?(:content) ? yield(:content) : yield
+
         #container_footer &nbsp;
     %footer
-      <p>Copyright 2011 Othermail.</p>
+      %img(src="/images/inbox.png" alt="Othermail will rock your world.")
 
     - if Rails.env.production?
       :javascript

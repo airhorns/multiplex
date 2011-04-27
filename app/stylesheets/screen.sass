@@ -18,6 +18,11 @@ body
 h1,h2,h3,a,a:visited
   color: #5d5d5d
 
+h3
+  color: #373c3c
+  font-weight: bold
+  font-size: 18px
+
 a:hover
   color: #8d8d8d
 
@@ -115,42 +120,42 @@ $body-border-color: #c2c2c2
 // -------------------------
 // Stuff for the index page
 // -------------------------
+.elevator
+  width: 100%
+  position: relative
+  margin-top: 5px
+  z-index: 1
+  h2
+    line-height: 1
+    font-size: 24px
+    margin-bottom: 15px
+    margin-top: 10px
+    /* old browsers */
+    color: #0e0e0e       
+    /* firefox */
+    //color: -moz-linear-gradient(top, #0e0e0e 0%, #4D4D4D 100%)
+    /* webkit */
+    //-webkit-text-fill-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e0e0e), color-stop(100%,#F00))
+    /* ie */
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#4D4D4D',GradientType=0 )
+  hr
+    color: $body-border-color
+    background-color: $body-border-color
+    height: 1px
+
+  a.sign_up
+    position: absolute
+    top: -5px
+    right: 0px
+    text-decoration: none
+
+    +sprite-background('/images/buttons.png', 86px, 32px)
+    &:hover
+      +sprite-row(2)
+    &:active
+      +sprite-row(3)
+
 .index_splash
-  .elevator
-    width: 100%
-    position: relative
-    margin-top: 5px
-    z-index: 1
-    h2
-      line-height: 1
-      font-size: 24px
-      margin-bottom: 15px
-      margin-top: 10px
-      /* old browsers */
-      color: #0e0e0e       
-      /* firefox */
-      //color: -moz-linear-gradient(top, #0e0e0e 0%, #4D4D4D 100%)
-      /* webkit */
-      //-webkit-text-fill-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e0e0e), color-stop(100%,#F00))
-      /* ie */
-      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#4D4D4D',GradientType=0 )
-    hr
-      color: $body-border-color
-      background-color: $body-border-color
-      height: 1px
-
-    a.sign_up
-      position: absolute
-      top: -5px
-      right: 0px
-      text-decoration: none
-
-      +sprite-background('/images/buttons.png', 86px, 32px)
-      &:hover
-        +sprite-row(2)
-      &:active
-        +sprite-row(3)
-
   .image
     float: left
 
@@ -169,17 +174,26 @@ $body-border-color: #c2c2c2
       line-height: 1.2
       color: #373c3c
 
-  .clear
-    hr
-      margin-bottom: 10px
+.clear
+  hr
+    margin-bottom: 10px
 
-  .quote
-    margin: 0px 50px 0px 50px
-    .words
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+.quote
+  margin: 0px 50px 0px 50px
+  .words
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 
-      text-align: justify
-      font-size: 24px
-    .person
-      text-align: right
+    text-align: justify
+    font-size: 24px
+  .person
+    text-align: right
 
+.learn_more_splash
+  text-align: justify
+  text-justify: newspaper
+  line-height: 1.2
+
+footer
+  img
+    display: block
+    margin: 0 auto

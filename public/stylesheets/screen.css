@@ -492,18 +492,18 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -54px;
+  margin-bottom: -90px;
 }
 /* line 18, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #container #container_footer {
-  height: 54px;
+  height: 90px;
 }
 
 /* line 20, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 footer {
   clear: both;
   position: relative;
-  height: 54px;
+  height: 90px;
 }
 
 /* line 44, ../../app/stylesheets/partials/_page.sass */
@@ -547,17 +547,18 @@ header nav li {
 footer {
   width: 620px;
   margin: 0 auto;
+  padding-top: 40px;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 78, ../../app/stylesheets/partials/_page.sass */
+/* line 79, ../../app/stylesheets/partials/_page.sass */
 .page, .window {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 81, ../../app/stylesheets/partials/_page.sass */
+/* line 82, ../../app/stylesheets/partials/_page.sass */
 .page {
   display: inline;
   float: left;
@@ -568,7 +569,7 @@ footer {
 * html .page {
   overflow-x: hidden;
 }
-/* line 83, ../../app/stylesheets/partials/_page.sass */
+/* line 84, ../../app/stylesheets/partials/_page.sass */
 .page + .page {
   display: inline;
   float: left;
@@ -580,7 +581,7 @@ footer {
   overflow-x: hidden;
 }
 
-/* line 86, ../../app/stylesheets/partials/_page.sass */
+/* line 87, ../../app/stylesheets/partials/_page.sass */
 .window {
   display: inline;
   float: left;
@@ -726,16 +727,23 @@ h1, h2, h3, a, a:visited {
 }
 
 /* line 21, ../../app/stylesheets/screen.sass */
+h3 {
+  color: #373c3c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* line 26, ../../app/stylesheets/screen.sass */
 a:hover {
   color: #8d8d8d;
 }
 
-/* line 24, ../../app/stylesheets/screen.sass */
+/* line 29, ../../app/stylesheets/screen.sass */
 header {
   padding-top: 40px;
   margin-bottom: 35px;
 }
-/* line 28, ../../app/stylesheets/screen.sass */
+/* line 33, ../../app/stylesheets/screen.sass */
 header .line {
   position: absolute;
   top: 0px;
@@ -744,31 +752,31 @@ header .line {
   height: 4px;
   background: url("../images/header_border.png") repeat top left;
 }
-/* line 36, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 header h1 {
   margin: 9px 0px 0px -45px;
   font-size: 24px;
 }
-/* line 40, ../../app/stylesheets/screen.sass */
+/* line 45, ../../app/stylesheets/screen.sass */
 header h1 a {
   text-decoration: none;
 }
-/* line 43, ../../app/stylesheets/screen.sass */
+/* line 48, ../../app/stylesheets/screen.sass */
 header nav {
   margin-top: 20px;
   font-size: 14px;
 }
-/* line 46, ../../app/stylesheets/screen.sass */
+/* line 51, ../../app/stylesheets/screen.sass */
 header nav a {
   text-decoration: none;
 }
 
-/* line 49, ../../app/stylesheets/screen.sass */
+/* line 54, ../../app/stylesheets/screen.sass */
 #error_explanation h2 {
   font-size: 14px;
 }
 
-/* line 52, ../../app/stylesheets/screen.sass */
+/* line 57, ../../app/stylesheets/screen.sass */
 form#new_user {
   display: inline;
   float: left;
@@ -779,7 +787,7 @@ form#new_user {
 * html form#new_user {
   overflow-x: hidden;
 }
-/* line 54, ../../app/stylesheets/screen.sass */
+/* line 59, ../../app/stylesheets/screen.sass */
 form#new_user .input {
   display: inline;
   float: left;
@@ -790,7 +798,7 @@ form#new_user .input {
 * html form#new_user .input {
   overflow-x: hidden;
 }
-/* line 56, ../../app/stylesheets/screen.sass */
+/* line 61, ../../app/stylesheets/screen.sass */
 form#new_user .input + .input {
   display: inline;
   float: left;
@@ -801,50 +809,50 @@ form#new_user .input + .input {
 * html form#new_user .input + .input {
   overflow-x: hidden;
 }
-/* line 58, ../../app/stylesheets/screen.sass */
+/* line 63, ../../app/stylesheets/screen.sass */
 form#new_user .input input {
   width: 258px;
 }
-/* line 60, ../../app/stylesheets/screen.sass */
+/* line 65, ../../app/stylesheets/screen.sass */
 form#new_user .input select {
   width: 270px;
 }
-/* line 63, ../../app/stylesheets/screen.sass */
+/* line 68, ../../app/stylesheets/screen.sass */
 form#new_user input[type="submit"] {
   clear: both;
 }
-/* line 66, ../../app/stylesheets/screen.sass */
+/* line 71, ../../app/stylesheets/screen.sass */
 form#new_user .hint {
   margin: 0 auto;
   font-size: 12px;
 }
-/* line 71, ../../app/stylesheets/screen.sass */
+/* line 76, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite input {
   width: 155px;
 }
-/* line 74, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.ghost {
   font-size: 12px;
 }
-/* line 76, ../../app/stylesheets/screen.sass */
+/* line 81, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.write {
   color: white;
   opacity: 0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 84, ../../app/stylesheets/screen.sass */
 form#new_user br {
   clear: both;
 }
-/* line 82, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 form#new_user input[type="submit"] {
   display: block;
   margin-left: 80px;
   width: 100px;
 }
 
-/* line 87, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 .register_email {
   display: inline;
   float: left;
@@ -855,7 +863,7 @@ form#new_user input[type="submit"] {
 * html .register_email {
   overflow-x: hidden;
 }
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 94, ../../app/stylesheets/screen.sass */
 .register_email img {
   -moz-box-shadow: #c2c2c2 0px 0px 5px 0px;
   -webkit-box-shadow: #c2c2c2 0px 0px 5px 0px;
@@ -865,12 +873,12 @@ form#new_user input[type="submit"] {
   width: 100%;
 }
 
-/* line 94, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 97, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -881,7 +889,7 @@ form#new_user input[type="submit"] {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 104, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -893,7 +901,7 @@ form#new_user input[type="submit"] {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 102, ../../app/stylesheets/screen.sass */
+/* line 107, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -902,20 +910,20 @@ form#new_user input[type="submit"] {
   color: white;
 }
 
-/* line 111, ../../app/stylesheets/screen.sass */
+/* line 116, ../../app/stylesheets/screen.sass */
 .clear {
   clear: both;
 }
 
-/* line 119, ../../app/stylesheets/screen.sass */
-.index_splash .elevator {
+/* line 123, ../../app/stylesheets/screen.sass */
+.elevator {
   width: 100%;
   position: relative;
   margin-top: 5px;
   z-index: 1;
 }
-/* line 124, ../../app/stylesheets/screen.sass */
-.index_splash .elevator h2 {
+/* line 128, ../../app/stylesheets/screen.sass */
+.elevator h2 {
   line-height: 1;
   font-size: 24px;
   margin-bottom: 15px;
@@ -926,68 +934,84 @@ form#new_user input[type="submit"] {
   /* webkit */
   /* ie */
 }
-/* line 137, ../../app/stylesheets/screen.sass */
-.index_splash .elevator hr {
+/* line 141, ../../app/stylesheets/screen.sass */
+.elevator hr {
   color: #c2c2c2;
   background-color: #c2c2c2;
   height: 1px;
 }
-/* line 142, ../../app/stylesheets/screen.sass */
-.index_splash .elevator a.sign_up {
+/* line 146, ../../app/stylesheets/screen.sass */
+.elevator a.sign_up {
   position: absolute;
   top: -5px;
   right: 0px;
   text-decoration: none;
-  background: url('/images/buttons.png?1301456529') no-repeat;
+  background: url('/images/buttons.png?1303941982') no-repeat;
   width: 86px;
   height: 32px;
   overflow: hidden;
 }
-/* line 149, ../../app/stylesheets/screen.sass */
-.index_splash .elevator a.sign_up:hover {
+/* line 153, ../../app/stylesheets/screen.sass */
+.elevator a.sign_up:hover {
   background-position: 0px -32px;
 }
-/* line 151, ../../app/stylesheets/screen.sass */
-.index_splash .elevator a.sign_up:active {
+/* line 155, ../../app/stylesheets/screen.sass */
+.elevator a.sign_up:active {
   background-position: 0px -64px;
 }
-/* line 154, ../../app/stylesheets/screen.sass */
+
+/* line 159, ../../app/stylesheets/screen.sass */
 .index_splash .image {
   float: left;
 }
-/* line 157, ../../app/stylesheets/screen.sass */
+/* line 162, ../../app/stylesheets/screen.sass */
 .index_splash .explanation {
   float: right;
   width: 253px;
 }
-/* line 161, ../../app/stylesheets/screen.sass */
+/* line 166, ../../app/stylesheets/screen.sass */
 .index_splash .explanation h3 {
   font-weight: bold;
   font-size: 18px;
   color: #272b2b;
   margin-bottom: 12px;
 }
-/* line 167, ../../app/stylesheets/screen.sass */
+/* line 172, ../../app/stylesheets/screen.sass */
 .index_splash .explanation p {
   text-align: justify;
   line-height: 1.2;
   color: #373c3c;
 }
-/* line 173, ../../app/stylesheets/screen.sass */
-.index_splash .clear hr {
+
+/* line 178, ../../app/stylesheets/screen.sass */
+.clear hr {
   margin-bottom: 10px;
 }
-/* line 176, ../../app/stylesheets/screen.sass */
-.index_splash .quote {
+
+/* line 181, ../../app/stylesheets/screen.sass */
+.quote {
   margin: 0px 50px 0px 50px;
 }
-/* line 178, ../../app/stylesheets/screen.sass */
-.index_splash .quote .words {
+/* line 183, ../../app/stylesheets/screen.sass */
+.quote .words {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-align: justify;
   font-size: 24px;
 }
-/* line 183, ../../app/stylesheets/screen.sass */
-.index_splash .quote .person {
+/* line 188, ../../app/stylesheets/screen.sass */
+.quote .person {
   text-align: right;
+}
+
+/* line 191, ../../app/stylesheets/screen.sass */
+.learn_more_splash {
+  text-align: justify;
+  text-justify: newspaper;
+  line-height: 1.2;
+}
+
+/* line 197, ../../app/stylesheets/screen.sass */
+footer img {
+  display: block;
+  margin: 0 auto;
 }
