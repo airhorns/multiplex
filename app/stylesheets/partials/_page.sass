@@ -38,7 +38,8 @@ div.flash
 
 //Footer
 @import "compass/layout/sticky-footer"
-@include sticky-footer(90px, "#container", "#container_footer", "footer")
+$footer-height: 120px
+@include sticky-footer($footer-height, "#container", "#container_footer", "footer")
 
 body
 #container
@@ -73,6 +74,7 @@ header
 footer
   width: $blueprint-container-size
   margin: 0 auto
+  height: $footer-height - 40px
   padding-top: 40px
   +clearfix
 

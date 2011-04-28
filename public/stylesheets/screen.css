@@ -492,50 +492,50 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -90px;
+  margin-bottom: -120px;
 }
 /* line 18, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #container #container_footer {
-  height: 90px;
+  height: 120px;
 }
 
 /* line 20, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 footer {
   clear: both;
   position: relative;
-  height: 90px;
+  height: 120px;
 }
 
-/* line 44, ../../app/stylesheets/partials/_page.sass */
+/* line 45, ../../app/stylesheets/partials/_page.sass */
 #container {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 50, ../../app/stylesheets/partials/_page.sass */
+/* line 51, ../../app/stylesheets/partials/_page.sass */
 #container .content {
   width: 620px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 55, ../../app/stylesheets/partials/_page.sass */
+/* line 56, ../../app/stylesheets/partials/_page.sass */
 #container .body {
   background: white;
   overflow: auto;
 }
 
-/* line 60, ../../app/stylesheets/partials/_page.sass */
+/* line 61, ../../app/stylesheets/partials/_page.sass */
 header {
   width: 100%;
 }
-/* line 63, ../../app/stylesheets/partials/_page.sass */
+/* line 64, ../../app/stylesheets/partials/_page.sass */
 header h1 {
   float: left;
 }
-/* line 65, ../../app/stylesheets/partials/_page.sass */
+/* line 66, ../../app/stylesheets/partials/_page.sass */
 header nav {
   float: right;
 }
-/* line 67, ../../app/stylesheets/partials/_page.sass */
+/* line 68, ../../app/stylesheets/partials/_page.sass */
 header nav li {
   float: left;
   list-style-position: none;
@@ -543,22 +543,23 @@ header nav li {
   margin-left: 15px;
 }
 
-/* line 73, ../../app/stylesheets/partials/_page.sass */
+/* line 74, ../../app/stylesheets/partials/_page.sass */
 footer {
   width: 620px;
   margin: 0 auto;
+  height: 80px;
   padding-top: 40px;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 79, ../../app/stylesheets/partials/_page.sass */
+/* line 81, ../../app/stylesheets/partials/_page.sass */
 .page, .window {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 82, ../../app/stylesheets/partials/_page.sass */
+/* line 84, ../../app/stylesheets/partials/_page.sass */
 .page {
   display: inline;
   float: left;
@@ -569,7 +570,7 @@ footer {
 * html .page {
   overflow-x: hidden;
 }
-/* line 84, ../../app/stylesheets/partials/_page.sass */
+/* line 86, ../../app/stylesheets/partials/_page.sass */
 .page + .page {
   display: inline;
   float: left;
@@ -581,7 +582,7 @@ footer {
   overflow-x: hidden;
 }
 
-/* line 87, ../../app/stylesheets/partials/_page.sass */
+/* line 89, ../../app/stylesheets/partials/_page.sass */
 .window {
   display: inline;
   float: left;
@@ -946,7 +947,7 @@ form#new_user input[type="submit"] {
   top: -5px;
   right: 0px;
   text-decoration: none;
-  background: url('/images/buttons.png?1303941982') no-repeat;
+  background: url('/images/buttons.png?1303944438') no-repeat;
   width: 86px;
   height: 32px;
   overflow: hidden;
@@ -995,22 +996,21 @@ form#new_user input[type="submit"] {
 /* line 183, ../../app/stylesheets/screen.sass */
 .quote .words {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  text-align: justify;
   font-size: 24px;
 }
-/* line 188, ../../app/stylesheets/screen.sass */
+/* line 186, ../../app/stylesheets/screen.sass */
 .quote .person {
   text-align: right;
 }
 
-/* line 191, ../../app/stylesheets/screen.sass */
+/* line 189, ../../app/stylesheets/screen.sass */
 .learn_more_splash {
   text-align: justify;
   text-justify: newspaper;
   line-height: 1.2;
 }
 
-/* line 197, ../../app/stylesheets/screen.sass */
+/* line 195, ../../app/stylesheets/screen.sass */
 footer img {
   display: block;
   margin: 0 auto;
