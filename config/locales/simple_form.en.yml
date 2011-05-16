@@ -23,15 +23,16 @@ en:
       #password: 'No special characters, please.' 
     labels:
       user:
-        mask_email_name: "Othermail Email"
-        summary_frequency: "How often should we email you?"
+        email: "Your current email"
+        mask_email_name: "Othermail email"
+        summary_frequency: "How often would you like to receive summary emails?"
     hints:
       user:
-        email: "This is where we'll send your summaries"
-        mask_email_name: "This is where you'll have people send your other emails."
-        invite_code: "This should have been given to you."
+        email: ""
+        mask_email_name: ""
+        invite_code: ""
     placeholders:
       user:
-        email: "Email"
-        mask_email_name: "Othermail Email"
-        invite_code: "Invite Code"
+        email: ""
+        mask_email_name: ""
+        invite_code: ""

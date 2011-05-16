@@ -55,39 +55,68 @@ header
   font-size: $blueprint-font-size
 
 form#new_user
-  +column(8)
   .input
     +column(4)
     & + .input
       +column(4, true)
-    input 
-      width: $blueprint_grid_width * 4 + $blueprint_grid_margin * (4 - 1) - 12px
-    select
-      +span(4)
+    
+    &.double
+      +column(8, true)
 
-  input[type="submit"]
-    clear: both
-  
+    input
+      &[type="text"], &[type="password"], &[type="email"]
+        width: $blueprint_grid_width * 4 + $blueprint_grid_margin * (4 - 1) - 12px
+    
+    label
+      display: block
+      width: 100%
+
+    label.collection_check_boxes
+      width: 130px
+      float: left
+
   .hint
     margin: 0 auto
     font-size: 12px
 
   .ghostwrite
+    overflow: hidden
+    position: relative
+
     input
-      width: 155px
+      color: #FFF
 
     span.ghost
+      position: absolute
       font-size: 12px
+      color: #CCC
+
     span.write
-      color: #FFF
-      +transparent
+      color: #000
+      //color: #FFF
+      //+transparent
   br
     clear: both
 
+.basement
+  background-color: #f2fbed
+  border-top: 1px solid #DDD
+  padding: 20px 20px
+  +clearfix
+  span
+    +neue
+    color: #739a5d
+    font-size: 24px
+
   input[type="submit"]
-    display: block
-    margin-left: 80px
-    width: 100px
+    float: right
+    border: 0
+    color: rgba(255,255,255,0)
+    +sprite-background('/images/paypal_button.png', 254px, 42px)
+    &:hover
+      +sprite-row(2, 42px)
+    &:active
+      +sprite-row(3, 42px)
 
 .register_email
   +column(4, true)
@@ -128,7 +157,8 @@ $body-border-color: #c2c2c2
   h2
     line-height: 1
     font-size: 24px
-    margin-bottom: 15px
+    padding-bottom: 5px
+    margin-bottom: 10px
     margin-top: 10px
     /* old browsers */
     color: #0e0e0e       
@@ -138,6 +168,8 @@ $body-border-color: #c2c2c2
     //-webkit-text-fill-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e0e0e), color-stop(100%,#F00))
     /* ie */
     //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#4D4D4D',GradientType=0 )
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.6)))
+
   hr
     color: $body-border-color
     background-color: $body-border-color
@@ -182,6 +214,7 @@ $body-border-color: #c2c2c2
   margin: 0px 50px 0px 50px
   .words
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-weight: 300
     font-size: 24px
   .person
     text-align: right

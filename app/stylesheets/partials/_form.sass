@@ -1,81 +1,57 @@
-// Only apply the blueprint form styles to forms with
-// a class of "bp". This makes it easier to style
-// forms from scratch if you need to.
+=neue
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif
+  font-weight: 300
 
-$label-column-width: 120px
 form
   +blueprint-form
-
+  +neue
   div.input
     margin-bottom: 10px
-
-  label
-    float: left
-    width: $label-column-width - 20px
-    text-align: right
-    margin: 9px 10px 2px 10px
+  
+  input
+    +neue
+    font-size: 14px
+    color: #000
 
     &.radio
-      margin-top: 0px
-    &.collection_radio, &.collection_check_boxes
-      float: none
-      display: block
-      margin: 3px 0px 0px $label-column-width
-      vertical-align: -2px
-      width: 140px
-      text-align: left
+      margin-right: 5px
 
-    div.boolean &
-      float: none
-      margin: 0
+    &.check_boxes
+      margin-left: 3px
+    
+    &[type="text"], &[type="password"], &[type="email"]
+      border-color: #d2d9dc
+      height: 32px
+      +border-radius(3px)
+      +box-shadow(inset 3px 3px 5px #EFEFEF)
 
-  div.boolean, input[type='submit']
-    margin-left: $label-column-width
+      &:focus
+        outline: none
+        border-color: #b7d4ea
+        +box-shadow(inset 3px 3px 5px #EFEFEF, 0 0 1px px #d0e6f6)
 
-  .field_with_errors
-    input
+    .field_with_errors &
       border-color: $error_border_color
-    //background-color: #ff3333
 
-  //div.error
-    //clear: left
-    //color: black
-    //display: block
-    //margin-left: $label-column-width
-    //font-size: 12px
+  label
+    +neue
+    font-size: 15px
+    color: #373c3c
+  
+    &.collection_check_boxes
+      font-size: 13px
+      input[type="checkbox"]
+        margin-right: 5px
+
+
   div.hint
     clear: left
-    margin-left: $label-column-width
     font-size: 9px
     color: #555
     display: block
     font-style: italic
 
-  input
-    &.radio
-      margin-right: 5px
-      //vertical-align: -3px
-    &.check_boxes
-      margin-left: 3px
-      //vertical-align: -3px
-
-
   div.error
-    margin: 5px 0
     padding: 2px
     float: left
-    border-left: 0px
-  
-  //div.hint
-    //font-size: 9px
-    //width: 100%
-  //.input
-    ////+clearfix
-    ////&.string
-      ////height: 44px
-  //label
-    //display: block
-    //float: left
-
-  //input.text, input.title, input[type="email"], input[type="text"], input[type="password"]
-    //float: left
+    color: #630000

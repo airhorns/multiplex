@@ -15,29 +15,27 @@ $(document).ready ->
     span = $('span.ghost', this)
     write = $('span.write', this)
 
-    $(this).css
-      position: "relative"
-
     css =
-      position: "absolute"
-      top: "4px"
-      left: "2px"
       display: "none"
-      color: "#888"
+      top: input.position().top + 18
+      left: input.position().left + 8
     
-    for attr in ["font-family", "font-size", "padding-left", "padding-top"]
+    for attr in ["font-family", "font-size"]
       css[attr] = input.css(attr)
 
     span.css(css).click ->
       input.focus()
-
-    input.css(
-      width: 248
-    ).keyup( ->
-      if input.val() != ""
-        span.show()
-        write.html(input.val())
+    
+    hidden = true
+    input.keyup( (e) ->
+      v = input.val()
+      if v != ""
+        write.html(v)
+        if hidden
+          span.show()
+          hidden = false
       else
+        hidden = true
         span.hide()
     ).trigger('keyup')
 

@@ -1,6 +1,6 @@
 = simple_form_for resource, :url => user_registration_path, :html => {:novalidate => true} do |f|
-  = f.input :email, :label => false
-  = f.input :mask_email_name, :label => false, :wrapper_html => {:class => "ghostwrite"} do
+  = f.input :email
+  = f.input :mask_email_name, :wrapper_html => {:class => "ghostwrite"} do
     = f.text_field :mask_email_name, :placeholder => "Othermail Email"
     = f.error :mask_email
     %span.ghost
@@ -9,10 +9,13 @@
   %br
   = f.input :summary_frequency,
               :prompt => "How often should we email you?",
-              :label => false,
-              :as => :select, 
-              :collection => f.object.available_summary_frequencies.collect {|(k,v)| [v,k.to_s]}
-  = f.input :invite_code, :label => false
+              :as => :check_boxes, 
+              :collection => f.object.available_summary_frequencies.collect {|(k,v)| [v,k.to_s]},
+              :wrapper_html => {:class => "double"}
   %br
-  = f.submit "Sign Up"
+  = f.input :invite_code
+  %br
+  .basement
+    = f.submit "Checkout with Paypal"
+    %span Othermail costs $8.<sup>00</sup> /year 
 
