@@ -10,7 +10,10 @@ gem "resque-scheduler"
 gem "uuid"
 gem "mail"
 gem "pg"
-gem "heroku" # need in all groups for the autoscaler as well as developingt c
+gem "heroku" # need in all groups for the autoscaler as well as developing
+
+gem "money"
+gem "activemerchant"
 
 group :production do
   gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"

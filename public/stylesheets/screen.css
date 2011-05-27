@@ -897,8 +897,9 @@ form#new_user br {
   color: #739a5d;
   font-size: 24px;
 }
+
 /* line 111, ../../app/stylesheets/screen.sass */
-.basement input[type="submit"] {
+input.paypal_checkout {
   float: right;
   border: 0;
   color: rgba(255, 255, 255, 0);
@@ -908,11 +909,11 @@ form#new_user br {
   overflow: hidden;
 }
 /* line 116, ../../app/stylesheets/screen.sass */
-.basement input[type="submit"]:hover {
+input.paypal_checkout:hover {
   background-position: 0px -42px;
 }
 /* line 118, ../../app/stylesheets/screen.sass */
-.basement input[type="submit"]:active {
+input.paypal_checkout:active {
   background-position: 0px -84px;
 }
 

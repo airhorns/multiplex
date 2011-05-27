@@ -14,6 +14,10 @@ Multiplex::Application.routes.draw do
     get 'unsubscribe', :on => :member
   end
 
+  resources :payments, :only => [:new] do
+    post 'paypal_ipn', :on => :collection, :as => :paypal_ipn
+  end
+
   resources :messages, :only => [] do
     post 'sendgrid_create', :on => :collection
     post 'cloudmailin_create', :on => :collection

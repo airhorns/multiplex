@@ -57,5 +57,13 @@ module Multiplex
     Mail.defaults do
       delivery_method :smtp, settings.dup
     end
+
+    unless Rails.env.production?
+      Multiplex::Application::PaypalAccount = 'test_1305508600_biz@jadedpixel.com'
+      ActiveMerchant::Billing::Base.mode = :test
+    else
+      Multiplex::Application::PaypalAccount = 'harry@skylightlabs.ca'
+    end
+    
   end
 end

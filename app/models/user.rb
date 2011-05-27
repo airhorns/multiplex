@@ -12,7 +12,10 @@ class User < ActiveRecord::Base
   end
 
   has_many :messages
+  has_many :transactions
   has_one :invite
+  
+  scope :enabled, where(:enabled => true)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
@@ -22,7 +25,7 @@ class User < ActiveRecord::Base
     
   validates_presence_of :email, :mask_email_name, :mask_email, :summary_frequency
   validate :mask_email_valid?
-  validate :invited
+  #validate :invited
   validates_uniqueness_of :mask_email
 
   def unsubscribe!
@@ -52,8 +55,12 @@ class User < ActiveRecord::Base
   end
 
   def enqueue_summary
-    Resque.enqueue(MailSummaryJob, self.id)
-    true
+    if self.enabled?
+      Resque.enqueue(MailSummaryJob, self.id)
+      true
+    else
+      false
+    end
   end
   
   def invite_code=(code)
@@ -67,6 +74,10 @@ class User < ActiveRecord::Base
     else
       nil
     end
+  end
+
+  def enabled?
+    self.enabled == true
   end
 
   private

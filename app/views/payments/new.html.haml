@@ -1,0 +1,18 @@
+- if user_signed_in?
+  You are about to activate your new OtherMail account
+  = current_user.mask_email
+  , which will send emails to
+  = succeed "." do
+    = current_user.email
+  Click the button below to proceed to PayPal's site to make a payment.
+  = payment_service_for current_user.id, Multiplex::Application::PaypalAccount,
+  :amount => 8.00, 
+  :currency => 'CAD', 
+  :service => :paypal do |service|
+    - service.item_name "Othermail Subscription"
+    - service.tax '0.00'
+    - service.notify_url paypal_ipn_payments_url
+    - service.return_url faq_url
+    = submit_tag 'Make Payment', :class => "paypal_checkout"
+- else
+  %p You need to sign in to make a payment. Please do so.

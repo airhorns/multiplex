@@ -108,15 +108,15 @@ form#new_user
     color: #739a5d
     font-size: 24px
 
-  input[type="submit"]
-    float: right
-    border: 0
-    color: rgba(255,255,255,0)
-    +sprite-background('/images/paypal_button.png', 254px, 42px)
-    &:hover
-      +sprite-row(2, 42px)
-    &:active
-      +sprite-row(3, 42px)
+input.paypal_checkout
+  float: right
+  border: 0
+  color: rgba(255,255,255,0)
+  +sprite-background('/images/paypal_button.png', 254px, 42px)
+  &:hover
+    +sprite-row(2, 42px)
+  &:active
+    +sprite-row(3, 42px)
 
 .register_email
   +column(4, true)

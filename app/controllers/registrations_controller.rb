@@ -11,6 +11,10 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_sign_up_path_for(resource)
-    faq_path
+    if resource.enabled?
+      faq_path
+    else
+      new_payment_path
+    end
   end
 end
