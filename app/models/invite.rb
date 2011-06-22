@@ -1,4 +1,5 @@
 class Invite < ActiveRecord::Base
+  belongs_to :user
   validates_uniqueness_of :code
   validates_inclusion_of :used, :in => [true, false]
   before_validation do
