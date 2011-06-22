@@ -1,10 +1,25 @@
 - if user_signed_in?
-  You are about to activate your new OtherMail account
-  = current_user.mask_email
-  , which will send emails to
-  = succeed "." do
-    = current_user.email
-  Click the button below to proceed to PayPal's site to make a payment.
+  %h2 Congratulations!
+  %p 
+    You must now pay to activate your new OtherMail account.
+
+  #diagram_many
+    .icon
+    Have your emails sent to:
+    %br
+    %b
+      = current_user.mask_email
+  #diagram_arrow
+    .icon
+  #diagram_one
+    .icon
+    You'll receive summaries at:
+    %br
+    %b
+      = current_user.email
+  
+  %div
+    Click the button below to proceed to PayPal's site to make a payment.
   = payment_service_for current_user.id, Multiplex::Application::PaypalAccount,
   :amount => 8.00, 
   :currency => 'CAD', 

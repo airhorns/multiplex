@@ -1,14 +1,13 @@
 $(document).ready ->
-  #$('body').noisy
-    #intensity: 1
-    #size: 200
-    #opacity: 0.08
-    #fallback: '/images/bg.png'
-    #monochrome: false
-  
-  #$('form#new_user').validate
-    #debug: true
-    #errorElement: "span"
+  togglePaypalInviteSignup = ->
+    $('.basement .paypal, .basement .invite, #invite_code_input').toggle()
+
+  $('#use_invite, #use_paypal').click (e) ->
+    e.preventDefault()
+    togglePaypalInviteSignup()
+
+  if $("#user_invite_code").val() != ""
+    togglePaypalInviteSignup()
 
   $('.input.ghostwrite').each () ->
     input = $('input', this)
@@ -27,8 +26,11 @@ $(document).ready ->
       input.focus()
     
     hidden = true
-    input.keyup( (e) ->
+    oldv = input.val()
+    update = () ->
       v = input.val()
+      return if v == oldv
+      oldv = v
       if v != ""
         write.html(v)
         if hidden
@@ -37,6 +39,6 @@ $(document).ready ->
       else
         hidden = true
         span.hide()
-    ).trigger('keyup')
+    setInterval(update, 25)
 
     true

@@ -22,11 +22,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :trackable, :validatable, :confirmable
 
   attr_accessible :email, :mask_email_name, :summary_frequency, :password, :password_confirmation, :remember_me, :invite_code
+  attr_accessor :given_invite_code
     
   validates_presence_of :email, :mask_email_name, :mask_email, :summary_frequency
   validate :mask_email_valid?
-  #validate :invited
   validates_uniqueness_of :mask_email
+
+  validate :invite_valid?
+  before_create :set_enabled_for_invited
 
   def unsubscribe!
     self.update_attributes!(:summary_frequency => :never)
@@ -64,6 +67,7 @@ class User < ActiveRecord::Base
   end
   
   def invite_code=(code)
+    self.given_invite_code = code
     self.invite = Invite.find_by_code(code)
     self.invite_code
   end
@@ -72,7 +76,7 @@ class User < ActiveRecord::Base
     if self.invite.present?
       self.invite.code
     else
-      nil
+      self.given_invite_code
     end
   end
 
@@ -85,17 +89,26 @@ class User < ActiveRecord::Base
     false 
   end
 
-  def invited
-    if self.invite.present?
-      errors.add(:invite_code, "has already been used") if self.invite.used
-    else
-      errors.add(:invite_code, "must be valid") 
-    end    
+  # Validates that the given invite code is good, but doesn't add errors if no invite code is given
+  def invite_valid?
+    if self.given_invite_code.present?
+      if self.invite.present?
+        errors.add(:invite_code, "has already been used") if self.invite.used
+      else
+        errors.add(:invite_code, "must be valid") 
+      end    
+    end
   end
 
   def mask_email_valid?
     unless self.mask_email =~ /\A[a-z0-9._%-]+@#{Multiplex::Application::Domain}\z/
       errors.add(:mask_email_name, "must be valid, containing only letters, numbers, and . _ % or -.")
+    end
+  end
+
+  def set_enabled_for_invited
+    if self.valid? && self.invite.present?
+      self.enabled = true
     end
   end
 end

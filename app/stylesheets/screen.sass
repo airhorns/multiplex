@@ -25,7 +25,8 @@ h3
 
 a:hover
   color: #8d8d8d
-
+b
+  font-weight: bold
 header
   padding-top: 40px
   margin-bottom: 35px
@@ -84,7 +85,7 @@ form#new_user
     position: relative
 
     input
-      color: #FFF
+      //color: #FFF
 
     span.ghost
       position: absolute
@@ -92,27 +93,37 @@ form#new_user
       color: #CCC
 
     span.write
-      color: #000
+      //color: #000
       //color: #FFF
-      //+transparent
+      +transparent
   br
     clear: both
 
 .basement
   background-color: #f2fbed
   border-top: 1px solid #DDD
-  padding: 20px 20px
+  padding: 20px 20px 6px 20px
   +clearfix
-  span
+  .invite, .paypal
+    float: right
+    width: 254px
+    input
+      height: 42px
+  .cost
     +neue
     color: #739a5d
     font-size: 24px
+  .alt
+    font-size: 10px
+    text-align: center
 
-input.paypal_checkout
-  float: right
+input.checkout
   border: 0
   color: rgba(255,255,255,0)
-  +sprite-background('/images/paypal_button.png', 254px, 42px)
+  .paypal &
+    +sprite-background('/images/paypal_button.png', 254px, 42px)
+  .invite &
+    +sprite-background('/images/invite_button.png', 254px, 42px)
   &:hover
     +sprite-row(2, 42px)
   &:active
@@ -124,6 +135,28 @@ input.paypal_checkout
     +box-shadow(#c2c2c2, 0px, 0px, 5px, 0px)
     border: 1px solid #c2c2c2
     width: 100%
+
+#diagram_many, #diagram_arrow, #diagram_one
+  text-align: center
+  margin: 20px 0px
+  .icon
+    background-image: url('/images/condense.png')
+    background-repeat: no-repeat
+    height: 167px
+    margin: 0 auto 5px auto
+    width: 105px
+
+#diagram_many
+  +column(3)
+#diagram_arrow
+  .icon
+    background-position: -105px 0px
+  +column(2, true)
+#diagram_one
+  +column(3, true)
+  .icon
+    background-position: -205px 0px
+    width: 135px
 
 #splash
   margin-bottom: 1em

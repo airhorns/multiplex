@@ -1,7 +1,7 @@
 = simple_form_for resource, :url => user_registration_path, :html => {:novalidate => true} do |f|
   = f.input :email
   = f.input :mask_email_name, :wrapper_html => {:class => "ghostwrite"} do
-    = f.text_field :mask_email_name, :placeholder => "Othermail Email"
+    = f.text_field :mask_email_name
     = f.error :mask_email
     %span.ghost
       %span.write>
@@ -13,9 +13,17 @@
               :collection => f.object.available_summary_frequencies.collect {|(k,v)| [v,k.to_s]},
               :wrapper_html => {:class => "double"}
   %br
-  = f.input :invite_code
+  = f.input :invite_code, :wrapper_html => {:style => "display: none;", :id => "invite_code_input"}
   %br
   .basement
-    = f.submit "Checkout with Paypal", :class => "paypal_checkout"
-    %span Othermail costs $8.<sup>00</sup> /year 
-
+    %span.cost Othermail costs $8.<sup>00</sup> /year 
+    .paypal
+      = f.submit "Checkout with Paypal", :class => "checkout"
+      .alt 
+        or, 
+        %a(id="use_invite" href="#") use an invite code
+    .invite(style="display:none;")
+      = f.submit "Sign up with invite", :class => "checkout"
+      .alt
+        or, 
+        %a(id="use_paypal" href="#") use Paypal

@@ -1,7 +1,18 @@
 (function() {
   $(document).ready(function() {
+    var togglePaypalInviteSignup;
+    togglePaypalInviteSignup = function() {
+      return $('.basement .paypal, .basement .invite, #invite_code_input').toggle();
+    };
+    $('#use_invite, #use_paypal').click(function(e) {
+      e.preventDefault();
+      return togglePaypalInviteSignup();
+    });
+    if ($("#user_invite_code").val() !== "") {
+      togglePaypalInviteSignup();
+    }
     return $('.input.ghostwrite').each(function() {
-      var attr, css, hidden, input, span, write, _i, _len, _ref;
+      var attr, css, hidden, input, oldv, span, update, write, _i, _len, _ref;
       input = $('input', this);
       span = $('span.ghost', this);
       write = $('span.write', this);
@@ -19,9 +30,14 @@
         return input.focus();
       });
       hidden = true;
-      input.keyup(function(e) {
+      oldv = input.val();
+      update = function() {
         var v;
         v = input.val();
+        if (v === oldv) {
+          return;
+        }
+        oldv = v;
         if (v !== "") {
           write.html(v);
           if (hidden) {
@@ -32,7 +48,8 @@
           hidden = true;
           return span.hide();
         }
-      }).trigger('keyup');
+      };
+      setInterval(update, 25);
       return true;
     });
   });

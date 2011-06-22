@@ -768,12 +768,17 @@ a:hover {
   color: #8d8d8d;
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 28, ../../app/stylesheets/screen.sass */
+b {
+  font-weight: bold;
+}
+
+/* line 30, ../../app/stylesheets/screen.sass */
 header {
   padding-top: 40px;
   margin-bottom: 35px;
 }
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 header .line {
   position: absolute;
   top: 0px;
@@ -782,31 +787,31 @@ header .line {
   height: 4px;
   background: url("../images/header_border.png") repeat top left;
 }
-/* line 41, ../../app/stylesheets/screen.sass */
+/* line 42, ../../app/stylesheets/screen.sass */
 header h1 {
   margin: 9px 0px 0px -45px;
   font-size: 24px;
 }
-/* line 45, ../../app/stylesheets/screen.sass */
+/* line 46, ../../app/stylesheets/screen.sass */
 header h1 a {
   text-decoration: none;
 }
-/* line 48, ../../app/stylesheets/screen.sass */
+/* line 49, ../../app/stylesheets/screen.sass */
 header nav {
   margin-top: 20px;
   font-size: 14px;
 }
-/* line 51, ../../app/stylesheets/screen.sass */
+/* line 52, ../../app/stylesheets/screen.sass */
 header nav a {
   text-decoration: none;
 }
 
-/* line 54, ../../app/stylesheets/screen.sass */
+/* line 55, ../../app/stylesheets/screen.sass */
 #error_explanation h2 {
   font-size: 14px;
 }
 
-/* line 58, ../../app/stylesheets/screen.sass */
+/* line 59, ../../app/stylesheets/screen.sass */
 form#new_user .input {
   display: inline;
   float: left;
@@ -817,7 +822,7 @@ form#new_user .input {
 * html form#new_user .input {
   overflow-x: hidden;
 }
-/* line 60, ../../app/stylesheets/screen.sass */
+/* line 61, ../../app/stylesheets/screen.sass */
 form#new_user .input + .input {
   display: inline;
   float: left;
@@ -828,7 +833,7 @@ form#new_user .input + .input {
 * html form#new_user .input + .input {
   overflow-x: hidden;
 }
-/* line 63, ../../app/stylesheets/screen.sass */
+/* line 64, ../../app/stylesheets/screen.sass */
 form#new_user .input.double {
   display: inline;
   float: left;
@@ -839,85 +844,106 @@ form#new_user .input.double {
 * html form#new_user .input.double {
   overflow-x: hidden;
 }
-/* line 67, ../../app/stylesheets/screen.sass */
+/* line 68, ../../app/stylesheets/screen.sass */
 form#new_user .input input[type="text"], form#new_user .input input[type="password"], form#new_user .input input[type="email"] {
   width: 293px;
 }
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 71, ../../app/stylesheets/screen.sass */
 form#new_user .input label {
   display: block;
   width: 100%;
 }
-/* line 74, ../../app/stylesheets/screen.sass */
+/* line 75, ../../app/stylesheets/screen.sass */
 form#new_user .input label.collection_check_boxes {
   width: 130px;
   float: left;
 }
-/* line 78, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 form#new_user .hint {
   margin: 0 auto;
   font-size: 12px;
 }
-/* line 82, ../../app/stylesheets/screen.sass */
+/* line 83, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite {
   overflow: hidden;
   position: relative;
 }
-/* line 86, ../../app/stylesheets/screen.sass */
-form#new_user .ghostwrite input {
-  color: white;
-}
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 90, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.ghost {
   position: absolute;
   font-size: 12px;
   color: #cccccc;
 }
-/* line 94, ../../app/stylesheets/screen.sass */
+/* line 95, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.write {
-  color: black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
-/* line 98, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 form#new_user br {
   clear: both;
 }
 
-/* line 101, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 .basement {
   background-color: #f2fbed;
   border-top: 1px solid #dddddd;
-  padding: 20px 20px;
+  padding: 20px 20px 6px 20px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 106, ../../app/stylesheets/screen.sass */
-.basement span {
+/* line 107, ../../app/stylesheets/screen.sass */
+.basement .invite, .basement .paypal {
+  float: right;
+  width: 254px;
+}
+/* line 110, ../../app/stylesheets/screen.sass */
+.basement .invite input, .basement .paypal input {
+  height: 42px;
+}
+/* line 112, ../../app/stylesheets/screen.sass */
+.basement .cost {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 300;
   color: #739a5d;
   font-size: 24px;
 }
+/* line 116, ../../app/stylesheets/screen.sass */
+.basement .alt {
+  font-size: 10px;
+  text-align: center;
+}
 
-/* line 111, ../../app/stylesheets/screen.sass */
-input.paypal_checkout {
-  float: right;
+/* line 120, ../../app/stylesheets/screen.sass */
+input.checkout {
   border: 0;
   color: rgba(255, 255, 255, 0);
+}
+/* line 123, ../../app/stylesheets/screen.sass */
+.paypal input.checkout {
   background: url('/images/paypal_button.png?1305504059') no-repeat;
   width: 254px;
   height: 42px;
   overflow: hidden;
 }
-/* line 116, ../../app/stylesheets/screen.sass */
-input.paypal_checkout:hover {
+/* line 125, ../../app/stylesheets/screen.sass */
+.invite input.checkout {
+  background: url('/images/invite_button.png?1308708104') no-repeat;
+  width: 254px;
+  height: 42px;
+  overflow: hidden;
+}
+/* line 127, ../../app/stylesheets/screen.sass */
+input.checkout:hover {
   background-position: 0px -42px;
 }
-/* line 118, ../../app/stylesheets/screen.sass */
-input.paypal_checkout:active {
+/* line 129, ../../app/stylesheets/screen.sass */
+input.checkout:active {
   background-position: 0px -84px;
 }
 
-/* line 121, ../../app/stylesheets/screen.sass */
+/* line 132, ../../app/stylesheets/screen.sass */
 .register_email {
   display: inline;
   float: left;
@@ -928,7 +954,7 @@ input.paypal_checkout:active {
 * html .register_email {
   overflow-x: hidden;
 }
-/* line 123, ../../app/stylesheets/screen.sass */
+/* line 134, ../../app/stylesheets/screen.sass */
 .register_email img {
   -moz-box-shadow: 0px 0px 5px 0px #c2c2c2;
   -webkit-box-shadow: 0px 0px 5px 0px #c2c2c2;
@@ -938,12 +964,71 @@ input.paypal_checkout:active {
   width: 100%;
 }
 
-/* line 128, ../../app/stylesheets/screen.sass */
+/* line 139, ../../app/stylesheets/screen.sass */
+#diagram_many, #diagram_arrow, #diagram_one {
+  text-align: center;
+  margin: 20px 0px;
+}
+/* line 142, ../../app/stylesheets/screen.sass */
+#diagram_many .icon, #diagram_arrow .icon, #diagram_one .icon {
+  background-image: url("/images/condense.png");
+  background-repeat: no-repeat;
+  height: 167px;
+  margin: 0 auto 5px auto;
+  width: 105px;
+}
+
+/* line 149, ../../app/stylesheets/screen.sass */
+#diagram_many {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 226.25px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #diagram_many {
+  overflow-x: hidden;
+}
+
+/* line 151, ../../app/stylesheets/screen.sass */
+#diagram_arrow {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 147.5px;
+}
+/* line 152, ../../app/stylesheets/screen.sass */
+#diagram_arrow .icon {
+  background-position: -105px 0px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #diagram_arrow {
+  overflow-x: hidden;
+}
+
+/* line 155, ../../app/stylesheets/screen.sass */
+#diagram_one {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 226.25px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #diagram_one {
+  overflow-x: hidden;
+}
+/* line 157, ../../app/stylesheets/screen.sass */
+#diagram_one .icon {
+  background-position: -205px 0px;
+  width: 135px;
+}
+
+/* line 161, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 131, ../../app/stylesheets/screen.sass */
+/* line 164, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -954,7 +1039,7 @@ input.paypal_checkout:active {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 133, ../../app/stylesheets/screen.sass */
+/* line 166, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -966,7 +1051,7 @@ input.paypal_checkout:active {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 136, ../../app/stylesheets/screen.sass */
+/* line 169, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -975,19 +1060,19 @@ input.paypal_checkout:active {
   color: white;
 }
 
-/* line 145, ../../app/stylesheets/screen.sass */
+/* line 178, ../../app/stylesheets/screen.sass */
 .clear {
   clear: both;
 }
 
-/* line 152, ../../app/stylesheets/screen.sass */
+/* line 185, ../../app/stylesheets/screen.sass */
 .elevator {
   width: 100%;
   position: relative;
   margin-top: 5px;
   z-index: 1;
 }
-/* line 157, ../../app/stylesheets/screen.sass */
+/* line 190, ../../app/stylesheets/screen.sass */
 .elevator h2 {
   line-height: 1;
   font-size: 24px;
@@ -1001,13 +1086,13 @@ input.paypal_checkout:active {
   /* ie */
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.6)));
 }
-/* line 173, ../../app/stylesheets/screen.sass */
+/* line 206, ../../app/stylesheets/screen.sass */
 .elevator hr {
   color: #c2c2c2;
   background-color: #c2c2c2;
   height: 1px;
 }
-/* line 178, ../../app/stylesheets/screen.sass */
+/* line 211, ../../app/stylesheets/screen.sass */
 .elevator a.sign_up {
   position: absolute;
   top: -5px;
@@ -1018,66 +1103,66 @@ input.paypal_checkout:active {
   height: 32px;
   overflow: hidden;
 }
-/* line 185, ../../app/stylesheets/screen.sass */
+/* line 218, ../../app/stylesheets/screen.sass */
 .elevator a.sign_up:hover {
   background-position: 0px -32px;
 }
-/* line 187, ../../app/stylesheets/screen.sass */
+/* line 220, ../../app/stylesheets/screen.sass */
 .elevator a.sign_up:active {
   background-position: 0px -64px;
 }
 
-/* line 191, ../../app/stylesheets/screen.sass */
+/* line 224, ../../app/stylesheets/screen.sass */
 .index_splash .image {
   float: left;
 }
-/* line 194, ../../app/stylesheets/screen.sass */
+/* line 227, ../../app/stylesheets/screen.sass */
 .index_splash .explanation {
   float: right;
   width: 253px;
 }
-/* line 198, ../../app/stylesheets/screen.sass */
+/* line 231, ../../app/stylesheets/screen.sass */
 .index_splash .explanation h3 {
   font-weight: bold;
   font-size: 18px;
   color: #272b2b;
   margin-bottom: 12px;
 }
-/* line 204, ../../app/stylesheets/screen.sass */
+/* line 237, ../../app/stylesheets/screen.sass */
 .index_splash .explanation p {
   text-align: justify;
   line-height: 1.2;
   color: #373c3c;
 }
 
-/* line 210, ../../app/stylesheets/screen.sass */
+/* line 243, ../../app/stylesheets/screen.sass */
 .clear hr {
   margin-bottom: 10px;
 }
 
-/* line 213, ../../app/stylesheets/screen.sass */
+/* line 246, ../../app/stylesheets/screen.sass */
 .quote {
   margin: 0px 50px 0px 50px;
 }
-/* line 215, ../../app/stylesheets/screen.sass */
+/* line 248, ../../app/stylesheets/screen.sass */
 .quote .words {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 24px;
 }
-/* line 219, ../../app/stylesheets/screen.sass */
+/* line 252, ../../app/stylesheets/screen.sass */
 .quote .person {
   text-align: right;
 }
 
-/* line 222, ../../app/stylesheets/screen.sass */
+/* line 255, ../../app/stylesheets/screen.sass */
 .learn_more_splash {
   text-align: justify;
   text-justify: newspaper;
   line-height: 1.2;
 }
 
-/* line 228, ../../app/stylesheets/screen.sass */
+/* line 261, ../../app/stylesheets/screen.sass */
 footer img {
   display: block;
   margin: 0 auto;
