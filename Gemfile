@@ -10,7 +10,6 @@ gem "resque-scheduler"
 gem "uuid"
 gem "mail"
 gem "pg"
-gem "heroku" # need in all groups for the autoscaler as well as developing
 
 gem "money"
 gem "activemerchant"
@@ -18,7 +17,8 @@ gem "activemerchant"
 gem 'activeadmin'
 
 group :production do
-  gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
+  gem "thin"
+  #gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
   gem "jammit_lite", :git => "https://github.com/hornairs/jammit_lite.git"
 end
 
