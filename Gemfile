@@ -18,7 +18,7 @@ gem 'activeadmin'
 
 group :production do
   gem "thin"
-  #gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler"
+  gem "resque-heroku-autoscaler", :require => "resque/plugins/resque_heroku_autoscaler", :git => "https://github.com/bborn/resque-heroku-autoscaler.git"
   gem "jammit_lite", :git => "https://github.com/hornairs/jammit_lite.git"
 end
 

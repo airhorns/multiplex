@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/bborn/resque-heroku-autoscaler.git
+  revision: 80577ab70e228422abaec4d505e786a17eb82479
+  specs:
+    resque-heroku-autoscaler (0.2.3)
+      heroku
+      resque (>= 1.8)
+
+GIT
   remote: https://github.com/hornairs/jammit_lite.git
   revision: 7a599ae3849bd19aab6dc34faa426d3294b9ef5f
   specs:
@@ -75,6 +83,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    configuration (1.3.1)
     daemons (1.0.10)
     devise (1.3.4)
       bcrypt-ruby (~> 2.1.2)
@@ -121,6 +130,10 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     has_scope (0.5.0)
+    heroku (2.3.3)
+      launchy (>= 0.3.2)
+      rest-client (~> 1.6.1)
+      term-ansicolor (~> 1.0.5)
     i18n (0.5.0)
     inherited_resources (1.2.2)
       has_scope (~> 0.5.0)
@@ -133,6 +146,9 @@ GEM
       yui-compressor (>= 0.9.3)
     json (1.5.3)
     json_pure (1.5.3)
+    launchy (0.4.0)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
     macaddr (1.0.0)
@@ -191,6 +207,8 @@ GEM
       redis (>= 2.0.1)
       resque (>= 1.8.0)
       rufus-scheduler
+    rest-client (1.6.3)
+      mime-types (>= 1.16)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -232,6 +250,7 @@ GEM
     steak (2.0.0)
       capybara (>= 1.0.0)
       rspec-rails (>= 2.5.0)
+    term-ansicolor (1.0.5)
     thin (1.2.11)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -282,6 +301,7 @@ DEPENDENCIES
   rails (= 3.0.7)
   rb-fsevent
   resque
+  resque-heroku-autoscaler!
   resque-scheduler
   rspec-rails
   ruby-debug19
