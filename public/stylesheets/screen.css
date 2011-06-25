@@ -855,38 +855,38 @@ form#new_user .input label {
   width: 100%;
 }
 /* line 75, ../../app/stylesheets/screen.sass */
-form#new_user .input label.collection_check_boxes {
-  width: 130px;
+form#new_user .input.check_boxes span {
   float: left;
+  width: 150px;
 }
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 78, ../../app/stylesheets/screen.sass */
 form#new_user .hint {
   margin: 0 auto;
   font-size: 12px;
 }
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 82, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite {
   overflow: hidden;
   position: relative;
 }
-/* line 90, ../../app/stylesheets/screen.sass */
+/* line 89, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.ghost {
   position: absolute;
   font-size: 12px;
   color: #cccccc;
 }
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 94, ../../app/stylesheets/screen.sass */
 form#new_user .ghostwrite span.write {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 98, ../../app/stylesheets/screen.sass */
 form#new_user br {
   clear: both;
 }
 
-/* line 102, ../../app/stylesheets/screen.sass */
+/* line 101, ../../app/stylesheets/screen.sass */
 .basement {
   background-color: #f2fbed;
   border-top: 1px solid #dddddd;
@@ -894,57 +894,57 @@ form#new_user br {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 107, ../../app/stylesheets/screen.sass */
+/* line 106, ../../app/stylesheets/screen.sass */
 .basement .invite, .basement .paypal {
   float: right;
   width: 254px;
 }
-/* line 110, ../../app/stylesheets/screen.sass */
+/* line 109, ../../app/stylesheets/screen.sass */
 .basement .invite input, .basement .paypal input {
   height: 42px;
 }
-/* line 112, ../../app/stylesheets/screen.sass */
+/* line 111, ../../app/stylesheets/screen.sass */
 .basement .cost {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 300;
   color: #739a5d;
   font-size: 24px;
 }
-/* line 116, ../../app/stylesheets/screen.sass */
+/* line 115, ../../app/stylesheets/screen.sass */
 .basement .alt {
   font-size: 10px;
   text-align: center;
 }
 
-/* line 120, ../../app/stylesheets/screen.sass */
+/* line 119, ../../app/stylesheets/screen.sass */
 input.checkout {
   border: 0;
   color: rgba(255, 255, 255, 0);
 }
-/* line 123, ../../app/stylesheets/screen.sass */
+/* line 122, ../../app/stylesheets/screen.sass */
 .paypal input.checkout {
   background: url('/images/paypal_button.png?1305504059') no-repeat;
   width: 254px;
   height: 42px;
   overflow: hidden;
 }
-/* line 125, ../../app/stylesheets/screen.sass */
+/* line 124, ../../app/stylesheets/screen.sass */
 .invite input.checkout {
   background: url('/images/invite_button.png?1308708104') no-repeat;
   width: 254px;
   height: 42px;
   overflow: hidden;
 }
-/* line 127, ../../app/stylesheets/screen.sass */
+/* line 126, ../../app/stylesheets/screen.sass */
 input.checkout:hover {
   background-position: 0px -42px;
 }
-/* line 129, ../../app/stylesheets/screen.sass */
+/* line 128, ../../app/stylesheets/screen.sass */
 input.checkout:active {
   background-position: 0px -84px;
 }
 
-/* line 132, ../../app/stylesheets/screen.sass */
+/* line 131, ../../app/stylesheets/screen.sass */
 .register_email {
   display: inline;
   float: left;
@@ -955,7 +955,7 @@ input.checkout:active {
 * html .register_email {
   overflow-x: hidden;
 }
-/* line 134, ../../app/stylesheets/screen.sass */
+/* line 133, ../../app/stylesheets/screen.sass */
 .register_email img {
   -moz-box-shadow: 0px 0px 5px 0px #c2c2c2;
   -webkit-box-shadow: 0px 0px 5px 0px #c2c2c2;
@@ -965,12 +965,12 @@ input.checkout:active {
   width: 100%;
 }
 
-/* line 139, ../../app/stylesheets/screen.sass */
+/* line 138, ../../app/stylesheets/screen.sass */
 #diagram_many, #diagram_arrow, #diagram_one {
   text-align: center;
   margin: 20px 0px;
 }
-/* line 142, ../../app/stylesheets/screen.sass */
+/* line 141, ../../app/stylesheets/screen.sass */
 #diagram_many .icon, #diagram_arrow .icon, #diagram_one .icon {
   background-image: url("/images/condense.png");
   background-repeat: no-repeat;
@@ -979,7 +979,7 @@ input.checkout:active {
   width: 105px;
 }
 
-/* line 149, ../../app/stylesheets/screen.sass */
+/* line 148, ../../app/stylesheets/screen.sass */
 #diagram_many {
   display: inline;
   float: left;
@@ -991,14 +991,14 @@ input.checkout:active {
   overflow-x: hidden;
 }
 
-/* line 151, ../../app/stylesheets/screen.sass */
+/* line 150, ../../app/stylesheets/screen.sass */
 #diagram_arrow {
   display: inline;
   float: left;
   margin-right: 0;
   width: 147.5px;
 }
-/* line 152, ../../app/stylesheets/screen.sass */
+/* line 151, ../../app/stylesheets/screen.sass */
 #diagram_arrow .icon {
   background-position: -105px 0px;
 }
@@ -1007,7 +1007,7 @@ input.checkout:active {
   overflow-x: hidden;
 }
 
-/* line 155, ../../app/stylesheets/screen.sass */
+/* line 154, ../../app/stylesheets/screen.sass */
 #diagram_one {
   display: inline;
   float: left;
@@ -1018,18 +1018,18 @@ input.checkout:active {
 * html #diagram_one {
   overflow-x: hidden;
 }
-/* line 157, ../../app/stylesheets/screen.sass */
+/* line 156, ../../app/stylesheets/screen.sass */
 #diagram_one .icon {
   background-position: -205px 0px;
   width: 135px;
 }
 
-/* line 161, ../../app/stylesheets/screen.sass */
+/* line 160, ../../app/stylesheets/screen.sass */
 #splash {
   margin-bottom: 1em;
   overflow: auto;
 }
-/* line 164, ../../app/stylesheets/screen.sass */
+/* line 163, ../../app/stylesheets/screen.sass */
 #splash #intro {
   display: inline;
   float: left;
@@ -1040,7 +1040,7 @@ input.checkout:active {
 * html #splash #intro {
   overflow-x: hidden;
 }
-/* line 166, ../../app/stylesheets/screen.sass */
+/* line 165, ../../app/stylesheets/screen.sass */
 #splash #email {
   font-size: 18px;
   display: inline;
@@ -1052,7 +1052,7 @@ input.checkout:active {
 * html #splash #email {
   overflow-x: hidden;
 }
-/* line 169, ../../app/stylesheets/screen.sass */
+/* line 168, ../../app/stylesheets/screen.sass */
 #splash #enticing {
   margin: 10px;
   padding: 10px;
@@ -1061,19 +1061,19 @@ input.checkout:active {
   color: white;
 }
 
-/* line 178, ../../app/stylesheets/screen.sass */
+/* line 177, ../../app/stylesheets/screen.sass */
 .clear {
   clear: both;
 }
 
-/* line 185, ../../app/stylesheets/screen.sass */
+/* line 184, ../../app/stylesheets/screen.sass */
 .elevator {
   width: 100%;
   position: relative;
   margin-top: 5px;
   z-index: 1;
 }
-/* line 190, ../../app/stylesheets/screen.sass */
+/* line 189, ../../app/stylesheets/screen.sass */
 .elevator h2 {
   line-height: 1;
   font-size: 24px;
@@ -1087,13 +1087,13 @@ input.checkout:active {
   /* ie */
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.6)));
 }
-/* line 206, ../../app/stylesheets/screen.sass */
+/* line 205, ../../app/stylesheets/screen.sass */
 .elevator hr {
   color: #c2c2c2;
   background-color: #c2c2c2;
   height: 1px;
 }
-/* line 211, ../../app/stylesheets/screen.sass */
+/* line 210, ../../app/stylesheets/screen.sass */
 .elevator a.sign_up {
   position: absolute;
   top: -5px;
@@ -1104,66 +1104,66 @@ input.checkout:active {
   height: 32px;
   overflow: hidden;
 }
-/* line 218, ../../app/stylesheets/screen.sass */
+/* line 217, ../../app/stylesheets/screen.sass */
 .elevator a.sign_up:hover {
   background-position: 0px -32px;
 }
-/* line 220, ../../app/stylesheets/screen.sass */
+/* line 219, ../../app/stylesheets/screen.sass */
 .elevator a.sign_up:active {
   background-position: 0px -64px;
 }
 
-/* line 224, ../../app/stylesheets/screen.sass */
+/* line 223, ../../app/stylesheets/screen.sass */
 .index_splash .image {
   float: left;
 }
-/* line 227, ../../app/stylesheets/screen.sass */
+/* line 226, ../../app/stylesheets/screen.sass */
 .index_splash .explanation {
   float: right;
   width: 253px;
 }
-/* line 231, ../../app/stylesheets/screen.sass */
+/* line 230, ../../app/stylesheets/screen.sass */
 .index_splash .explanation h3 {
   font-weight: bold;
   font-size: 18px;
   color: #272b2b;
   margin-bottom: 12px;
 }
-/* line 237, ../../app/stylesheets/screen.sass */
+/* line 236, ../../app/stylesheets/screen.sass */
 .index_splash .explanation p {
   text-align: justify;
   line-height: 1.2;
   color: #373c3c;
 }
 
-/* line 243, ../../app/stylesheets/screen.sass */
+/* line 242, ../../app/stylesheets/screen.sass */
 .clear hr {
   margin-bottom: 10px;
 }
 
-/* line 246, ../../app/stylesheets/screen.sass */
+/* line 245, ../../app/stylesheets/screen.sass */
 .quote {
   margin: 0px 50px 0px 50px;
 }
-/* line 248, ../../app/stylesheets/screen.sass */
+/* line 247, ../../app/stylesheets/screen.sass */
 .quote .words {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 24px;
 }
-/* line 252, ../../app/stylesheets/screen.sass */
+/* line 251, ../../app/stylesheets/screen.sass */
 .quote .person {
   text-align: right;
 }
 
-/* line 255, ../../app/stylesheets/screen.sass */
+/* line 254, ../../app/stylesheets/screen.sass */
 .learn_more_splash {
   text-align: justify;
   text-justify: newspaper;
   line-height: 1.2;
 }
 
-/* line 261, ../../app/stylesheets/screen.sass */
+/* line 260, ../../app/stylesheets/screen.sass */
 footer img {
   display: block;
   margin: 0 auto;
