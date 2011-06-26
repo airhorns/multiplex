@@ -54,5 +54,5 @@ Multiplex::Application.configure do
   # Host configuration 
   config.action_mailer.default_url_options = { :host => Multiplex::Application::Domain }
 
-  ENV['REDISTOGO_URL'] ||= "redis://redistogo:4b5e283cccced8fd569b7427b2d5e27c@filefish.redistogo.com:9496/"
+  ENV['REDISTOGO_URL'] ||= "redis://redistogo:bc92454f58b3943d285a82b3659e25b8@icefish.redistogo.com:9233/"
 end
