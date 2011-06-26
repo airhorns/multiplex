@@ -30,4 +30,7 @@
     - service.return_url faq_url
     = submit_tag 'Make Payment', :class => "paypal_checkout"
 - else
-  %p You need to sign in to make a payment. Please do so.
+  %p 
+    You need to sign up to make a payment. You can do that 
+    %a{:href=>sign_up_url} here
+    , or if you have signed up already you can pay using the link in the confirmation email you were sent.

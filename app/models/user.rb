@@ -25,10 +25,12 @@ class User < ActiveRecord::Base
   attr_accessor :given_invite_code
     
   validates_presence_of :email, :mask_email_name, :mask_email, :summary_frequency
-  validate :mask_email_valid?
   validates_uniqueness_of :mask_email
 
+  validate :mask_email_valid?
+  validate :summary_frequency_valid?
   validate :invite_valid?
+
   before_create :set_enabled_for_invited
 
   def unsubscribe!
@@ -89,6 +91,13 @@ class User < ActiveRecord::Base
     false 
   end
 
+  # Validates inclusion of summary frequency in the available ones for this instance
+  def summary_frequency_valid?
+    unless self.summary_frequency.present? && available_summary_frequencies.keys.include?(self.summary_frequency.intern)
+      errors.add(:summary_frequency, "must be selected from the above options")
+    end
+  end
+
   # Validates that the given invite code is good, but doesn't add errors if no invite code is given
   def invite_valid?
     if self.given_invite_code.present?
@@ -99,7 +108,8 @@ class User < ActiveRecord::Base
       end    
     end
   end
-
+  
+  # Validates that the mask email conforms to our domain and stuff
   def mask_email_valid?
     unless self.mask_email =~ /\A[a-z0-9._%-]+@#{Multiplex::Application::Domain}\z/
       errors.add(:mask_email_name, "must be valid, containing only letters, numbers, and . _ % or -.")

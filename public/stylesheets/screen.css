@@ -855,7 +855,7 @@ form#new_user .input label {
   width: 100%;
 }
 /* line 75, ../../app/stylesheets/screen.sass */
-form#new_user .input.check_boxes span {
+form#new_user .input.radio span {
   float: left;
   width: 150px;
 }

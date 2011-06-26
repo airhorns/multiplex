@@ -9,7 +9,7 @@
   %br
   = f.input :summary_frequency,
               :prompt => "How often should we email you?",
-              :as => :check_boxes, 
+              :as => :radio, 
               :collection => f.object.available_summary_frequencies.collect {|(k,v)| [v,k.to_s]},
               :wrapper_html => {:class => "double"}
   %br

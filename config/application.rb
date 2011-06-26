@@ -62,7 +62,7 @@ module Multiplex
       Multiplex::Application::PaypalAccount = 'test_1305508600_biz@jadedpixel.com'
       ActiveMerchant::Billing::Base.mode = :test
     else
-      Multiplex::Application::PaypalAccount = 'harry@skylightlabs.ca'
+      Multiplex::Application::PaypalAccount = 'payments@corp.othermail.me'
     end
     
   end
