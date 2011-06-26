@@ -47,4 +47,6 @@ group :development, :test do
 
   gem "growl"
   gem "rb-fsevent"
+
+  gem "foreman"
 end
