@@ -11,6 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_sign_up_path_for(resource)
+    @mixpanel.track_event("User signed up", resource.mixpanel_attributes)
     if resource.enabled?
       faq_path
     else

@@ -4,12 +4,13 @@ class Transaction < ActiveRecord::Base
   
   def self.validate!(notify)
     user = User.find(notify.item_id)
-    transaction = user.transactions.build(:notification => tnotify)
+    transaction = user.transactions.build(:notification => notify)
     if notify.acknowledge
       begin
         if notify.complete? and notify.amount == Money.new(800, 'CAD')
           transaction.status = 'success'
           user.enabled = true
+          @mixpanel.track_event("User enabled", user.mixpanel_attributes)
         else
           Rails.logger.error("Failed to verify Paypal's notification, please investigate")
         end

@@ -1,5 +1,6 @@
 Multiplex::Application.configure do
   Multiplex::Application::Domain = "watch.skylightlabs.ca"
+  Multiplex::Application::MixpanelKey = "9871c75f5bb84f252834a20c6be6ab4b" 
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -29,4 +30,5 @@ Multiplex::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   ENV["REDISTOGO_URL"] = 'redis://localhost:6379'
+  config.middleware.use "Mixpanel::Tracker::Middleware", Multiplex::Application::MixpanelKey, :async => true
 end

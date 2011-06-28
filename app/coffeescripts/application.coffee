@@ -41,4 +41,38 @@ $(document).ready ->
         span.hide()
     setInterval(update, 25)
 
-    true
+  # Track signup links
+  mpq.push ['track_links', $("a.sign_up"), "Sign Up button clicked"]
+
+  # Track nav links
+  mpq.push ['track_links', $("header nav a")[0], "Learn more nav link clicked", {nav_link: true}]
+  mpq.push ['track_links', $("header nav a")[1], "FAQ nav link clicked", {nav_link: true}]
+  mpq.push ['track_links', $("header nav a")[2], "Twitter nav link clicked", {nav_link: true}]
+  mpq.push ['track_links', $("header h1 > a"), "Logo link clicked", {nav_link: true}]
+
+  # Track signup flow
+  user_email = $("#new_user #user_email")
+  mask_email = $("#new_user #user_mask_email_name")
+  summary_freq_selector = "#new_user input:radio[name=user[summary_frequency]]" 
+  invite_code = $("#new_user #user_invite_code")
+
+  getSignupProps = ->
+    user_email: user_email.val()
+    mask_email: mask_email.val()
+    summary_frequency: $("#{summary_freq_selector}:checked").val()
+    invite_code: invite_code.val()
+    invite_used: $("#invite_code_input").css('display') == "block"
+
+  user_email.change (e) ->
+    mpq.push ['track',  "User's own email filled out", getSignupProps()]
+
+  mask_email.change (e) ->
+    mpq.push ['track',  "User's mask email filled out", getSignupProps()]
+
+  $(summary_freq_selector).change (e) ->
+    mpq.push ['track',  "User's summary frequency filled out", getSignupProps()]
+
+  invide_code.change (e) ->
+    mpq.push ['track',  "User's invite code filled out", getSignupProps()]
+
+  mpq.push ['track_links']

@@ -15,6 +15,7 @@ gem "money"
 gem "activemerchant"
 
 gem 'activeadmin'
+gem 'mixpanel'
 
 group :production do
   gem "thin"

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :initialize_mixpanel
 
   def after_sign_in_path_for(resource)
     if resource.is_a?(User)
@@ -7,5 +8,9 @@ class ApplicationController < ActionController::Base
     else
       super
     end
+  end
+
+  def initialize_mixpanel
+    @mixpanel = Mixpanel::Tracker.new(Multiplex::Application::MixpanelKey, request.env, true)
   end
 end

@@ -85,6 +85,10 @@ class User < ActiveRecord::Base
   def enabled?
     self.enabled == true
   end
+  
+  def mixpanel_attributes
+    self.attributes.merge(:ip => self.current_sign_in_ip)
+  end
 
   private
   def password_required? 

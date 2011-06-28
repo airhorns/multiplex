@@ -1,6 +1,6 @@
 Multiplex::Application.configure do
   Multiplex::Application::Domain = "othermail.me"
-  
+  Multiplex::Application::MixpanelKey = "563b3f5f6d1818e8292160ca0dcea950" 
   # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.
@@ -55,4 +55,6 @@ Multiplex::Application.configure do
   config.action_mailer.default_url_options = { :host => Multiplex::Application::Domain }
 
   ENV['REDISTOGO_URL'] ||= "redis://redistogo:bc92454f58b3943d285a82b3659e25b8@icefish.redistogo.com:9233/"
+
+  config.middleware.use "Mixpanel::Tracker::Middleware", Multiplex::Application::MixpanelKey, :async => true
 end
