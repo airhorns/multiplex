@@ -2,7 +2,6 @@ require 'resque'
 require 'resque_scheduler'
 require 'resque/plugins/resque_heroku_autoscaler'
 
-
 Resque::Plugins::HerokuAutoscaler.config do |c|
   c.scaling_disabled = true unless Rails.env.production?
   c.new_worker_count do |pending|

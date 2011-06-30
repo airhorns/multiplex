@@ -7,6 +7,7 @@ require 'resque/tasks'
 require 'resque_scheduler/tasks'
 
 Multiplex::Application.load_tasks
+include Rake::DSL
 
 task "resque:setup" => :environment do
   ENV['QUEUE'] = '*'
