@@ -7,7 +7,7 @@ class InternalController < ApplicationController
  
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      Digest::SHA1.hexdigest(password) == PASSWORD
+      password == PASSWORD
     end
   end
   

@@ -69,7 +69,8 @@ class Message < ActiveRecord::Base
   attr_accessor :mail
 
   belongs_to :user
-  validates_presence_of :subject, :mail
+  has_many :manifest_entries 
+  has_many :delivery_manifests, :through => :manifest_entries
 
   scope :undelivered, self.scoped.where(:delivered => false)
   scope :unsummarized, self.scoped.where(:summarized => false)
@@ -77,6 +78,8 @@ class Message < ActiveRecord::Base
   scope :summarized, self.scoped.where(:summarized => true)
  
   before_create :set_delivery_secret
+
+  validates_presence_of :subject, :mail
 
   def to
     "#{self.to_email} - #{self.to_name}"

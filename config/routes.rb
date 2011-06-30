@@ -36,6 +36,13 @@ Multiplex::Application.routes.draw do
   match 'learn_more' => 'dashboard#learn_more', :as => :learn_more
   match 'help' => 'dashboard#help', :as => :help
   match 'send_summary' => 'dashboard#send_summary', :as => :send_summary
+  
+  namespace 'internal' do
+    resources :users, :only => [] do
+      get 'test_summary_email', :on => :collection
+    end
+  end
+
   root :to => "dashboard#index"
 
   # The priority is based upon order of creation:

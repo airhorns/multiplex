@@ -20,9 +20,6 @@ javascripts:
 stylesheets:
   screen:
     - public/stylesheets/screen.css
-  email:
-    - public/stylesheets/screen.css
-    - public/stylesheets/email.css
   print:
     - public/stylesheets/print.css
   ie:

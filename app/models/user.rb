@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
   has_many :messages
   has_many :transactions
+  has_many :delivery_manifests
   has_one :invite
   
   scope :enabled, where(:enabled => true)

@@ -1,14 +1,13 @@
 = form_for @manifest, :url => delivery_manifest_url(@manifest), :html => {:method => :get} do |g|
   = g.hidden_field :delivery_secret
-  %table.message_summary
-    %tr
-      %th From
-      %th Subject
-      %th Send
-    = g.fields_for :manifest_entries do |f|
-      %tr
-        %td= f.object.message.from
-        %td= f.object.message.subject
-        %td= f.check_box :marked_for_delivery
+  %div(style="width:100%; border-top: 1px solid #cdcdcd; border-bottom: 1px solid #cdcdcd;  margin-bottom: 10px; background-color: #f2fbed;")
+    %table(style="border-color:#FFF; ")
+      = g.fields_for :manifest_entries do |f|
+        %tr
+          %td(style="width:20px;")= f.check_box :marked_for_delivery
+          %td(style="padding: 0px; 2px;")
+            = succeed ":" do
+              %b= f.object.message.from
+            = f.object.message.subject
 
-  = g.submit "Send Emails"
+  = g.submit "Send Selected", :style => "width: 100px; height: 25px; border: 1px solid #cdcdcd; border-radius: 3px; background-color: #f4f4f4;"

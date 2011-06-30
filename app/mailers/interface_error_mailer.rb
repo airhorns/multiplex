@@ -4,7 +4,7 @@ class InterfaceErrorMailer < ActionMailer::Base
 
   def error(type, to)
     @from_user = to
-    mail(:to => to, :subject => "Othermail Error! Uh oh.") do |format|
+    mail(:to => to, :subject => "Othermail Error! Uh oh.", 'List-Help' => "<mailto:help@othermail.me>") do |format|
       format.html { render type.to_s }
       format.text { render type.to_s }
     end

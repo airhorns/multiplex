@@ -3,13 +3,14 @@ class MailSummaryJob < MultiplexJob
 
   def self.perform(user_id)
     user = User.find(user_id)
-    messages = user.messages.unsummarized
+    manifest = DeliveryManifest.summary_for(user)
     
-    if messages.count > 0
-      manifest = DeliveryManifest.new(:messages => messages, :user => user)
+    if manifest.messages.to_a.count > 0
       manifest.save!
-      SummaryMailer.summary(manifest).deliver!
-      messages.update_all(:summarized => true)
+      mail = SummaryMailer.summary(manifest)
+      mail.deliver!
+      manifest.mark_as_delivered!
+      true
     end
   end
 end
