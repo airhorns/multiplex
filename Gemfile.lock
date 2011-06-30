@@ -177,6 +177,7 @@ GEM
       daemons (~> 1.0.10)
       gem_plugin (~> 0.2.3)
     multi_json (1.0.3)
+    newrelic_rpm (2.14.1)
     nokogiri (1.4.6)
     open4 (1.1.0)
     orm_adapter (0.0.5)
@@ -307,6 +308,7 @@ DEPENDENCIES
   mixpanel
   money
   mongrel (= 1.2.0.pre2)
+  newrelic_rpm
   pg
   rails (= 3.0.7)
   rb-fsevent
