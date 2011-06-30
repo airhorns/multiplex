@@ -72,7 +72,5 @@ $(document).ready ->
   $(summary_freq_selector).change (e) ->
     mpq.push ['track',  "User's summary frequency filled out", getSignupProps()]
 
-  invide_code.change (e) ->
+  invite_code.change (e) ->
     mpq.push ['track',  "User's invite code filled out", getSignupProps()]
-
-  mpq.push ['track_links']
