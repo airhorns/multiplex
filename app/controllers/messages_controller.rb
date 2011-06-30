@@ -24,11 +24,14 @@ class MessagesController < ApplicationController
 
   private
   def create(type)
-    @message = Message.new_from_params(params, type)
-    if EmailInterfaceController.recognize_path(@message)
-      EmailInterfaceController.dispatch(@message)
-    else
-      @message.save!
+    begin
+      @message = Message.new_from_params(params, type)
+      if EmailInterfaceController.recognize_path(@message)
+        EmailInterfaceController.dispatch(@message)
+      else
+        @message.save!
+      end
+    rescue ActiveRecord::RecordInvalid => e
     end
     render :nothing => true, :status => 200 # a status of 404 would reject the mail
   end
