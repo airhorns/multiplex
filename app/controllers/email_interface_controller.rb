@@ -57,7 +57,7 @@ class EmailInterfaceController
   end
   
   def send_summary
-    Resque.enqueue(MailSummaryJob,@message.user_id)
+    Resque.enqueue(MailSummaryJob, @message.user_id)
   end
 
   def unsubscribe
@@ -65,7 +65,7 @@ class EmailInterfaceController
   end
   
   def help
-    Resque.enqueue(MailHelpJob,@message.user_id)
+    Resque.enqueue(MailHelpJob, @message.user_id)
   end
 
   def error(type, message)
