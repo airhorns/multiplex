@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/bborn/resque-heroku-autoscaler.git
-  revision: 80577ab70e228422abaec4d505e786a17eb82479
-  specs:
-    resque-heroku-autoscaler (0.2.3)
-      heroku
-      resque (>= 1.8)
-
-GIT
   remote: https://github.com/hornairs/jammit_lite.git
   revision: 7a599ae3849bd19aab6dc34faa426d3294b9ef5f
   specs:
@@ -302,6 +294,7 @@ DEPENDENCIES
   guard-spork
   haml (>= 3.0.0)
   haml-rails
+  heroku
   jammit
   jammit_lite!
   mail
@@ -313,7 +306,6 @@ DEPENDENCIES
   rails (= 3.0.7)
   rb-fsevent
   resque
-  resque-heroku-autoscaler!
   resque-scheduler
   rspec-rails
   ruby-debug19
