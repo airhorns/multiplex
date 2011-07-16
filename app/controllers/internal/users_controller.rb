@@ -4,7 +4,7 @@ class Internal::UsersController < InternalController
     @manifest = DeliveryManifest.new(:user => user, :messages => user.messages)
     @manifest.save!
     mail = SummaryMailer.summary(@manifest)
-    render :text => mail.html_part.body
+    render :text => mail.html_part.body.to_s
     true
   end
 end

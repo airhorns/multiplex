@@ -1,0 +1,33 @@
+:javascript
+  for (var i = 0; i < 10; i++) {
+    (function(i) {
+      setTimeout(function() {
+        var s = "";
+        s += 10 - i;
+        if ((10 - 1) === 1) {
+          s += " second";
+        } else {
+          s += " seconds";
+        }
+        $('#time_left').html(s);
+      }, i * 1000);
+    })(i);
+  }
+
+  setTimeout(function() {
+    window.opener = window.opener ? window.opener : self;
+    window.close();
+  }, 10*1000);
+
+:css
+  .success {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 2px solid #dddddd;
+    background: #e6efc2;
+    color: #264409;
+    border-color: #c6d880;
+  }
+  
+.success
+  Your message(s) will be delivered shortly! This window will close in <span id="time_left">10 seconds</span>. You can close this window yourself at any time. 

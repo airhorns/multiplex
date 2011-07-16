@@ -1,0 +1,11 @@
+%h2 Unsubscribe?
+
+Are you sure you want to unsubscribe 
+%b= @user.email
+from OtherMail summaries being sent from 
+%b= @user.mask_email
+?
+%br
+= link_to "Unsubscribe now", unsubscribe_user_path(params.merge(:confirm => true))
+|
+= link_to "Cancel", "javascript:window.close();"

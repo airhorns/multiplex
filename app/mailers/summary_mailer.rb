@@ -1,4 +1,4 @@
-class SummaryMailer < ActionMailer::Base
+class SummaryMailer < MultiplexMailer
   default :from => "Othermail Summaries <summaries@#{Multiplex::Application::Domain}>"
   layout 'email'
 
@@ -7,7 +7,7 @@ class SummaryMailer < ActionMailer::Base
     @user = manifest.user
     @date_range = manifest.date_range
 
-    mail(:to => @user.email, :subject => "Othermail Summary for #{@date_range.begin} to #{@date_range.end} (#{Time.now.to_s})", 'List-Help' => "<mailto:help@othermail.me>", 'List-Unsubscribe' => "<mailto:unsubscribe@othermail.me>", "List-Id" => "<#{@user.mask_email_name}.summaries.othermail.me>") do |format|
+    mail(:to => @user.email, :subject => "Othermail Summary for #{@date_range.begin} to #{@date_range.end}", 'List-Help' => "<mailto:help@othermail.me>", 'List-Unsubscribe' => "<mailto:unsubscribe@othermail.me>", "List-Id" => "<#{@user.mask_email_name}.summaries.othermail.me>") do |format|
       format.text
       format.html 
     end

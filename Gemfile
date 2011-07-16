@@ -9,6 +9,8 @@ gem "resque"
 gem "resque-scheduler"
 gem "uuid"
 gem "mail"
+gem "premailer"
+gem "nokogiri"
 gem "pg"
 
 gem "money"

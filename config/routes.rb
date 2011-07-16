@@ -1,9 +1,5 @@
 Multiplex::Application.routes.draw do
 
-  ActiveAdmin.routes(self)
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
-
   devise_for :users,
     :skip => [:passwords, :registrations],
     :controllers => { :registrations => "registrations" } do
@@ -13,6 +9,9 @@ Multiplex::Application.routes.draw do
     post "user_registration", :to => "registrations#create"
     get "new_user_registration", :to => "registrations#new"
   end
+
+  ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
   
   resources :users, :only => [] do
     get 'unsubscribe', :on => :member

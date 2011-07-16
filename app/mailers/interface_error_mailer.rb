@@ -1,4 +1,4 @@
-class InterfaceErrorMailer < ActionMailer::Base
+class InterfaceErrorMailer < MultiplexMailer
   default :from => "Othermail Errors <support@#{Multiplex::Application::Domain}>"
   layout 'email'
 

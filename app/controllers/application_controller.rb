@@ -13,4 +13,12 @@ class ApplicationController < ActionController::Base
   def initialize_mixpanel
     @mixpanel = Mixpanel::Tracker.new(Multiplex::Application::MixpanelKey, request.env, true)
   end
+
+  def mobile_device?
+    if session[:mobile_param]
+      session[:mobile_param] == "1"
+    else
+      request.user_agent =~ /Mobile|webOS/
+    end
+  end
 end

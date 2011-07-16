@@ -1,6 +1,6 @@
 - if user_signed_in?
   #splash
-    %h1 Welcome to Othermail!
+    %h1 Welcome to OtherMail!
     #intro
       You can start sending emails to your Othermail right now. Take a moment to savour the sweet sweet taste of inbox freedom.
       - unless current_user.confirmed?
@@ -18,7 +18,25 @@
 .window
   %h1 Frequently Asked Questions
 
-  %h3 How can I check my Othermail inbox right now?
+  %h3 What is OtherMail? 
+  %p 
+    OtherMail is a new email address which is perfect for giving out to newsletters, beta invitations and any other low priority email lists. OtherMail collects all of the email which is sent to your @Othermail.me email address and sends you a simple summary email as often as you would like.
+
+  %h3 What is included in the Summary email? 
+  %p
+    The summary email you receive is very simple. It includes the name of the sender and the subject line of the email. This way you can quickly scan for any emails you are interested in receiving, select them to be sent to you in full and then move on with your day. 
+
+  %h3 How will OtherMail help me manage my email better? 
+  %p 
+    Unlike most solutions to almost-spam and email overload, OtherMail doesn't rely on complicated software. Instead, OtherMail imposes a more efficient workflow for managing things like email newsletters, notifications et all. By collecting these things, away from your inbox, OtherMail reduces the amount of clutter and the frequency of distractions arriving in your inbox. By grouping them all together, OtherMail reduces the amount of context switching and mental overhead required to process these unimportant items. To learn more about the benefits of this way of working, we would suggest David Allen's Getting things Done or 
+    %a(href="http://zenhabits.net")Zen Habits
+    \.
+
+  %h3 Aren't there countless other more powerful solutions to this problem
+  %p 
+    Rule matching, priority inboxes, throwaway email addresses and lots of other solutions exist to help address this same problem but in our experience they seem to add complexity instead of reducing it. OtherMail works regardless of the email service or client you use it with and there is nothing to set up, you just start giving out your @othermail.me address anytime you know the email you will be receiving is low priority. We built OtherMail to solve our own problems by imposing a more efficient way of processing low priority emails, not complicate our lives with more software. We hope you will find it as useful as we do. 
+
+  %h3 How can I check my OtherMail inbox right now?
   %p
     Just email <b>check@othermail.me</b> from the email you get your summaries at, and a summary should arrive in your actual inbox shortly. Summaries will still continue to arrive on schedule.
 
@@ -31,9 +49,6 @@
     That's weird. Did you check your spam folder? Did you wait a few minutes? If you still haven't gotten a confirmation email, you can resend it at the
     %a{:href => new_confirmation_path(:user)} Send Another Confirmation
     page.
-
-  %h3 Why Otherbox instead of &lt;some other solution which is definitely better&gt;?
-  %p Rule matching filters, priority inbox, the "+" trick, and lots of other solutions exist for the same problem. If you think they are better, go right ahead and use them! We built Othermail because its extraordinarily simple and we want to use it every day. We think its worth it. It introduces a paradigm shift from incoming emails being "unread" by default, to electing to have some emails come in as "read" by default and only actually read them if they look interesting enough. Adding this extra step for the erroneous emails cluttering your inbox is worth it and leaves only the good, juicy stuff as actually "unread" in your real inbox.
 
   %h3 How can I get help using Othermail?
   %p 

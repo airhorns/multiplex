@@ -1,6 +1,5 @@
 // To configure blueprint, edit the partials/base.sass file.
 @import partials/base
-
 @import compass/css3
 
 // Import all the default blueprint modules so that we can access their mixins.
@@ -9,7 +8,8 @@
 // Combine the partials into a single screen stylesheet.
 @import partials/page
 @import partials/form
-@import partials/multi_line_button
+
+@import "compass/utilities/sprites/sprite-img"
 
 // General
 body
@@ -25,8 +25,10 @@ h3
 
 a:hover
   color: #8d8d8d
+
 b
   font-weight: bold
+
 header
   padding-top: 40px
   margin-bottom: 35px

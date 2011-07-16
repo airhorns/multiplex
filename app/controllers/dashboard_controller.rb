@@ -23,7 +23,7 @@ class DashboardController < ApplicationController
 
   private 
   def set_layout
-    if [:index, :learn_more].include?(action_name.intern)
+    if !user_signed_in? || [:index, :learn_more].include?(action_name.intern)
       "tagline"
     else
       "application"
