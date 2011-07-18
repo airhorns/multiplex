@@ -1,4 +1,4 @@
-class QueueSummariesJob
+class QueueSummariesJob < MultiplexJob
   @queue = :queuing
 
   def self.perform(type)
@@ -7,4 +7,3 @@ class QueueSummariesJob
     end
   end
 end
-

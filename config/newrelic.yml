@@ -1,5 +1,5 @@
 ---
-<%= ENV["RAILS_ENV"] %>:
+production:
   error_collector:
     capture_source: true
     enabled: true
@@ -7,9 +7,9 @@
   apdex_t: 0.5
   ssl: false
   monitor_mode: true
-  license_key: <%= ENV["NEW_RELIC_LICENSE_KEY"] %>
+  license_key: 10bcc56e68a1be893def12ce9f47785aef8dd7b3 
   developer_mode: false
-  app_name: <%= ENV["NEW_RELIC_APPNAME"] %>
+  app_name: othermail
   transaction_tracer:
     record_sql: obfuscated
     enabled: true

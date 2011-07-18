@@ -215,6 +215,8 @@ GEM
       rufus-scheduler
     rest-client (1.6.3)
       mime-types (>= 1.16)
+    rpm_contrib (1.0.13)
+      newrelic_rpm (>= 2.13.1)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -314,6 +316,7 @@ DEPENDENCIES
   rb-fsevent
   resque
   resque-scheduler
+  rpm_contrib
   rspec-rails
   ruby-debug19
   simple_form
